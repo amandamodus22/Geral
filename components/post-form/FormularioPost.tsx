@@ -518,7 +518,7 @@ export function FormularioPost({ inicial, config, urlsIniciais }: Props) {
       <div className="fixed inset-x-0 bottom-[calc(64px+env(safe-area-inset-bottom))] z-20 border-t border-zinc-200 bg-white/95 p-3 backdrop-blur md:bottom-0">
         <div className="mx-auto grid max-w-3xl grid-cols-3 gap-2">
           <button type="button" className="botao-secundario px-2" disabled={salvando} onClick={() => salvar("rascunho")}>
-            <Save className="size-4" /> Rascunho
+            <Save className="hidden size-4 sm:block" /> Rascunho
           </button>
           <button
             type="button"
@@ -526,7 +526,7 @@ export function FormularioPost({ inicial, config, urlsIniciais }: Props) {
             disabled={salvando || !validacao.ok}
             onClick={() => salvar("agendar")}
           >
-            <CalendarClock className="size-4" /> Agendar
+            <CalendarClock className="hidden size-4 sm:block" /> Agendar
           </button>
           <button
             type="button"
@@ -534,7 +534,8 @@ export function FormularioPost({ inicial, config, urlsIniciais }: Props) {
             disabled={salvando || !validarPost(config, dados, { exigirDataFutura: false }).ok}
             onClick={() => salvar("publicar_agora")}
           >
-            {salvando ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />} Publicar agora
+            {salvando ? <Loader2 className="size-4 animate-spin" /> : <Send className="hidden size-4 sm:block" />}
+            <span className="whitespace-nowrap">Publicar agora</span>
           </button>
         </div>
       </div>

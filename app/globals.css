@@ -18,29 +18,27 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-@layer components {
-  .rotulo {
-    @apply mb-1 block text-sm font-medium text-zinc-700;
-  }
-  .campo {
-    @apply block w-full rounded-lg border border-zinc-300 bg-white px-3 py-2.5 text-base text-zinc-900 shadow-sm outline-none placeholder:text-zinc-400 focus:border-marca-600 focus:ring-2 focus:ring-marca-100 disabled:bg-zinc-100;
-  }
-  .botao {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
-  }
-  .botao-primario {
-    @apply botao bg-marca-600 text-white hover:bg-marca-700;
-  }
-  .botao-secundario {
-    @apply botao border border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-50;
-  }
-  .botao-perigo {
-    @apply botao border border-red-300 bg-white text-red-700 hover:bg-red-50;
-  }
-  .cartao {
-    @apply rounded-xl border border-zinc-200 bg-white p-4 shadow-sm;
-  }
-  .selo {
-    @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium whitespace-nowrap;
-  }
+@utility rotulo {
+  @apply mb-1 block text-sm font-medium text-zinc-700;
+}
+@utility campo {
+  @apply block w-full rounded-lg border border-zinc-300 bg-white px-3 py-2.5 text-base text-zinc-900 shadow-sm outline-none placeholder:text-zinc-400 focus:border-marca-600 focus:ring-2 focus:ring-marca-100 disabled:bg-zinc-100;
+}
+@utility botao {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility botao-primario {
+  @apply botao bg-marca-600 text-white hover:bg-marca-700;
+}
+@utility botao-secundario {
+  @apply botao border border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-50;
+}
+@utility botao-perigo {
+  @apply botao border border-red-300 bg-white text-red-700 hover:bg-red-50;
+}
+@utility cartao {
+  @apply rounded-xl border border-zinc-200 bg-white p-4 shadow-sm;
+}
+@utility selo {
+  @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium whitespace-nowrap;
 }
