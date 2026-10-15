@@ -49,6 +49,9 @@ export interface PostDestino {
   linkedin_link_no_comentario: boolean;
   youtube_formato: "longo" | "shorts";
   youtube_titulo: string | null;
+  google_tipo_post: string | null;
+  google_botao_tipo: string | null;
+  google_botao_url: string | null;
   reddit_subreddit: string | null;
   reddit_titulo: string | null;
   status: StatusDestino;

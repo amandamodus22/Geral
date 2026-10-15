@@ -3,7 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { exigirDona } from "./auth";
-import { calcularDestino, CONFIG_PADRAO, esquemaConfigConteudo } from "./conteudo";
+import padrao from "./config-padrao.json";
+import { calcularDestino, esquemaConfigConteudo } from "./conteudo";
 import { buscarConfig } from "./dados";
 import { isoDeSP, partesSP } from "./datas";
 import { chamarEnvio, type RespostaEnvio } from "./envio";
@@ -124,6 +125,9 @@ export async function salvarPost(entrada: unknown, acao: AcaoSalvar): Promise<Re
       linkedin_link_no_comentario: d.rede === "linkedin" && d.linkedin_link_no_comentario,
       youtube_formato: d.youtube_formato,
       youtube_titulo: d.rede === "youtube" ? vazioParaNulo(d.youtube_titulo) : null,
+      google_tipo_post: d.rede === "google_business" ? calc.tipoPostGoogle : null,
+      google_botao_tipo: d.rede === "google_business" ? (calc.botao?.tipo ?? null) : null,
+      google_botao_url: d.rede === "google_business" ? (calc.botao?.url ?? null) : null,
       reddit_subreddit: d.rede === "reddit" ? vazioParaNulo(limparSubreddit(d.reddit_subreddit)) : null,
       reddit_titulo: d.rede === "reddit" ? vazioParaNulo(d.reddit_titulo) : null,
       status: "pendente" as const,
@@ -251,6 +255,9 @@ export async function duplicarPost(id: string): Promise<void> {
         linkedin_link_no_comentario: d.linkedin_link_no_comentario,
         youtube_formato: d.youtube_formato,
         youtube_titulo: d.youtube_titulo,
+        google_tipo_post: d.google_tipo_post,
+        google_botao_tipo: d.google_botao_tipo,
+        google_botao_url: d.google_botao_url,
         reddit_subreddit: d.reddit_subreddit,
         reddit_titulo: d.reddit_titulo,
       })),
@@ -345,5 +352,5 @@ export async function salvarConfigConteudo(texto: string): Promise<ResultadoAcao
 }
 
 export async function restaurarConfigPadrao(): Promise<ResultadoAcao> {
-  return salvarConfigConteudo(JSON.stringify(CONFIG_PADRAO));
+  return salvarConfigConteudo(JSON.stringify(padrao));
 }

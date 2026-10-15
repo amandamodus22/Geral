@@ -233,6 +233,10 @@ create table public.post_destinos (
   youtube_formato text not null default 'longo'
     constraint destinos_youtube_formato check (youtube_formato in ('longo', 'shorts')),
   youtube_titulo text,
+  -- Google Perfil da Empresa: tipo do post e botão (ex.: "Saiba mais" + link).
+  google_tipo_post text,
+  google_botao_tipo text,
+  google_botao_url text,
   reddit_subreddit text,
   reddit_titulo text,
   status public.status_destino not null default 'pendente',

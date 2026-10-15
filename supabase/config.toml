@@ -1,0 +1,7 @@
+# Configuração mínima para a Supabase CLI (opcional: dá para fazer tudo pelo painel web).
+project_id = "painel-posts"
+
+[functions.enviar-para-make]
+# A função é chamada pelo pg_cron e pelo painel com o cabeçalho x-cron-secret,
+# então a verificação de JWT do Supabase fica desligada.
+verify_jwt = false
