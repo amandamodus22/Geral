@@ -38,13 +38,14 @@ Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server
 
 ## Visual e interações
 
-- **Paleta:** lilás e ameixa profundo, com detalhes em dourado champanhe sobre fundo marfim. As cores ficam em variáveis no início do CSS de cada página (`--brand`, `--night`, `--gold`...).
-- **Tipografia:** títulos em Newsreader (licença SIL OFL, hospedada em `fonts/`, sem Google Fonts); textos na fonte do sistema.
+- **Paleta:** lilás e violeta sobre fundo escuro (ameixa quase preto) nas áreas de destaque e fundo claro levemente lavanda no conteúdo. As cores ficam em variáveis no início do CSS de cada página (`--brand`, `--night`, `--grad-cta`...).
+- **Tipografia:** títulos em Space Grotesk (licença SIL OFL, hospedada em `fonts/`, sem Google Fonts); rótulos em fonte monoespaçada do sistema; textos na fonte do sistema.
 - **Interações:**
   - barra de progresso de leitura no topo da tela;
   - topo que fica fixo e claro ao rolar (desktop);
   - conteúdo que surge suavemente ao rolar;
-  - ilustração flutuante que reage ao mouse;
+  - janela simulando a sessão de assinatura online, flutuante e reagindo ao mouse;
+  - luz que acompanha o cursor nos cartões;
   - linha do tempo que se desenha;
   - lista de requisitos clicável, que mostra um atalho para a triagem quando todos os itens são marcados.
 - **Celular:** layout pensado primeiro para o celular (testado em 320, 360 e 390 px), com barra fixa "Verificar meu caso" e aviso de cookies que só aparece depois da primeira rolagem, para não cobrir o botão principal.
