@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 4 páginas (divorcio, inventario, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "55DDDNUMERO",              // só números: 55 + DDD + número. Ex.: 5544999999999
+  EMAIL: "contato@seudominio.com.br",   // e-mail para contato e para pedidos sobre dados pessoais
+  ADS_ID: "AW-XXXXXXXXXX",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "XXXXXXXXXXXXXXXXXXXX",    // não é usado nesta página
+  GA4_ID: "G-XXXXXXXXXX",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: ""                       // não é usado nesta página
+};
+</script>
+<title>Política de privacidade | Amanda Modus – OAB/PR 119.898</title>
+<meta name="description" content="Como os dados pessoais enviados nestas páginas são tratados, conforme a Lei Geral de Proteção de Dados (LGPD).">
+<meta name="theme-color" content="#0F4C5C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F4C5C'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<style>
+:root{
+  --bg:#FAFAF7;--surface:#FFFFFF;--ink:#1C2B33;--muted:#4B5B64;--line:#DCE3E6;
+  --brand:#0F4C5C;--brand-dark:#0A3742;--brand-soft:#E8F1F3;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--sans)}
+@media (min-width:900px){body{font-size:1.125rem}}
+a{color:var(--brand);text-underline-offset:.15em}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:4px}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.25;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,6vw,2.5rem)}
+h2{font-size:1.35rem;margin-top:1.8em}
+p,ul{margin:0 0 1em}
+ul{padding-left:1.3em}
+li{margin-bottom:.35em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow>*{max-width:780px}
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;min-height:68px;padding-top:8px;padding-bottom:8px}
+.brand{text-decoration:none;color:var(--ink);line-height:1.25}
+.brand strong{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:600}
+.brand span{display:block;font-size:1rem;color:var(--muted)}
+main{padding:40px 0 56px}
+.muted{color:var(--muted)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 1em}
+.btn-link{display:inline-flex;align-items:center;min-height:48px;padding:.6em 1.2em;border:2px solid var(--brand);border-radius:10px;background:transparent;color:var(--brand);font:600 1rem var(--sans);cursor:pointer}
+.btn-link:hover{background:var(--brand-soft)}
+mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;padding:0 .3em;border-radius:4px;white-space:nowrap}
+.foot{background:#13262D;color:#E3EBEE;padding:36px 0 40px}
+.foot a{color:#fff}
+.foot p{margin:0 0 .6em}
+.foot strong{font-family:var(--serif);font-size:1.15rem}
+.disclaimer{border-top:1px solid rgba(255,255,255,.18);padding-top:16px;margin-top:16px!important;color:#C9D6DA}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;max-width:560px;background:var(--ink);color:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.5}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:8px;font:600 1rem var(--sans);cursor:pointer;border:2px solid #fff}
+.cookie .ok{background:#fff;color:var(--ink)}
+.cookie .no{background:transparent;color:#fff}
+.cookie button:focus-visible{outline-color:#fff}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand">
+      <strong>Amanda Modus</strong>
+      <span>Advogada · OAB/PR 119.898</span>
+    </span>
+  </div>
+</header>
+
+<main>
+  <article class="wrap narrow">
+    <h1>Política de privacidade</h1>
+    <p class="muted">Última atualização: outubro de 2026.</p>
+    <p>Esta política explica, de forma simples, como são tratados os dados pessoais enviados por meio destas páginas, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD).</p>
+
+    <h2>1. Quem é a responsável pelos dados</h2>
+    <div class="box">
+      <p><strong>Amanda Modus</strong>, advogada inscrita na OAB/PR sob o nº 119.898, com escritório em Maringá-PR.</p>
+      <p style="margin:0">Contato para assuntos de privacidade: <a data-email href="#"></a></p>
+    </div>
+
+    <h2>2. Quais dados são coletados</h2>
+    <ul>
+      <li><strong>Dados que você informa no formulário:</strong> respostas sobre o seu caso, cidade e estado, nome, número de WhatsApp e e-mail.</li>
+      <li><strong>Dados de navegação:</strong> páginas visitadas, tipo de dispositivo e navegador, e informações sobre o anúncio que trouxe você até aqui (como identificadores de clique e parâmetros de campanha).</li>
+    </ul>
+    <p>Não pedimos documentos nem dados bancários neste formulário. Evite incluir informações além das solicitadas.</p>
+
+    <h2>3. Para que os dados são usados</h2>
+    <ul>
+      <li>Entrar em contato com você sobre o seu caso, a seu pedido.</li>
+      <li>Fazer a análise inicial sobre a possibilidade de realizar o procedimento em cartório.</li>
+      <li>Medir o desempenho das páginas e dos anúncios, de forma agregada.</li>
+    </ul>
+    <p>Os dados não são vendidos nem usados para outras finalidades.</p>
+
+    <h2>4. Bases legais <mark class="revisar">[REVISAR]</mark></h2>
+    <ul>
+      <li><strong>Consentimento</strong> (art. 7º, I, da LGPD), dado ao marcar a caixa do formulário e ao aceitar os cookies de medição.</li>
+      <li><strong>Procedimentos preliminares relacionados a contrato</strong>, a pedido do titular (art. 7º, V, da LGPD), para a análise inicial do caso.</li>
+    </ul>
+
+    <h2>5. Com quem os dados podem ser compartilhados <mark class="revisar">[REVISAR]</mark></h2>
+    <ul>
+      <li><strong>Google (Google Ads e Google Analytics):</strong> recebem dados de navegação para medir o desempenho dos anúncios e das páginas. Os dados do formulário (nome, telefone e e-mail) não são enviados a essas ferramentas.</li>
+      <li><strong>Ferramenta de recebimento do formulário</strong> [informar o serviço utilizado, por exemplo Make ou Google Planilhas]: armazena as respostas enviadas para que o contato possa ser feito.</li>
+      <li><strong>WhatsApp (Meta):</strong> somente se você decidir iniciar uma conversa pelo botão de WhatsApp.</li>
+    </ul>
+    <p>Algumas dessas ferramentas podem armazenar dados em servidores fora do Brasil, observadas as garantias previstas na LGPD. <mark class="revisar">[REVISAR]</mark></p>
+
+    <h2>6. Por quanto tempo os dados são guardados <mark class="revisar">[REVISAR]</mark></h2>
+    <p>Os dados do formulário são mantidos pelo tempo necessário para o atendimento do seu pedido. Se não houver contratação, são eliminados em até [12] meses, salvo obrigação legal ou regulatória. Se houver contratação, seguem as regras de guarda aplicáveis à atividade da advocacia.</p>
+
+    <h2>7. Cookies</h2>
+    <p>Cookies são pequenos arquivos guardados no seu navegador. Estas páginas usam cookies do Google Analytics e do Google Ads apenas para medição, e somente depois que você os aceita. Se você recusar, a página continua funcionando normalmente, e o Google pode receber apenas sinais sem cookies, sem identificar você.</p>
+    <p><button type="button" class="btn-link" id="mudar-cookies">Alterar minhas preferências de cookies</button></p>
+
+    <h2>8. Seus direitos</h2>
+    <p>Conforme o art. 18 da LGPD, você pode solicitar, a qualquer momento:</p>
+    <ul>
+      <li>confirmação de que seus dados são tratados e acesso a eles;</li>
+      <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+      <li>portabilidade dos dados;</li>
+      <li>informação sobre com quem os dados foram compartilhados;</li>
+      <li>eliminação dos dados tratados com base no consentimento e revogação do consentimento.</li>
+    </ul>
+    <p>Para exercer esses direitos, escreva para <a data-email href="#"></a>. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h2>9. Segurança e sigilo profissional</h2>
+    <p>As informações recebidas são tratadas com medidas de segurança adequadas e protegidas pelo sigilo profissional da advocacia.</p>
+
+    <h2>10. Alterações desta política</h2>
+    <p>Esta política pode ser atualizada. A data da última atualização aparece no início da página.</p>
+
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Amanda Modus</strong> · Advogada · OAB/PR 119.898</p>
+    <p>Maringá-PR · Atendimento 100% online em todo o Brasil</p>
+    <p>E-mail: <a data-email href="#"></a></p>
+    <p class="disclaimer">Conteúdo informativo; não substitui análise jurídica individual.</p>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho desta página e dos anúncios. Você pode aceitar ou recusar.</p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-email]'), function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+  var b = document.getElementById('cookie');
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  if (!salvo) b.hidden = false;
+  Array.prototype.forEach.call(b.querySelectorAll('[data-cookie]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+      try { localStorage.setItem('modus_consent', g); } catch (e) {}
+      gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+      gtag('set', 'ads_data_redaction', g === 'denied');
+      b.hidden = true;
+    });
+  });
+  document.getElementById('mudar-cookies').addEventListener('click', function () {
+    b.hidden = false;
+    b.querySelector('.ok').focus();
+  });
+})();
+</script>
+</body>
+</html>

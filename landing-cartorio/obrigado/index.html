@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 4 páginas (divorcio, inventario, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "55DDDNUMERO",              // só números: 55 + DDD + número. Ex.: 5544999999999
+  EMAIL: "contato@seudominio.com.br",   // e-mail que recebe os contatos e aparece no rodapé
+  ADS_ID: "AW-XXXXXXXXXX",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "XXXXXXXXXXXXXXXXXXXX",    // Google Ads: rótulo da conversão principal (lead)
+  GA4_ID: "G-XXXXXXXXXX",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "",                      // opcional: URL do webhook (usado nas páginas de serviço)
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL"
+};
+</script>
+<title>Recebemos suas respostas | Amanda Modus – OAB/PR 119.898</title>
+<meta name="description" content="Confirmação de envio das respostas do formulário.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F4C5C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F4C5C'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  window.idValido = valido;
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<style>
+:root{
+  --bg:#FAFAF7;--surface:#FFFFFF;--ink:#1C2B33;--muted:#4B5B64;--line:#DCE3E6;
+  --brand:#0F4C5C;--brand-dark:#0A3742;--brand-soft:#E8F1F3;
+  --radius:12px;--shadow:0 1px 2px rgba(16,40,48,.06),0 10px 28px rgba(16,40,48,.07);
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);display:flex;flex-direction:column;min-height:100vh}
+@media (min-width:900px){body{font-size:1.125rem}}
+a{color:var(--brand);text-underline-offset:.15em}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:4px}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,6vw,2.6rem)}
+h2{font-size:1.35rem}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow>*{max-width:780px}
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;min-height:68px;padding-top:8px;padding-bottom:8px}
+.brand{text-decoration:none;color:var(--ink);line-height:1.25}
+.brand strong{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:600}
+.brand span{display:block;font-size:1rem;color:var(--muted)}
+main{flex:1;padding:40px 0 56px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:28px 20px}
+@media (min-width:700px){.card{padding:40px}}
+.selo{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--brand-soft);color:var(--brand);margin-bottom:16px}
+.selo svg{width:28px;height:28px}
+.lead{font-size:1.125rem}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:56px;padding:.8em 1.4em;border-radius:10px;border:2px solid var(--brand);background:var(--brand);color:#fff;font:600 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;width:100%}
+@media (min-width:600px){.btn{width:auto}}
+.btn:hover{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.btn-sec{background:transparent;color:var(--brand)}
+.btn-sec:hover{background:var(--brand-soft);color:var(--brand-dark)}
+.btn svg{width:22px;height:22px;flex:none}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 12px}
+.proximos{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.proximos ol{margin:0;padding-left:1.3em}
+.proximos li{margin-bottom:.5em}
+.foot{background:#13262D;color:#E3EBEE;padding:36px 0}
+.foot a{color:#fff}
+.foot p{margin:0 0 .6em}
+.foot strong{font-family:var(--serif);font-size:1.15rem}
+.disclaimer{border-top:1px solid rgba(255,255,255,.18);padding-top:16px;margin-top:16px!important;color:#C9D6DA}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand">
+      <strong>Amanda Modus</strong>
+      <span>Advogada · OAB/PR 119.898</span>
+    </span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap narrow">
+    <div class="card" id="conteudo">
+      <!-- Conteúdo padrão (acesso direto, sem envio de formulário) -->
+      <div class="selo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h1>Obrigada pelo contato</h1>
+      <p class="lead">Se você já respondeu ao formulário, o retorno é feito pelo contato informado.</p>
+      <p>Se ainda não respondeu, comece pela página do serviço:</p>
+      <div class="acoes">
+        <a class="btn btn-sec" href="../divorcio/#verificar">Divórcio em cartório</a>
+        <a class="btn btn-sec" href="../inventario/#verificar">Inventário em cartório</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Amanda Modus</strong> · Advogada · OAB/PR 119.898</p>
+    <p>Maringá-PR · Atendimento 100% online em todo o Brasil</p>
+    <p>E-mail: <a data-email href="#"></a></p>
+    <p><a href="../privacidade/">Política de privacidade</a></p>
+    <p class="disclaimer">Conteúdo informativo; não substitui análise jurídica individual.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function track(ev, p) { if (DEBUG) console.log('[evento]', ev, p); gtag('event', ev, p); }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-email]'), function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+
+  var lead = null;
+  try { lead = JSON.parse(sessionStorage.getItem('modus_lead') || 'null'); } catch (e) {}
+  if (!lead || (lead.classificacao !== 'QUALIFICADO' && lead.classificacao !== 'REVISAR')) return;
+
+  /* Conversão principal do Google Ads — dispara uma única vez por envio */
+  if (lead.conv_pendente) {
+    var valor = lead.classificacao === 'QUALIFICADO' ? C.VALOR_QUALIFICADO : C.VALOR_REVISAR;
+    if (idValido(C.ADS_ID) && C.ADS_LABEL && !/X{4,}/.test(C.ADS_LABEL)) {
+      gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
+    }
+    if (DEBUG) console.log('[conversão]', lead.classificacao, valor, lead.lead_id);
+    lead.conv_pendente = false;
+    try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
+  }
+
+  /* Mensagens de WhatsApp e e-mail com o resumo das respostas */
+  var linhas = (lead.resumo || []).map(function (r) { return '• ' + r[0] + ': ' + r[1]; }).join('\n');
+  var msg = 'Olá, Dra. Amanda. Preenchi o formulário sobre ' + lead.servico_nome + '.\n' +
+    'Nome: ' + lead.nome + '\n' + linhas + '\n' + 'Gostaria de dar andamento à análise.';
+  var whats = 'https://wa.me/' + String(C.WHATSAPP).replace(/\D/g, '') + '?text=' + encodeURIComponent(msg);
+  var mail = 'mailto:' + C.EMAIL + '?subject=' + encodeURIComponent('Análise de caso – ' + lead.servico_nome) +
+    '&body=' + encodeURIComponent(msg + '\nWhatsApp: ' + lead.whatsapp + '\nE-mail: ' + lead.email);
+
+  var texto = lead.classificacao === 'QUALIFICADO'
+    ? 'Pelas informações enviadas, seu caso apresenta as condições iniciais para ser feito em cartório. A confirmação depende da análise dos documentos.'
+    : 'Alguns pontos do seu caso, como ' + lead.motivo_texto + ', precisam de uma análise mais cuidadosa para confirmar se o procedimento pode ser feito em cartório.';
+
+  var icoChat = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>';
+
+  document.getElementById('conteudo').innerHTML =
+    '<div class="selo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+    '<h1>Recebemos suas respostas</h1>' +
+    '<p class="lead">' + esc(texto) + '</p>' +
+    '<p>Para dar andamento, envie o resumo das suas respostas pelo WhatsApp. A mensagem já vem preenchida, e você pode revisá-la antes de enviar.</p>' +
+    '<div class="acoes"><a class="btn" id="btn-whats" href="' + esc(whats) + '" target="_blank" rel="noopener">' + icoChat + 'Enviar minhas respostas pelo WhatsApp</a>' +
+    (lead.webhook_ok ? '' : '<a class="btn btn-sec" id="btn-mail" href="' + esc(mail) + '">Enviar minhas respostas por e-mail</a>') + '</div>' +
+    '<p class="muted">Seus dados são usados apenas para o contato sobre o seu caso.</p>' +
+    '<div class="proximos"><h2>Próximos passos</h2><ol>' +
+    '<li>A advogada analisa as suas respostas.</li>' +
+    '<li>O contato é feito pelo WhatsApp ou e-mail informado, em dias úteis.</li>' +
+    '<li>Se o caso puder seguir em cartório, você recebe a lista de documentos e a proposta de contrato.</li>' +
+    '</ol></div>';
+
+  document.getElementById('btn-whats').addEventListener('click', function () {
+    track('clique_whatsapp', { servico: lead.servico, classificacao: lead.classificacao, local: 'obrigado' });
+  });
+})();
+</script>
+</body>
+</html>
