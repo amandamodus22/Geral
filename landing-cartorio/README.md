@@ -110,6 +110,16 @@ Para receber um aviso a cada lead, abra o cenário no Make e acrescente um módu
 
 Sem webhook, ou se ele falhar, a `/obrigado/` mostra o botão "Enviar minhas respostas por e-mail" (mailto com o resumo), além do WhatsApp.
 
+## Agendamento online (Calendly)
+
+O evento **"Conversa inicial – divórcio e inventário em cartório"** (30 min, Google Meet), separado do evento de Direito Gamer, fica em:
+`https://calendly.com/amanda-modusadvocacia/conversa-inicial-divorcio-e-inventario-em-cartorio` (`CALENDLY_URL` no bloco de configuração).
+
+- O botão "Agendar conversa por vídeo" aparece só **depois da triagem**: na `/obrigado/` (QUALIFICADO e REVISAR) e na tela de "não cabe em cartório", após o envio dos dados.
+- Nome, e-mail e o resumo das respostas já vão preenchidos no Calendly (parâmetros `name`, `email` e `a1`).
+- O clique gera o evento `clique_agendamento` no GA4.
+- Horários e disponibilidade são ajustados no próprio Calendly.
+
 ## Campanha
 
 Anúncios, palavras-chave, negativas e extensões prontos em [`google-ads.md`](google-ads.md).

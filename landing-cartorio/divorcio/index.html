@@ -11,6 +11,7 @@
    ========================================================================== */
 window.CONFIG = {
   WHATSAPP: "5544988482082",             // só números: 55 + DDD + número. Ex.: 5544999999999
+  CALENDLY_URL: "https://calendly.com/amanda-modusadvocacia/conversa-inicial-divorcio-e-inventario-em-cartorio", // agendamento online (aparece depois da triagem)
   EMAIL: "amanda@modusadvocacia.com.br",  // e-mail que recebe os contatos e aparece no rodapé
   ADS_ID: "AW-XXXXXXXXXX",              // Google Ads: ID da tag (AW-...)
   ADS_LABEL: "XXXXXXXXXXXXXXXXXXXX",    // Google Ads: rótulo da conversão principal (lead)
@@ -395,6 +396,7 @@ legend.q{font:600 1.55rem/1.2 var(--display);letter-spacing:-.025em;padding:0;ma
 .nav{display:flex;flex-direction:row-reverse;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;margin-top:22px}
 .nav .btn{flex:1 1 220px}
 @media (min-width:600px){.nav .btn{flex:0 0 auto}}
+@media (max-width:599px){.nav{flex-direction:column;align-items:stretch;gap:4px}.nav .btn{flex:none;width:100%}.nav .link-btn{align-self:center}}
 .hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
 .seguro{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:1rem;margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}
 .seguro .ico{width:20px;height:20px;margin-top:2px;color:var(--brand)}
@@ -420,15 +422,30 @@ legend.q{font:600 1.55rem/1.2 var(--display);letter-spacing:-.025em;padding:0;ma
 .cookie button:focus-visible{outline-color:#fff}
 
 /* Rodapé */
-.foot{position:relative;background:var(--night);color:var(--on-dark-muted);padding:56px 0 110px;border-top:1px solid rgba(201,182,255,.18)}
-@media (min-width:900px){.foot{padding-bottom:48px}}
-.foot-grid{display:grid;gap:28px}
-@media (min-width:800px){.foot-grid{grid-template-columns:1.2fr 1fr;align-items:end}}
-.foot .brand{color:var(--on-dark);margin-bottom:18px}
-.foot a{color:#fff}
-.foot p{margin:0 0 .5em}
-@media (min-width:800px){.foot-links{text-align:right}}
-.disclaimer{border-top:1px solid rgba(255,255,255,.1);margin:32px 0 0!important;padding-top:20px;color:#A79DBE}
+.foot{position:relative;overflow:hidden;overflow:clip;background:var(--night);color:var(--on-dark-muted);padding:44px 0 100px}
+@media (min-width:900px){.foot{padding:64px 0 44px}}
+.foot::before{content:"";position:absolute;inset:0;background:var(--dots);-webkit-mask-image:radial-gradient(ellipse 60% 80% at 100% 0%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 60% 80% at 100% 0%,#000 10%,transparent 70%);pointer-events:none}
+.foot::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--grad-line);opacity:.7}
+.foot .wrap{position:relative}
+.foot-top{display:grid;gap:14px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.08)}
+@media (min-width:800px){.foot-top{grid-template-columns:auto 1fr;align-items:center;gap:40px}}
+.foot .brand{color:var(--on-dark);text-decoration:none;border:0}
+.foot .brand-oab{font-family:var(--sans);letter-spacing:0}
+.foot-tag{margin:0;max-width:32em}
+.foot-cols{display:grid;gap:22px;padding:26px 0}
+@media (min-width:600px){.foot-cols{grid-template-columns:repeat(3,1fr)}}
+.foot-h{font:500 1rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--lilac);margin:0 0 10px}
+.foot-cols p{margin:0}
+.foot-cols ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot-cols a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(201,182,255,.35);padding-bottom:1px;transition:border-color .2s,color .2s}
+.foot-cols a:hover{color:var(--lilac-2);border-color:var(--lilac)}
+.foot-mail{display:flex;align-items:center;gap:10px;min-width:0}
+.foot-mail .ico{width:20px;height:20px;color:var(--lilac)}
+.foot-mail a{overflow-wrap:anywhere}
+.disclaimer{display:flex;gap:10px;align-items:flex-start;margin:0;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#B3A9C8}
+.disclaimer .ico{width:20px;height:20px;margin-top:2px;color:var(--lilac)}
+.foot-copy{margin:16px 0 0;color:#8E84A6}
+@media (max-width:599px){.sec-form{padding-bottom:48px}}
 
 /* Movimento (desligado para quem prefere menos animação) */
 @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
@@ -706,17 +723,30 @@ legend.q{font:600 1.55rem/1.2 var(--display);letter-spacing:-.025em;padding:0;ma
 <!-- 10. Rodapé -->
 <footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot-top">
+      <a class="brand" href="#topo"><span class="mono" aria-hidden="true">AM</span><span><span class="brand-nome">Amanda Modus</span><span class="brand-oab">Advogada · OAB/PR 119.898</span></span></a>
+      <p class="foot-tag">Divórcio e inventário em cartório, 100% online, com acompanhamento de advogada do início ao fim.</p>
+    </div>
+    <div class="foot-cols">
       <div>
-        <a class="brand" href="#topo"><span class="mono" aria-hidden="true">AM</span><span><span class="brand-nome">Amanda Modus</span><span class="brand-oab">Advogada · OAB/PR 119.898</span></span></a>
-        <p>Maringá-PR · Atendimento 100% online em todo o Brasil</p>
+        <p class="foot-h">Contato</p>
+        <p class="foot-mail"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg><a data-email href="#"></a></p>
       </div>
-      <div class="foot-links">
-        <p>E-mail: <a data-email href="#"></a></p>
-        <p><a href="../privacidade/">Política de privacidade</a></p>
+      <div>
+        <p class="foot-h">Atendimento</p>
+        <p>Escritório em Maringá-PR<br>Online em todo o Brasil</p>
+      </div>
+      <div>
+        <p class="foot-h">Páginas</p>
+        <ul>
+          <li><a href="../divorcio/">Divórcio em cartório</a></li>
+          <li><a href="../inventario/">Inventário em cartório</a></li>
+          <li><a href="../privacidade/">Política de privacidade</a></li>
+        </ul>
       </div>
     </div>
-    <p class="disclaimer">Conteúdo informativo; não substitui análise jurídica individual.</p>
+    <p class="disclaimer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Conteúdo informativo; não substitui análise jurídica individual.</span></p>
+    <p class="foot-copy">© 2026 Amanda Modus · OAB/PR 119.898</p>
   </div>
 </footer>
 
@@ -1016,7 +1046,7 @@ var PAGINA = {
     $$('fieldset.step', areaPassos).forEach(function (fs) { fs.hidden = fs.getAttribute('data-id') !== id; });
     var fs = elPasso(id);
     var voltar = $('[data-acao="voltar"]', fs);
-    voltar.style.visibility = (historico.length || modo === 'nao_cabe') ? 'visible' : 'hidden';
+    voltar.hidden = !(historico.length || modo === 'nao_cabe');
     var p = passo(id);
     if (p.tipo === 'contato') $('.q', fs).textContent = modo === 'nao_cabe' ? p.perguntaNaoCabe : p.pergunta;
     progresso.hidden = modo === 'nao_cabe';
@@ -1143,6 +1173,7 @@ var PAGINA = {
     if (a === 'avaliar') avaliar();
     if (a === 'revisar') revisar();
     if (a === 'whatsapp') track('clique_whatsapp', { classificacao: 'NAO_CABE', local: 'formulario' });
+    if (a === 'agenda') track('clique_agendamento', { classificacao: 'NAO_CABE', local: 'formulario' });
   });
   form.addEventListener('input', function (e) {
     if (e.target.name !== 'whatsapp') return;
@@ -1260,8 +1291,9 @@ var PAGINA = {
     form.hidden = true;
     resultado.hidden = false;
     resultado.innerHTML = '<div class="result" tabindex="-1"><h3>Recebemos seus dados</h3>' +
-      '<p>Sua situação será analisada, e o retorno é feito pelo contato informado. Se preferir, você também pode enviar uma mensagem com o resumo das suas respostas.</p>' +
+      '<p>Sua situação será analisada, e o retorno é feito pelo contato informado. Se preferir, envie uma mensagem com o resumo das suas respostas ou agende uma conversa por vídeo.</p>' +
       '<div class="acoes"><a class="btn btn-sec" data-acao="whatsapp" href="' + esc(linkWhats(msg)) + '" target="_blank" rel="noopener">Enviar mensagem pelo WhatsApp</a>' +
+      (C.CALENDLY_URL ? '<a class="btn btn-sec" data-acao="agenda" href="' + esc(C.CALENDLY_URL + '?name=' + encodeURIComponent(lead.nome) + '&email=' + encodeURIComponent(lead.email) + '&a1=' + encodeURIComponent('Avaliação (' + lead.servico_nome + '):\n' + textoResumo(lead)) + '&utm_source=site-cartorio&utm_medium=nao-cabe&utm_campaign=' + P.servico) + '" target="_blank" rel="noopener">Agendar conversa por vídeo</a>' : '') +
       (lead.webhook_ok ? '' : '<a class="link-btn" href="' + esc(mail) + '">Enviar por e-mail</a>') + '</div></div>';
     $('.result', resultado).focus({ preventScroll: true });
   }
