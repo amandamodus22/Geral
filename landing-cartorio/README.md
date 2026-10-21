@@ -38,7 +38,7 @@ Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server
 
 ## Visual e interações
 
-- **Paleta:** verde-esmeralda profundo, dourado champanhe e creme quente. As cores ficam em variáveis no início do CSS de cada página (`--brand`, `--night`, `--gold`...).
+- **Paleta:** lilás e ameixa profundo, com detalhes em dourado champanhe sobre fundo marfim. As cores ficam em variáveis no início do CSS de cada página (`--brand`, `--night`, `--gold`...).
 - **Tipografia:** títulos em Newsreader (licença SIL OFL, hospedada em `fonts/`, sem Google Fonts); textos na fonte do sistema.
 - **Interações:**
   - barra de progresso de leitura no topo da tela;
@@ -47,6 +47,7 @@ Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server
   - ilustração flutuante que reage ao mouse;
   - linha do tempo que se desenha;
   - lista de requisitos clicável, que mostra um atalho para a triagem quando todos os itens são marcados.
+- **Celular:** layout pensado primeiro para o celular (testado em 320, 360 e 390 px), com barra fixa "Verificar meu caso" e aviso de cookies que só aparece depois da primeira rolagem, para não cobrir o botão principal.
 - **Acessibilidade:** quem ativa "reduzir movimento" no sistema vê tudo sem animação. Sem JavaScript, o conteúdo aparece normalmente.
 
 ## 3. Google Ads: conversão
