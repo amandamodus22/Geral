@@ -27,10 +27,16 @@ Páginas independentes para Google Ads (rede de pesquisa). Cada arquivo HTML tem
 
 Endereço definido: **https://cartorio.modusadvocacia.com.br** (subdomínio sem acento). As páginas não citam o site principal; o endereço já está nas tags `canonical` das páginas.
 
-1. Publique a pasta `landing-cartorio/` inteira como raiz do site, **incluindo a pasta `fonts/`**, em qualquer hospedagem estática: Netlify, Vercel, Cloudflare Pages, Hostinger etc.
-2. No painel de DNS de `modusadvocacia.com.br`, crie um registro **CNAME** com nome `cartorio`, apontando para o endereço que a hospedagem indicar (por exemplo `cname.vercel-dns.com` na Vercel, ou `seu-site.netlify.app` no Netlify).
-3. Ative o HTTPS (certificado automático) na hospedagem.
-4. A raiz `cartorio.modusadvocacia.com.br/` não tem página. Se quiser, configure na hospedagem um redirecionamento de `/` para `/divorcio/`.
+1. **Hospedagem:** projeto `cartorio-online` na sua conta da Vercel, publicando a pasta `landing-cartorio/` (configuração em `vercel.json`: `/` redireciona para `/divorcio/`, e as fontes ficam em cache). O `README.md` e o `google-ads.md` não são publicados (`.vercelignore`).
+2. **DNS (Cloudflare):** o domínio `modusadvocacia.com.br` usa o DNS do Cloudflare.
+   1. Entre em dash.cloudflare.com → selecione `modusadvocacia.com.br` → **DNS** → **Records** → **Add record**.
+   2. Preencha:
+      - **Type:** CNAME
+      - **Name:** `cartorio`
+      - **Target:** `cname.vercel-dns.com`
+      - **Proxy status:** desligado (nuvem cinza, "DNS only")
+   3. Salve. O site principal não é afetado.
+3. O HTTPS é emitido automaticamente pela Vercel depois que o DNS propaga.
 
 Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server`) e abra `http://localhost:3000/divorcio/?debug=1`. Com `?debug=1`, todos os eventos aparecem no console do navegador.
 
@@ -92,25 +98,21 @@ Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server
 
 **Consentimento:** o banner de cookies usa o Consent Mode v2. Tudo começa como "negado" e muda para "concedido" quando a pessoa clica em Aceitar. O formulário funciona com ou sem aceite.
 
-## 5. Webhook (recebimento dos leads)
+## 5. Recebimento dos leads (já configurado no Make)
 
-Sugestão com Make:
+Já está criado e ativo na sua conta do Make (equipe "My Team"):
 
-1. Crie um cenário com o módulo **Webhooks → Custom webhook** e copie a URL para `WEBHOOK_URL`.
-2. Envie um lead de teste para o Make aprender a estrutura dos dados.
-3. Adicione **Google Sheets → Add a row** (uma linha por lead) e, se quiser, um aviso por e-mail ou WhatsApp para você.
+- **Cenário:** "Leads – cartório online". Recebe o formulário, grava o lead e responde ao site.
+- **Webhook:** `https://hook.us2.make.com/h2ykw2j3wkuyjyx7sl513ear7729nk1t` (já está em `WEBHOOK_URL` nas 4 páginas).
+- **Banco de leads:** Make → **Data stores** → "Leads – cartório online". Cada lead vira uma linha com nome, WhatsApp, e-mail, classificação, pontos a revisar, resumo das respostas, cidade/UF, gclid e palavra-chave. O lead é gravado pelo `lead_id`, então um envio repetido não duplica.
 
-Os dados chegam como formulário (`application/x-www-form-urlencoded`) com os campos:
+Para receber um aviso a cada lead, abra o cenário no Make e acrescente um módulo de **e-mail ou Gmail** depois do "Add/replace a record". O Make vai pedir para você conectar a sua conta, e só você pode fazer isso.
 
-- **Identificação e classificação:** `lead_id`, `servico`, `classificacao` (QUALIFICADO / REVISAR / NAO_CABE), `motivo`, `motivo_texto`
-- **Contato:** `nome`, `whatsapp`, `email`, `cidade`, `uf`, `uf_bens`
-- **Respostas:** cada resposta como `resp_<pergunta>`, mais `resumo` (texto pronto com todas as respostas)
-- **Atribuição:** `gclid`, `gbraid`, `wbraid`, `utm_*`, `pagina_origem`, `referrer`
-- **Consentimento e data:** `consentimento`, `consentimento_texto`, `data_hora`
+Sem webhook, ou se ele falhar, a `/obrigado/` mostra o botão "Enviar minhas respostas por e-mail" (mailto com o resumo), além do WhatsApp.
 
-Se o webhook não responder, a página faz uma segunda tentativa. Por isso, **ignore `lead_id` repetido** (no Make, use um filtro ou um Data store).
+## Campanha
 
-Sem webhook configurado, ou se ele falhar, a `/obrigado/` mostra o botão "Enviar minhas respostas por e-mail" (mailto com o resumo), além do WhatsApp.
+Anúncios, palavras-chave, negativas e extensões prontos em [`google-ads.md`](google-ads.md).
 
 ## 6. Lógica de classificação
 
