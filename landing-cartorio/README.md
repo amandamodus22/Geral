@@ -20,7 +20,7 @@ Páginas independentes para Google Ads (rede de pesquisa). Cada arquivo HTML tem
    - `GA4_ID`: veja o item 4.
    - `WEBHOOK_URL`: veja o item 5.
    - `PERGUNTA_GRAVIDEZ`: só na página de divórcio. Fica `false` por padrão; se ativar, revise a política de privacidade, porque essa informação é dado de saúde (dado sensível na LGPD).
-2. **[REVISAR]:** procure `[REVISAR]` nos 4 arquivos. Cada marca aparece na página como uma etiqueta amarela. Confira o texto jurídico ao lado e apague a marca (`<mark class="revisar">[REVISAR]</mark>`). Na política de privacidade, preencha também os trechos entre colchetes (serviço do webhook e prazo de guarda).
+2. **Revisão jurídica:** concluída e aprovada pela advogada em 21/10/2026 (etiquetas [REVISAR] removidas).
 3. **Foto:** já incluída (`foto-amanda-modus.webp`, 368×368, 14 KB). Para trocar, substitua esse arquivo mantendo o nome.
 
 ## 2. Hospedagem e domínio
