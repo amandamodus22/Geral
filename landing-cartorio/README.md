@@ -23,11 +23,31 @@ Páginas independentes para Google Ads (rede de pesquisa). Cada arquivo HTML tem
 2. **[REVISAR]:** procure `[REVISAR]` nos 4 arquivos. Cada marca aparece na página como uma etiqueta amarela. Confira o texto jurídico ao lado e apague a marca (`<mark class="revisar">[REVISAR]</mark>`). Na política de privacidade, preencha também os trechos entre colchetes (serviço do webhook e prazo de guarda).
 3. **[FOTO]:** em "Sobre a advogada", substitua `<div class="photo" aria-hidden="true">AM</div>` pelo `<img>` indicado no comentário logo acima. Use foto quadrada, em `.webp`, com até 40 KB.
 
-## 2. Hospedagem
+## 2. Hospedagem e domínio
 
-Funciona em qualquer hospedagem estática: Netlify, Vercel, Cloudflare Pages, Hostinger etc. Publique a pasta `landing-cartorio/` como raiz do site. Os links entre páginas são relativos, então também funcionam dentro de uma subpasta.
+Endereço definido: **https://cartorio.modusadvocacia.com.br** (subdomínio sem acento). As páginas não citam o site principal; o endereço já está nas tags `canonical` das páginas.
+
+1. Publique a pasta `landing-cartorio/` inteira como raiz do site, **incluindo a pasta `fonts/`**, em qualquer hospedagem estática: Netlify, Vercel, Cloudflare Pages, Hostinger etc.
+2. No painel de DNS de `modusadvocacia.com.br`, crie um registro **CNAME** com nome `cartorio`, apontando para o endereço que a hospedagem indicar (por exemplo `cname.vercel-dns.com` na Vercel, ou `seu-site.netlify.app` no Netlify).
+3. Ative o HTTPS (certificado automático) na hospedagem.
+4. A raiz `cartorio.modusadvocacia.com.br/` não tem página. Se quiser, configure na hospedagem um redirecionamento de `/` para `/divorcio/`.
 
 Para testar localmente: `npx serve landing-cartorio` (ou `python3 -m http.server`) e abra `http://localhost:3000/divorcio/?debug=1`. Com `?debug=1`, todos os eventos aparecem no console do navegador.
+
+**GA4:** como o domínio é compartilhado com o site principal, recomendo uma **propriedade GA4 separada** para estas páginas, para não misturar os dados. A conta do Google Ads pode ser a mesma.
+
+## Visual e interações
+
+- **Paleta:** verde-esmeralda profundo, dourado champanhe e creme quente. As cores ficam em variáveis no início do CSS de cada página (`--brand`, `--night`, `--gold`...).
+- **Tipografia:** títulos em Newsreader (licença SIL OFL, hospedada em `fonts/`, sem Google Fonts); textos na fonte do sistema.
+- **Interações:**
+  - barra de progresso de leitura no topo da tela;
+  - topo que fica fixo e claro ao rolar (desktop);
+  - conteúdo que surge suavemente ao rolar;
+  - ilustração flutuante que reage ao mouse;
+  - linha do tempo que se desenha;
+  - lista de requisitos clicável, que mostra um atalho para a triagem quando todos os itens são marcados.
+- **Acessibilidade:** quem ativa "reduzir movimento" no sistema vê tudo sem animação. Sem JavaScript, o conteúdo aparece normalmente.
 
 ## 3. Google Ads: conversão
 

@@ -19,6 +19,8 @@ window.CONFIG = {
 </script>
 <title>Política de privacidade | Amanda Modus – OAB/PR 119.898</title>
 <meta name="description" content="Como os dados pessoais enviados nestas páginas são tratados, conforme a Lei Geral de Proteção de Dados (LGPD).">
+<link rel="canonical" href="https://cartorio.modusadvocacia.com.br/privacidade/">
+<link rel="preload" href="../fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="theme-color" content="#0F4C5C">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F4C5C'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
 <script>
@@ -46,6 +48,8 @@ window.CONFIG = {
 })();
 </script>
 <style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/newsreader-500.woff2") format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:500;font-display:swap;src:url("../fonts/newsreader-500-italic.woff2") format("woff2")}
 :root{
   --bg:#FAFAF7;--surface:#FFFFFF;--ink:#1C2B33;--muted:#4B5B64;--line:#DCE3E6;
   --brand:#0F4C5C;--brand-dark:#0A3742;--brand-soft:#E8F1F3;
@@ -70,18 +74,14 @@ li{margin-bottom:.35em}
 .top{background:var(--surface);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;min-height:68px;padding-top:8px;padding-bottom:8px}
 .brand{text-decoration:none;color:var(--ink);line-height:1.25}
-.brand strong{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:600}
-.brand span{display:block;font-size:1rem;color:var(--muted)}
 main{padding:40px 0 56px}
 .muted{color:var(--muted)}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 1em}
 .btn-link{display:inline-flex;align-items:center;min-height:48px;padding:.6em 1.2em;border:2px solid var(--brand);border-radius:10px;background:transparent;color:var(--brand);font:600 1rem var(--sans);cursor:pointer}
 .btn-link:hover{background:var(--brand-soft)}
 mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;padding:0 .3em;border-radius:4px;white-space:nowrap}
-.foot{background:#13262D;color:#E3EBEE;padding:36px 0 40px}
 .foot a{color:#fff}
 .foot p{margin:0 0 .6em}
-.foot strong{font-family:var(--serif);font-size:1.15rem}
 .disclaimer{border-top:1px solid rgba(255,255,255,.18);padding-top:16px;margin-top:16px!important;color:#C9D6DA}
 .cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;max-width:560px;background:var(--ink);color:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .cookie p{margin:0 0 12px;font-size:1rem;line-height:1.5}
@@ -90,6 +90,33 @@ mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;pad
 .cookie .ok{background:#fff;color:var(--ink)}
 .cookie .no{background:transparent;color:#fff}
 .cookie button:focus-visible{outline-color:#fff}
+
+/* Identidade visual (igual às páginas de serviço) */
+:root{--bg:#F7F2EA;--surface:#FFFDF9;--ink:#132321;--muted:#4F5F5C;--line:#E5DCCD;--brand:#1B5C57;--brand-dark:#123F3C;--brand-soft:#E4EFEB;--night:#0B2322;--gold:#C9A66B;--gold-light:#E3C994;--gold-dark:#7E5F2C;--gold-soft:#F3E9D7;--on-dark:#FBF6EC;--on-dark-muted:#C2D3CE;--serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --grad-gold:linear-gradient(135deg,#ECD5A4 0%,#C9A66B 52%,#B48D55 100%);
+  --grad-night:radial-gradient(820px 520px at 88% 12%,rgba(201,166,107,.20),rgba(201,166,107,0) 60%),radial-gradient(760px 560px at -5% 105%,rgba(47,130,118,.38),rgba(47,130,118,0) 62%),linear-gradient(160deg,#0A201F 0%,#113533 55%,#0B2726 100%)}
+body{-webkit-font-smoothing:antialiased}
+:focus-visible{outline-color:var(--brand)}
+h1,h2{font-weight:500;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--brand)}
+.wrap{max-width:1160px}
+@media (min-width:700px){.wrap{padding:0 32px}}
+.top{background:var(--night);color:var(--on-dark);border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;line-height:1.2}
+.brand .mono{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--grad-gold);color:var(--night);font:500 1.2rem/1 var(--serif);letter-spacing:.03em;flex:none}
+.brand .brand-nome{display:block;font:500 1.35rem/1.1 var(--serif);color:inherit}
+.brand .brand-oab{display:block;font-size:1rem;color:var(--on-dark-muted);white-space:nowrap}
+.foot{background:var(--night);color:var(--on-dark-muted);padding:48px 0;border-top:1px solid rgba(227,201,148,.2)}
+.foot .brand{color:var(--on-dark);margin:0 0 16px}
+.disclaimer{color:#A9BCB7;border-color:rgba(255,255,255,.12)!important}
+h1{font-size:clamp(2.2rem,7vw,3.2rem);line-height:1.05}
+h2{font-size:1.6rem}
+h2::before{content:"";display:block;width:32px;height:2px;background:var(--gold);margin-bottom:14px}
+.box{border-radius:16px;border-color:var(--line);background:var(--surface)}
+.btn-link{border-color:var(--brand);color:var(--brand)}
+.cookie{background:var(--night);border:1px solid rgba(227,201,148,.25)}
+.cookie .ok{background:var(--grad-gold);border-color:transparent;color:var(--night)}
 </style>
 </head>
 <body>
@@ -97,8 +124,8 @@ mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;pad
 <header class="top">
   <div class="wrap">
     <span class="brand">
-      <strong>Amanda Modus</strong>
-      <span>Advogada · OAB/PR 119.898</span>
+      <span class="mono" aria-hidden="true">AM</span>
+      <span><span class="brand-nome">Amanda Modus</span><span class="brand-oab">Advogada · OAB/PR 119.898</span></span>
     </span>
   </div>
 </header>
@@ -174,7 +201,7 @@ mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;pad
 
 <footer class="foot">
   <div class="wrap">
-    <p><strong>Amanda Modus</strong> · Advogada · OAB/PR 119.898</p>
+    <p class="brand"><span class="mono" aria-hidden="true">AM</span><span><span class="brand-nome">Amanda Modus</span><span class="brand-oab">Advogada · OAB/PR 119.898</span></span></p>
     <p>Maringá-PR · Atendimento 100% online em todo o Brasil</p>
     <p>E-mail: <a data-email href="#"></a></p>
     <p class="disclaimer">Conteúdo informativo; não substitui análise jurídica individual.</p>
