@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 3 páginas (início, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "5544988482082",             // só números: 55 + DDD + número
+  EMAIL: "amanda@modusadvocacia.com.br",  // e-mail de contato (rodapé e envio alternativo)
+  ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "XXXXXXXXXXXX",             // Google Ads: rótulo da conversão "Lead – bancário PJ" (criar no Ads e colar aqui)
+  GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "https://hook.us2.make.com/n3sjr2173n7svw4di6fx70qd9luse8mm", // Make: cenário "Leads – bancário PJ"
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL"
+};
+</script>
+<title>Dívidas bancárias de pequenas empresas | Advogada OAB/PR 119.898</title>
+<meta name="description" content="Análise jurídica, plano e negociação das dívidas bancárias de ME e EPP: capital de giro, Pronampe, execução e aval. Atendimento online em todo o Brasil.">
+<link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0B1E33">
+<link rel="canonical" href="https://bancario.modusadvocacia.com.br/">
+<meta property="og:url" content="https://bancario.modusadvocacia.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Dívidas bancárias da sua pequena empresa com análise jurídica, plano e negociação">
+<meta property="og:description" content="Mapeamos os empréstimos da empresa, conferimos cada contrato e negociamos com os bancos. Atendimento online para ME e EPP de todo o Brasil.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1E33'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%235FD3B6' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Modus Advocacia – Amanda Regina Gonçalves Modus",
+  "description": "Análise jurídica, plano e negociação de dívidas bancárias de microempresas e empresas de pequeno porte.",
+  "serviceType": "Direito bancário para pequenas empresas (gestão de passivo bancário)",
+  "url": "https://bancario.modusadvocacia.com.br/",
+  "telephone": "+55-44-98848-2082",
+  "email": "amanda@modusadvocacia.com.br",
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "address": { "@type": "PostalAddress", "streetAddress": "R. Quebec, 326 - Jardim Canadá", "addressLocality": "Maringá", "addressRegion": "PR", "postalCode": "87080-560", "addressCountry": "BR" },
+  "identifier": { "@type": "PropertyValue", "propertyID": "OAB/PR", "value": "119.898" },
+  "founder": { "@type": "Person", "name": "Amanda Regina Gonçalves Modus", "jobTitle": "Advogada", "identifier": "OAB/PR 119.898" },
+  "availableLanguage": "pt-BR"
+}
+</script>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("/fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/inter-600.woff2") format("woff2")}
+:root{
+  --navy:#0B1E33;--navy-2:#12304F;--navy-line:#23476E;--navy-head-line:#1E3550;--navy-deep:#081626;
+  --green:#12A383;--green-ink:#062A22;--green-dark:#0B6B58;--green-darker:#084F41;--mint:#5FD3B6;
+  --ink:#13253A;--muted:#44576B;--line:#DCE4EC;--field:#A9B8C7;--soft:#F3F6F9;
+  --on-navy-2:#DCE6F0;--on-navy-3:#C9D6E3;--on-navy-4:#A9B8C7;
+  --err:#B42335;
+  --display:Manrope,Inter,system-ui,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;overflow-x:clip;background:#fff;color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--green-dark)}
+a:hover{color:var(--green-darker)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);margin:0;color:inherit}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.nw{white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 24px}}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:8px 12px;z-index:70}
+.skip:focus{left:16px}
+.ico{width:22px;height:22px;flex:none}
+@media (min-width:900px){section[id]{scroll-margin-top:78px}}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:10px;border:0;background:var(--green);color:var(--green-ink);font:700 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;transition:background .2s}
+.btn:hover{background:#17B893;color:var(--green-ink)}
+.btn[disabled]{opacity:.7;cursor:wait}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--mint);font-weight:600}
+.btn-ghost:hover{background:rgba(95,211,182,.12);color:#fff}
+.btn-sm{min-height:44px;padding:10px 18px;border-radius:8px;font-size:1rem;font-weight:600}
+
+/* Topo */
+.top{background:var(--navy);border-bottom:1px solid var(--navy-head-line);color:#fff}
+@media (min-width:900px){.top{position:sticky;top:0;z-index:40}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#fff}
+.brand:hover{color:#fff}
+.brand-nome{font:800 1.25rem/1.15 var(--display);letter-spacing:.02em}
+.brand-sub{font-size:1rem;color:#B9C8D8;line-height:1.3}
+.menu{display:flex;align-items:center;gap:24px}
+.menu a{color:var(--on-navy-2);text-decoration:none;font-size:1rem}
+.menu a:hover{color:#fff}
+.menu .btn{color:var(--green-ink)}
+@media (max-width:899px){.menu a:not(.btn){display:none}}
+@media (max-width:599px){.menu{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff}
+.hero .wrap{display:grid;gap:40px;padding-top:44px;padding-bottom:56px;align-items:center}
+@media (min-width:960px){.hero .wrap{grid-template-columns:1.6fr 1fr;gap:48px;padding-top:72px;padding-bottom:88px}}
+.eyebrow{font-size:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green-dark);margin-bottom:14px}
+.hero .eyebrow,.navy .eyebrow{color:var(--mint)}
+.hero h1{font-size:clamp(2.1rem,7.2vw,3.25rem);line-height:1.08;font-weight:800;letter-spacing:-.01em;margin-bottom:22px}
+.hero-sub{font-size:1.1875rem;line-height:1.6;color:var(--on-navy-3);max-width:620px;margin-bottom:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:599px){.cta-row .btn{width:100%}}
+.hero-oab{margin-top:22px;font-size:1rem;color:#9FB3C8}
+@media (max-width:599px){.hero .wrap{padding-top:28px;gap:32px}.hero .eyebrow{margin-bottom:10px}.hero h1{font-size:1.875rem;margin-bottom:14px}.hero-sub{font-size:1.0625rem;line-height:1.55;margin-bottom:20px}.cta-row{gap:10px}.hero-oab{margin-top:16px}}
+.hero-card{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;gap:16px}
+@media (min-width:700px){.hero-card{padding:32px}}
+.hero-card h2{font-size:1.375rem;font-weight:700;color:#fff}
+.hero-card ul{display:grid;gap:14px}
+.hero-card li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;line-height:1.5;color:var(--on-navy-2)}
+.hero-card li svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--mint)}
+
+/* Seções */
+.sec{padding:64px 0}
+@media (min-width:900px){.sec{padding:88px 0}}
+.soft{background:var(--soft)}
+.navy{background:var(--navy);color:#fff}
+.sec h2{font-size:clamp(1.85rem,5vw,2.5rem);line-height:1.15;font-weight:800;letter-spacing:-.01em;max-width:760px}
+.sec-lead{font-size:1.125rem;line-height:1.6;color:var(--muted);margin-top:12px;max-width:760px}
+.navy .sec-lead{color:var(--on-navy-3)}
+.sec-head{margin-bottom:36px}
+
+/* Cartões */
+.grid3{display:grid;gap:16px}
+@media (min-width:700px){.grid3{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media (min-width:1000px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px}
+@media (min-width:700px){.card.srv{padding:28px}}
+.card svg{width:26px;height:26px;color:var(--green-dark)}
+.card h3{font-size:1.1875rem;line-height:1.3;font-weight:700}
+.card p{font-size:1rem;line-height:1.6;color:var(--muted)}
+.card .num{font:700 1rem/1 var(--display);color:var(--green-dark);letter-spacing:.04em;margin-bottom:4px}
+
+/* Etapas */
+.steps{display:grid;gap:16px}
+@media (min-width:700px){.steps{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media (min-width:1100px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step-card{background:var(--navy-2);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.step-card b{font:800 2.5rem/1 var(--display);color:var(--mint);margin-bottom:6px}
+.step-card h3{font-size:1.3125rem;font-weight:700;color:#fff}
+.step-card p{font-size:1rem;line-height:1.6;color:var(--on-navy-3)}
+
+/* Antes de assinar */
+.split{display:grid;gap:28px}
+@media (min-width:960px){.split{grid-template-columns:1fr 1.6fr;gap:48px;align-items:start}}
+.split .sec-lead{margin-top:16px}
+.mini{display:grid;gap:16px}
+@media (min-width:600px){.mini{grid-template-columns:repeat(2,1fr)}}
+.mini div{background:var(--soft);border-radius:12px;padding:22px}
+.mini h3{font-size:1.0625rem;font-weight:700;margin-bottom:6px}
+.mini p{font-size:1rem;line-height:1.55;color:var(--muted)}
+
+/* Quem atende */
+.about{display:grid;gap:28px;align-items:center}
+@media (min-width:800px){.about{grid-template-columns:300px 1fr;gap:48px}}
+.foto{width:100%;max-width:300px;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--line)}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.about h2{margin-bottom:8px}
+.cred{font-weight:600;color:var(--green-dark);margin-bottom:16px}
+.about p+p{margin-top:12px}
+.about .bio{color:var(--muted);line-height:1.7}
+
+/* Dúvidas */
+.faq{max-width:880px;margin:0 auto}
+.faq h2{margin-bottom:24px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:700 1.125rem/1.4 var(--display);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:700 1.5rem/1 var(--sans);color:var(--green-dark);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 0 22px;color:var(--muted);line-height:1.7}
+
+/* Contato */
+.contato .wrap{display:grid;gap:32px}
+@media (min-width:960px){.contato .wrap{grid-template-columns:1fr 1.9fr;gap:48px;align-items:start}}
+.contato h2{color:#fff}
+.alt-whats{margin-top:20px;color:var(--on-navy-4);font-size:1rem}
+.alt-whats a{color:var(--mint)}
+.alt-whats a:hover{color:#fff}
+.form-card{overflow:hidden;overflow:clip;background:#fff;color:var(--ink);border-radius:16px;padding:24px 20px;scroll-margin-top:90px}
+@media (min-width:700px){.form-card{padding:32px}}
+.fgrid{display:grid;gap:0 18px}
+@media (min-width:640px){.fgrid{grid-template-columns:1fr 1fr}}
+.field{margin:0 0 16px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:1rem;font-weight:600;margin-bottom:6px}
+.field label small{font-size:1rem;font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{display:block;width:100%;min-height:48px;padding:10px 14px;font:inherit;font-size:1.0625rem;color:var(--ink);background:#fff;border:1px solid var(--field);border-radius:8px}
+.field select{appearance:none;-webkit-appearance:none;padding-right:44px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2313253A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/18px 18px}
+.field textarea{min-height:96px;resize:vertical;line-height:1.5}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-dark);outline:none;box-shadow:0 0 0 3px rgba(11,107,88,.2)}
+.field [aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 1px var(--err)}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:4px 0 8px;cursor:pointer;font-size:1rem;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--green-dark)}
+.err{color:var(--err);font-weight:600;margin:10px 0 0}
+.form-card .enviar{margin-top:18px;width:100%;background:var(--green-dark);color:#fff;border-radius:8px}
+.form-card .enviar:hover{background:var(--green-darker);color:#fff}
+@media (min-width:640px){.form-card .enviar{width:auto}}
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+.seguro{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:1rem;margin:20px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.seguro svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--green-dark)}
+
+/* Rodapé */
+.foot{background:var(--navy-deep);color:var(--on-navy-4);padding:40px 0 100px}
+@media (min-width:900px){.foot{padding:48px 0}}
+.foot .wrap{display:grid;gap:24px}
+@media (min-width:800px){.foot .wrap{grid-template-columns:1.2fr 1fr;align-items:start}}
+.foot-brand{font:800 1.125rem/1.2 var(--display);letter-spacing:.02em;color:#fff;margin-bottom:10px}
+.foot p{line-height:1.7}
+.foot p+p{margin-top:6px}
+.foot a{color:#fff}
+[data-email]{overflow-wrap:anywhere}
+.foot a:hover{color:var(--mint)}
+@media (min-width:800px){.foot .lado{text-align:right}}
+
+/* Barra fixa (celular) e cookies */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(11,30,51,.96);border-top:1px solid var(--navy-line);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility .25s}
+.sticky-cta.show{transform:none;visibility:visible}
+.sticky-cta .btn{width:100%}
+@media (min-width:900px){.sticky-cta{display:none}}
+.has-cookie .sticky-cta{display:none}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:540px;background:var(--navy);color:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px}}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+.cookie a{color:var(--mint)}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:8px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.6)}
+.cookie .ok{background:var(--green);border-color:var(--green);color:var(--green-ink)}
+.cookie .no{background:transparent;color:#fff}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <span class="brand-nome">MODUS ADVOCACIA</span>
+      <span class="brand-sub">Direito bancário para pequenas empresas</span>
+    </a>
+    <nav class="menu" aria-label="Seções da página">
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-sm" href="#contato">Enviar meu caso</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 1. Topo -->
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Gestão de passivo bancário · <span class="nw">ME e EPP</span></p>
+        <h1>Dívidas bancárias da sua pequena empresa com análise jurídica, plano e negociação.</h1>
+        <p class="hero-sub">Mapeamos todos os empréstimos da empresa, conferimos cada contrato e negociamos com os bancos uma proposta que caiba no caixa. Atendimento online para pequenas empresas de todo o Brasil, a partir de Maringá-PR.</p>
+        <div class="cta-row">
+          <a class="btn" id="hero-cta" href="#contato">Enviar dados do caso</a>
+          <a class="btn btn-ghost" data-whats="hero" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a>
+        </div>
+        <p class="hero-oab">Advogada Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      </div>
+      <aside class="hero-card" aria-labelledby="t-quem">
+        <h2 id="t-quem">Para quem é</h2>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Microempresas e empresas de pequeno porte (ME e EPP)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Dívidas bancárias somando a partir de <span class="nw">R$ 50 mil</span></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Empréstimos em um ou mais bancos: capital de giro, Pronampe, conta garantida, cheque especial PJ</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Parcelas em dia mas apertando o caixa, ou já em atraso</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 2. Situações -->
+  <section class="sec soft" id="situacoes" aria-labelledby="t-sit">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="t-sit">Alguma dessas situações é a da sua empresa?</h2>
+        <p class="sec-lead">São os casos mais comuns de pequenas empresas que chegam com dívidas bancárias.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg><h3>Parcelas que não cabem no caixa</h3><p>Capital de giro tomado para cobrir outro empréstimo, e a conta não fecha mais.</p></div>
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><h3>Vendas no cartão retidas pelo banco</h3><p>A “trava bancária” segura os recebíveis e o dinheiro das vendas não chega à conta.</p></div>
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><h3>Sócio avalista preocupado</h3><p>O patrimônio pessoal do sócio está em jogo por causa do aval dado nos contratos.</p></div>
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 8l-3 7h6zM19 8l-3 7h6z"/></svg><h3>Execução ou bloqueio de contas</h3><p>O banco entrou com execução da cédula de crédito ou houve bloqueio pelo Sisbajud.</p></div>
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11M10 21v-6h4v6"/></svg><h3>Pronampe em atraso</h3><p>Parcelas atrasadas ou contrato já honrado pelo FGO, e o banco segue cobrando.</p></div>
+        <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg><h3>Proposta do banco na mesa</h3><p>O gerente ofereceu uma renegociação ou confissão de dívida e você não sabe se deve assinar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Serviços -->
+  <section class="sec" id="servicos" aria-labelledby="t-srv">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Serviços</p>
+        <h2 id="t-srv">O que fazemos pelas dívidas bancárias da empresa</h2>
+      </div>
+      <div class="grid3">
+        <div class="card srv"><span class="num">01</span><h3>Diagnóstico do passivo bancário</h3><p>Levantamos todas as dívidas pelo Registrato (SCR do Banco Central) e pelos contratos, e montamos o mapa: banco, saldo, taxa, garantia, avalista e atraso. Você recebe um parecer com a estratégia.</p></div>
+        <div class="card srv"><span class="num">02</span><h3>Gestão e renegociação com os bancos</h3><p>Propostas por escrito a cada banco, conversa com o gerente e com a área de recuperação de crédito, e acompanhamento até o acordo final.</p></div>
+        <div class="card srv"><span class="num">03</span><h3>Revisão de contratos bancários</h3><p>Análise de cédulas de crédito bancário (CCB), capital de giro, conta garantida e cheque especial PJ: encargos, capitalização, comissão de permanência e tarifas.</p></div>
+        <div class="card srv"><span class="num">04</span><h3>Pronampe e programas de renegociação</h3><p>Orientação sobre Pronampe, inclusive depois da honra pelo FGO, e sobre os programas de renegociação para pequenos negócios em vigor.</p></div>
+        <div class="card srv"><span class="num">05</span><h3>Defesa em execução bancária</h3><p>Quando o banco já cobrou na Justiça: embargos à execução, impenhorabilidades, bloqueios de conta e proteção do sócio avalista.</p></div>
+        <div class="card srv"><span class="num">06</span><h3>Recuperação extrajudicial</h3><p>Avaliação de um plano de pagamento negociado com vários credores (Lei 11.101), como alternativa à recuperação judicial.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Como funciona -->
+  <section class="sec navy" id="metodo" aria-labelledby="t-metodo">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="t-metodo">Quatro etapas, com você decidindo em cada uma</h2>
+      </div>
+      <div class="steps">
+        <div class="step-card"><b>1</b><h3>Diagnóstico</h3><p>Você envia o Registrato, os contratos e os extratos. Montamos o mapa das dívidas e apontamos os riscos.</p></div>
+        <div class="step-card"><b>2</b><h3>Plano</h3><p>Com o seu contador, definimos quanto a empresa consegue pagar por mês e a ordem de cada banco.</p></div>
+        <div class="step-card"><b>3</b><h3>Negociação</h3><p>Enviamos as propostas e conduzimos a conversa com os bancos, com base nos contratos e nas regras do setor.</p></div>
+        <div class="step-card"><b>4</b><h3>Acordo revisado</h3><p>Revisamos a minuta antes da assinatura. A decisão de aceitar cada proposta é sempre da empresa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Antes de assinar -->
+  <section class="sec" id="antes-de-assinar" aria-labelledby="t-antes">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Antes de assinar</p>
+        <h2 id="t-antes">O que conferimos em qualquer acordo com o banco</h2>
+        <p class="sec-lead">Uma renegociação mal feita pode trocar uma parcela menor por um risco maior. Por isso a minuta passa por análise jurídica antes da assinatura.</p>
+      </div>
+      <div class="mini">
+        <div><h3>Novas garantias</h3><p>Se o acordo exige imóvel, veículo ou recebíveis que antes não estavam em garantia.</p></div>
+        <div><h3>Aval dos sócios</h3><p>Se a renegociação amplia a responsabilidade pessoal do sócio ou do cônjuge.</p></div>
+        <div><h3>Confissão de dívida</h3><p>O que está sendo confessado, sobre qual saldo e com quais encargos embutidos.</p></div>
+        <div><h3>Vencimento antecipado</h3><p>Cláusulas que fazem uma parcela atrasada derrubar todo o acordo e outros contratos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Quem atende -->
+  <section class="sec soft" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap about">
+      <div class="foto"><img src="/foto-amanda-modus-retrato.webp" width="480" height="600" alt="Amanda Regina Gonçalves Modus, advogada" loading="lazy" decoding="async"></div>
+      <div>
+        <p class="eyebrow">Quem atende</p>
+        <h2 id="t-sobre">Amanda Regina Gonçalves Modus</h2>
+        <p class="cred">Advogada · OAB/PR 119.898 · Modus Advocacia, Maringá-PR</p>
+        <p class="bio">Advogada inscrita na OAB/PR sob o nº 119.898, com escritório em Maringá-PR. Atende pequenas empresas de forma online, em todo o Brasil, na análise de contratos e na negociação de dívidas bancárias.</p>
+        <p class="bio">Renegociar com respaldo jurídico faz diferença: só a advogada pode analisar a legalidade do contrato, orientar sobre os riscos de uma execução e atuar no processo se o banco cobrar na Justiça. Os honorários são combinados em contrato escrito, com escopo definido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Dúvidas -->
+  <section class="sec" id="duvidas" aria-labelledby="t-faq">
+    <div class="wrap">
+      <div class="faq">
+        <h2 id="t-faq">Dúvidas frequentes</h2>
+        <details>
+          <summary>Vocês garantem desconto na dívida?</summary>
+          <div class="ans"><p>Não. Nenhum advogado pode garantir resultado. O que é possível depende do banco, das garantias, do tempo de atraso e do caixa da empresa. No diagnóstico mostramos os cenários realistas do seu caso.</p></div>
+        </details>
+        <details>
+          <summary>Atendem empresas fora de Maringá?</summary>
+          <div class="ans"><p>Sim. O atendimento é online, com reuniões por vídeo e documentos digitais, para pequenas empresas de todo o Brasil.</p></div>
+        </details>
+        <details>
+          <summary>Preciso estar com parcelas em atraso?</summary>
+          <div class="ans"><p>Não. Empresas em dia, mas com o caixa apertado, também podem reorganizar prazos e juros. Quanto antes a análise, mais opções existem.</p></div>
+        </details>
+        <details>
+          <summary>O que acontece com o sócio avalista?</summary>
+          <div class="ans"><p>O aval permite ao banco cobrar o sócio diretamente. Por isso a situação do avalista entra no diagnóstico desde o início, e qualquer acordo é analisado também do ponto de vista dele.</p></div>
+        </details>
+        <details>
+          <summary>Recuperação extrajudicial serve para a minha empresa?</summary>
+          <div class="ans"><p>Depende de quantos credores há, do tipo de garantia de cada dívida e de quantos bancos aceitariam o plano. Em muitos casos de pequenas empresas, a negociação direta resolve sem processo. Avaliamos as duas vias no diagnóstico.</p></div>
+        </details>
+        <details>
+          <summary>Quais documentos vou precisar?</summary>
+          <div class="ans"><p>Relatório do Registrato da empresa e dos sócios, contratos e aditivos com os bancos, extratos recentes e, se possível, balancete ou DRE fornecidos pelo contador. Orientamos como obter cada um.</p></div>
+        </details>
+        <details>
+          <summary>Como são cobrados os honorários?</summary>
+          <div class="ans"><p>Os valores são definidos depois da análise inicial, conforme o número de contratos e de bancos, e ficam registrados em contrato escrito antes do início do trabalho.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Contato -->
+  <section class="sec navy contato" id="contato" aria-labelledby="t-form">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2 id="t-form">Conte a situação da sua empresa</h2>
+        <p class="sec-lead">Com essas informações a advogada avalia o caso e retorna em horário comercial para explicar os próximos passos.</p>
+        <p class="alt-whats">Prefere conversar direto? <a data-whats="contato" href="#" target="_blank" rel="noopener">Chame no WhatsApp</a>.</p>
+      </div>
+      <div class="form-card" id="form-card">
+        <form id="form-caso" novalidate>
+          <div class="fgrid">
+            <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required maxlength="120"></div>
+            <div class="field"><label for="f-empresa">Nome da empresa</label><input id="f-empresa" name="empresa" autocomplete="organization" required maxlength="160"></div>
+            <div class="field"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(44) 99999-9999" required maxlength="20"></div>
+            <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+            <div class="field"><label for="f-porte">Porte da empresa</label>
+              <select id="f-porte" name="porte" required>
+                <option value="">Selecione</option>
+                <option>MEI</option>
+                <option>Microempresa (ME)</option>
+                <option>Empresa de pequeno porte (EPP)</option>
+                <option>Outro / não sei</option>
+              </select></div>
+            <div class="field"><label for="f-divida">Total das dívidas com bancos</label>
+              <select id="f-divida" name="faixa_divida" required>
+                <option value="">Selecione</option>
+                <option>Até R$ 50 mil</option>
+                <option>De R$ 50 mil a R$ 200 mil</option>
+                <option>De R$ 200 mil a R$ 500 mil</option>
+                <option>De R$ 500 mil a R$ 1 milhão</option>
+                <option>Acima de R$ 1 milhão</option>
+              </select></div>
+            <div class="field"><label for="f-bancos">Com quantos bancos?</label>
+              <select id="f-bancos" name="qtd_bancos" required>
+                <option value="">Selecione</option>
+                <option>1 banco</option>
+                <option>2 ou 3 bancos</option>
+                <option>4 ou mais</option>
+              </select></div>
+            <div class="field"><label for="f-situacao">Situação hoje</label>
+              <select id="f-situacao" name="situacao" required>
+                <option value="">Selecione</option>
+                <option>Em dia, mas o caixa está apertado</option>
+                <option>Parcelas em atraso</option>
+                <option>Banco ofereceu renegociação</option>
+                <option>Execução ou bloqueio de contas</option>
+              </select></div>
+            <div class="field full"><label for="f-cidade">Cidade / UF</label><input id="f-cidade" name="cidade" autocomplete="address-level2" placeholder="Ex.: Maringá/PR" required maxlength="80"></div>
+            <div class="field full"><label for="f-msg">Algo mais que devemos saber? <small>(opcional)</small></label><textarea id="f-msg" name="mensagem" rows="3" maxlength="1500"></textarea></div>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="f-site">Não preencha este campo</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="consent"><input type="checkbox" name="consentimento" required><span>Autorizo o uso destes dados apenas para a avaliação do meu caso, conforme a <a href="/privacidade/">política de privacidade</a>.</span></label>
+          <p class="err" id="form-erro" role="alert" hidden></p>
+          <button class="btn enviar" type="submit">Enviar para análise</button>
+        </form>
+        <noscript><p>Para enviar o formulário, ative o JavaScript no navegador ou escreva para amanda@modusadvocacia.com.br.</p></noscript>
+        <p class="seguro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>As informações são confidenciais, protegidas pelo sigilo profissional, e servem apenas para a análise do caso.</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="foot-brand">MODUS ADVOCACIA</p>
+      <p>Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      <p>R. Quebec, 326 – Jardim Canadá, Maringá-PR, <span class="nw">87080-560</span></p>
+      <p><a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a> · <a data-whats="rodape" href="#" target="_blank" rel="noopener" class="nw">(44) 98848-2082</a></p>
+    </div>
+    <div class="lado">
+      <p>Conteúdo informativo. Cada caso depende da análise dos documentos e não há garantia de resultado.</p>
+      <p><a href="/privacidade/">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn" href="#contato">Enviar dados do caso</a>
+</div>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho da página e dos anúncios. <a href="/privacidade/">Política de privacidade</a></p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+
+<script>
+/* ==========================================================================
+   MOTOR DA PÁGINA — não precisa editar
+   ========================================================================== */
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  var SERVICO = 'bancario', SERVICO_NOME = 'dívidas bancárias da empresa (passivo bancário PJ)';
+  var URL_OBRIGADO = '/obrigado/';
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  var params = new URLSearchParams(location.search);
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function track(ev, p) {
+    p = p || {};
+    p.servico = SERVICO;
+    if (DEBUG) console.log('[evento]', ev, p);
+    if (typeof gtag === 'function') gtag('event', ev, p);
+  }
+  function digitos(s) { return String(s || '').replace(/\D/g, ''); }
+  function linkWhats(msg) { return 'https://wa.me/' + digitos(C.WHATSAPP) + '?text=' + encodeURIComponent(msg); }
+
+  /* ---------- Links de WhatsApp e e-mail ---------- */
+  var MSG_WHATS = 'Olá, Dra. Amanda. Vim pela página de direito bancário e gostaria de falar sobre as dívidas bancárias da minha empresa.';
+  $$('[data-whats]').forEach(function (a) {
+    a.href = linkWhats(MSG_WHATS);
+    a.addEventListener('click', function () { track('clique_whatsapp', { local: a.getAttribute('data-whats') }); });
+  });
+  $$('[data-email]').forEach(function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+
+  /* ---------- Atribuição: gclid / UTM (guardada por 90 dias, último clique) ---------- */
+  var CAMPOS_ATRIB = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var atrib = (function () {
+    var salvo = {};
+    try { salvo = JSON.parse(lsGet('modus_atrib') || '{}') || {}; } catch (e) {}
+    if (salvo.ts && Date.now() - salvo.ts > 90 * 864e5) salvo = {};
+    var novo = {}, tem = false;
+    CAMPOS_ATRIB.forEach(function (k) { var v = params.get(k); if (v) { novo[k] = v.slice(0, 200); tem = true; } });
+    if (tem) { novo.ts = Date.now(); lsSet('modus_atrib', JSON.stringify(novo)); return novo; }
+    return salvo;
+  })();
+
+  /* ---------- Schema FAQPage gerado a partir das perguntas visíveis ---------- */
+  (function () {
+    var itens = $$('#duvidas details').map(function (d) {
+      return { '@type': 'Question', name: d.querySelector('summary').textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: d.querySelector('.ans').textContent.replace(/\s+/g, ' ').trim() } };
+    });
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: itens });
+    document.head.appendChild(s);
+  })();
+
+  /* ---------- Banner de cookies (aparece após rolar ou depois de alguns segundos) ---------- */
+  (function () {
+    var b = $('#cookie');
+    if (!lsGet('modus_consent')) {
+      var mostrou = false;
+      var mostrar = function () {
+        if (mostrou) return;
+        mostrou = true;
+        b.hidden = false;
+        document.body.classList.add('has-cookie');
+        removeEventListener('scroll', aoRolar);
+      };
+      var aoRolar = function () { if (window.scrollY > 150) mostrar(); };
+      addEventListener('scroll', aoRolar, { passive: true });
+      setTimeout(mostrar, 6000);
+    }
+    $$('[data-cookie]', b).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+        lsSet('modus_consent', g);
+        gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+        gtag('set', 'ads_data_redaction', g === 'denied');
+        b.hidden = true;
+        document.body.classList.remove('has-cookie');
+      });
+    });
+  })();
+
+  /* ---------- Barra fixa no celular ---------- */
+  (function () {
+    var bar = $('#sticky-cta');
+    if (!('IntersectionObserver' in window)) return;
+    var heroVisivel = true, formVisivel = false;
+    function atualizar() { bar.classList.toggle('show', !heroVisivel && !formVisivel); }
+    new IntersectionObserver(function (e) { heroVisivel = e[0].isIntersecting; atualizar(); }).observe($('#hero-cta'));
+    new IntersectionObserver(function (e) { formVisivel = e[0].isIntersecting; atualizar(); }).observe($('#contato'));
+  })();
+
+  /* ---------- Formulário ---------- */
+  var form = $('#form-caso'), erroEl = $('#form-erro'), enviando = false, iniciou = false, inicioTs = Date.now();
+  var CONSENT_TXT = 'Autorizo o uso destes dados apenas para a avaliação do meu caso, conforme a política de privacidade.';
+
+  // Máscara simples do WhatsApp: (44) 99999-9999
+  form.whatsapp.addEventListener('input', function () {
+    var d = digitos(this.value).slice(0, 11);
+    if (d.length > 2) d = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length > 10) d = d.slice(0, 10) + '-' + d.slice(10);
+    this.value = d;
+  });
+  form.addEventListener('input', function (e) {
+    if (!iniciou) { iniciou = true; inicioTs = Date.now(); track('inicio_formulario', {}); }
+    if (e.target.getAttribute('aria-invalid') === 'true') e.target.removeAttribute('aria-invalid');
+  });
+  form.addEventListener('change', function (e) {
+    if (e.target.getAttribute('aria-invalid') === 'true') e.target.removeAttribute('aria-invalid');
+  });
+
+  function erro(msg, campo) {
+    erroEl.textContent = msg;
+    erroEl.hidden = !msg;
+    if (campo) { if (campo.type !== 'checkbox') campo.setAttribute('aria-invalid', 'true'); campo.focus(); }
+  }
+
+  function validar() {
+    var f = form;
+    $$('[aria-invalid]', f).forEach(function (el) { el.removeAttribute('aria-invalid'); });
+    if (f.nome.value.trim().length < 2) return erro('Informe o seu nome.', f.nome);
+    if (f.empresa.value.trim().length < 2) return erro('Informe o nome da empresa.', f.empresa);
+    if (!/^[1-9]\d{9,10}$/.test(digitos(f.whatsapp.value))) return erro('Informe um WhatsApp válido, com DDD.', f.whatsapp);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.value.trim())) return erro('Informe um e-mail válido.', f.email);
+    if (!f.porte.value) return erro('Selecione o porte da empresa.', f.porte);
+    if (!f.faixa_divida.value) return erro('Selecione o total das dívidas com bancos.', f.faixa_divida);
+    if (!f.qtd_bancos.value) return erro('Selecione com quantos bancos a empresa tem dívidas.', f.qtd_bancos);
+    if (!f.situacao.value) return erro('Selecione a situação de hoje.', f.situacao);
+    if (f.cidade.value.trim().length < 2) return erro('Informe a cidade e o estado.', f.cidade);
+    if (!f.consentimento.checked) return erro('Para enviar, marque a caixa de autorização.', f.consentimento);
+    erro('');
+    return true;
+  }
+
+  // Classificação interna (só define o valor da conversão; não aparece para a pessoa)
+  function classificar(f) {
+    var m = [];
+    if (f.faixa_divida.value === 'Até R$ 50 mil') m.push('divida_abaixo_50mil');
+    if (f.porte.value === 'MEI' || f.porte.value === 'Outro / não sei') m.push('porte');
+    return { c: m.length ? 'REVISAR' : 'QUALIFICADO', m: m.join(',') };
+  }
+
+  function montarLead() {
+    var f = form, cl = classificar(f);
+    var lead = {
+      lead_id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+      servico: SERVICO, servico_nome: SERVICO_NOME,
+      classificacao: cl.c, motivo: cl.m,
+      nome: f.nome.value.trim(), empresa: f.empresa.value.trim(),
+      whatsapp: f.whatsapp.value.trim(), email: f.email.value.trim(),
+      porte: f.porte.value, faixa_divida: f.faixa_divida.value, qtd_bancos: f.qtd_bancos.value,
+      situacao: f.situacao.value, cidade: f.cidade.value.trim(), mensagem: f.mensagem.value.trim(),
+      consentimento: 'sim', consentimento_texto: CONSENT_TXT,
+      data_hora: new Date().toISOString(),
+      pagina_origem: location.origin + location.pathname + location.search,
+      referrer: document.referrer || ''
+    };
+    CAMPOS_ATRIB.forEach(function (k) { lead[k] = atrib[k] || ''; });
+    lead.resumo = [
+      ['Empresa', lead.empresa], ['Porte', lead.porte], ['Total das dívidas', lead.faixa_divida],
+      ['Bancos', lead.qtd_bancos], ['Situação', lead.situacao], ['Cidade/UF', lead.cidade]
+    ];
+    return lead;
+  }
+
+  function enviarWebhook(lead) {
+    var url = C.WEBHOOK_URL;
+    if (!url || !/^https:\/\//.test(url)) return Promise.resolve(false);
+    var corpo = new URLSearchParams();
+    Object.keys(lead).forEach(function (k) { if (typeof lead[k] !== 'object') corpo.append(k, lead[k]); });
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, 6000);
+    return fetch(url, { method: 'POST', body: corpo, keepalive: true, signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { clearTimeout(t); return r.ok; })
+      .catch(function () {
+        clearTimeout(t);
+        // Segunda tentativa sem esperar resposta (o lead é gravado pelo lead_id, sem duplicar)
+        try { if (navigator.sendBeacon) navigator.sendBeacon(url, corpo); } catch (e) {}
+        return false;
+      });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (enviando || validar() !== true) return;
+    var btn = $('button[type=submit]', form);
+    enviando = true;
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    // Proteção contra robôs: campo invisível preenchido ou envio rápido demais
+    if (form.website.value || Date.now() - inicioTs < 3000) { location.href = URL_OBRIGADO; return; }
+    var lead = montarLead();
+    track(lead.classificacao === 'QUALIFICADO' ? 'lead_qualificado' : 'lead_revisar', { classificacao: lead.classificacao, motivo: lead.motivo || '(nenhum)' });
+    enviarWebhook(lead).then(function (ok) {
+      lead.webhook_ok = ok;
+      lead.conv_pendente = true;
+      try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
+      location.href = URL_OBRIGADO;
+    });
+  });
+})();
+</script>
+</body>
+</html>

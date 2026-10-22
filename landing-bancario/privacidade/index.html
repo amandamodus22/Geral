@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 3 páginas (início, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "5544988482082",             // só números: 55 + DDD + número
+  EMAIL: "amanda@modusadvocacia.com.br",  // e-mail de contato (rodapé e envio alternativo)
+  ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "XXXXXXXXXXXX",             // Google Ads: rótulo da conversão "Lead – bancário PJ" (criar no Ads e colar aqui)
+  GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "https://hook.us2.make.com/n3sjr2173n7svw4di6fx70qd9luse8mm", // Make: cenário "Leads – bancário PJ"
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL"
+};
+</script>
+<title>Política de privacidade | Modus Advocacia – OAB/PR 119.898</title>
+<meta name="description" content="Como são tratados os dados pessoais enviados pela página de direito bancário da Modus Advocacia, conforme a LGPD.">
+<link rel="canonical" href="https://bancario.modusadvocacia.com.br/privacidade/">
+<link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0B1E33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1E33'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%235FD3B6' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  window.idValido = valido;
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("/fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/inter-600.woff2") format("woff2")}
+:root{--navy:#0B1E33;--navy-2:#12304F;--navy-line:#23476E;--navy-head-line:#1E3550;--navy-deep:#081626;--green:#12A383;--green-ink:#062A22;--green-dark:#0B6B58;--green-darker:#084F41;--mint:#5FD3B6;--ink:#13253A;--muted:#44576B;--line:#DCE4EC;--soft:#F3F6F9;--on-navy-4:#A9B8C7;
+  --display:Manrope,Inter,system-ui,sans-serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--soft);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
+a{color:var(--green-dark)}
+a:hover{color:var(--green-darker)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);margin:0;color:inherit}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 24px}}
+.narrow{max-width:840px}
+.top{background:var(--navy);border-bottom:1px solid var(--navy-head-line);color:#fff}
+.top .wrap{display:flex;align-items:center;min-height:76px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#fff}
+.brand:hover{color:#fff}
+.brand-nome{font:800 1.25rem/1.15 var(--display);letter-spacing:.02em}
+.brand-sub{font-size:1rem;color:#B9C8D8;line-height:1.3}
+main{flex:1;padding:48px 0 64px}
+@media (min-width:900px){main{padding:72px 0 88px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:10px;border:0;background:var(--green);color:var(--green-ink);font:700 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;width:100%}
+@media (min-width:600px){.btn{width:auto}}
+.btn:hover{background:#17B893;color:var(--green-ink)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-sec{background:transparent;color:var(--green-dark);border:1.5px solid var(--green-dark)}
+.btn-sec:hover{background:#E7F3F0;color:var(--green-darker)}
+.foot{background:var(--navy-deep);color:var(--on-navy-4);padding:40px 0}
+@media (min-width:900px){.foot{padding:48px 0}}
+.foot .wrap{display:grid;gap:24px}
+@media (min-width:800px){.foot .wrap{grid-template-columns:1.2fr 1fr;align-items:start}.foot .lado{text-align:right}}
+.foot-brand{font:800 1.125rem/1.2 var(--display);letter-spacing:.02em;color:#fff;margin-bottom:10px}
+.foot p{line-height:1.7;margin:0}
+.foot p+p{margin-top:6px}
+.foot a{color:#fff}
+[data-email]{overflow-wrap:anywhere}
+.foot a:hover{color:var(--mint)}
+.nw{white-space:nowrap}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:540px;background:var(--navy);color:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px}}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:8px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.6)}
+.cookie .ok{background:var(--green);border-color:var(--green);color:var(--green-ink)}
+.cookie .no{background:transparent;color:#fff}
+article h1{font-size:clamp(2rem,6vw,2.75rem);line-height:1.1;font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
+article h2{font-size:1.375rem;font-weight:800;margin:36px 0 12px}
+article ul{padding-left:1.2em;margin:0 0 1em}
+article li{margin-bottom:.5em}
+.muted{color:var(--muted)}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.btn-link{background:none;border:0;padding:.5em 0;min-height:44px;color:var(--green-dark);font:inherit;text-decoration:underline;text-underline-offset:.15em;cursor:pointer}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="brand-nome">MODUS ADVOCACIA</span>
+      <span class="brand-sub">Direito bancário para pequenas empresas</span>
+    </a>
+  </div>
+</header>
+<main>
+  <article class="wrap narrow">
+    <h1>Política de privacidade</h1>
+    <p class="muted">Última atualização: outubro de 2026.</p>
+    <p>Esta política explica, de forma simples, como são tratados os dados pessoais enviados por meio desta página, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD).</p>
+
+    <h2>1. Quem é a responsável pelos dados</h2>
+    <div class="box">
+      <p><strong>Amanda Regina Gonçalves Modus</strong> (Modus Advocacia), advogada inscrita na OAB/PR sob o nº 119.898, com escritório na R. Quebec, 326 – Jardim Canadá, Maringá-PR, 87080-560.</p>
+      <p style="margin:0">Contato para assuntos de privacidade: <a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a></p>
+    </div>
+
+    <h2>2. Quais dados são coletados</h2>
+    <ul>
+      <li><strong>Dados que você informa no formulário:</strong> seu nome, nome da empresa, WhatsApp, e-mail, cidade e estado, porte da empresa, faixa do total das dívidas com bancos, número de bancos, situação atual e, se você quiser, uma mensagem.</li>
+      <li><strong>Dados de navegação:</strong> páginas visitadas, tipo de dispositivo e navegador, e informações sobre o anúncio que trouxe você até aqui (como identificadores de clique e parâmetros de campanha).</li>
+    </ul>
+    <p>Não pedimos documentos, senhas nem dados de contas bancárias neste formulário. Evite incluir informações além das solicitadas.</p>
+
+    <h2>3. Para que os dados são usados</h2>
+    <ul>
+      <li>Avaliar a situação da empresa e entrar em contato sobre o caso, a seu pedido.</li>
+      <li>Medir o desempenho da página e dos anúncios, de forma agregada.</li>
+    </ul>
+    <p>Os dados não são vendidos nem usados para outras finalidades.</p>
+
+    <h2>4. Bases legais</h2>
+    <ul>
+      <li><strong>Consentimento</strong> (art. 7º, I, da LGPD), dado ao marcar a caixa do formulário e ao aceitar os cookies de medição.</li>
+      <li><strong>Procedimentos preliminares relacionados a contrato</strong>, a pedido do titular (art. 7º, V, da LGPD), para a análise inicial do caso.</li>
+    </ul>
+
+    <h2>5. Com quem os dados podem ser compartilhados</h2>
+    <ul>
+      <li><strong>Google (Google Ads e Google Analytics):</strong> recebem dados de navegação para medir o desempenho dos anúncios e da página. Os dados do formulário (nome, empresa, telefone e e-mail) não são enviados a essas ferramentas.</li>
+      <li><strong>Ferramenta de recebimento do formulário</strong> (Make, make.com): armazena os dados enviados e avisa a advogada por e-mail para que o contato possa ser feito.</li>
+      <li><strong>WhatsApp (Meta):</strong> somente se você decidir iniciar uma conversa pelo botão de WhatsApp.</li>
+    </ul>
+    <p>Algumas dessas ferramentas podem armazenar dados em servidores fora do Brasil, observadas as garantias previstas na LGPD.</p>
+
+    <h2>6. Por quanto tempo os dados são guardados</h2>
+    <p>Os dados do formulário são mantidos pelo tempo necessário para o atendimento do seu pedido. Se não houver contratação, são eliminados em até 12 meses, salvo obrigação legal ou regulatória. Se houver contratação, seguem as regras de guarda aplicáveis à atividade da advocacia.</p>
+
+    <h2>7. Cookies</h2>
+    <p>Cookies são pequenos arquivos guardados no seu navegador. Esta página usa cookies do Google Analytics e do Google Ads apenas para medição, e somente depois que você os aceita. Se você recusar, a página continua funcionando normalmente, e o Google pode receber apenas sinais sem cookies, sem identificar você.</p>
+    <p><button type="button" class="btn-link" id="mudar-cookies">Alterar minhas preferências de cookies</button></p>
+
+    <h2>8. Seus direitos</h2>
+    <p>Conforme o art. 18 da LGPD, você pode solicitar, a qualquer momento:</p>
+    <ul>
+      <li>confirmação de que seus dados são tratados e acesso a eles;</li>
+      <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+      <li>portabilidade dos dados;</li>
+      <li>informação sobre com quem os dados foram compartilhados;</li>
+      <li>eliminação dos dados tratados com base no consentimento e revogação do consentimento.</li>
+    </ul>
+    <p>Para exercer esses direitos, escreva para <a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a>. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h2>9. Segurança e sigilo profissional</h2>
+    <p>As informações recebidas são tratadas com medidas de segurança adequadas e protegidas pelo sigilo profissional da advocacia.</p>
+
+    <h2>10. Alterações desta política</h2>
+    <p>Esta política pode ser atualizada. A data da última atualização aparece no início da página.</p>
+  </article>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="foot-brand">MODUS ADVOCACIA</p>
+      <p>Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      <p>R. Quebec, 326 – Jardim Canadá, Maringá-PR, <span class="nw">87080-560</span></p>
+      <p><a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a> · <a data-whats href="https://wa.me/5544988482082" target="_blank" rel="noopener" class="nw">(44) 98848-2082</a></p>
+    </div>
+    <div class="lado">
+      <p>Conteúdo informativo. Cada caso depende da análise dos documentos e não há garantia de resultado.</p>
+      <p><a href="/">Página inicial</a> · <a href="/privacidade/">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho da página e dos anúncios. Você pode aceitar ou recusar.</p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+<script>
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-email]'), function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-whats]'), function (a) { a.href = 'https://wa.me/' + String(C.WHATSAPP).replace(/\D/g, ''); });
+  var b = document.getElementById('cookie');
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  if (!salvo) b.hidden = false;
+  Array.prototype.forEach.call(b.querySelectorAll('[data-cookie]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+      try { localStorage.setItem('modus_consent', g); } catch (e) {}
+      gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+      gtag('set', 'ads_data_redaction', g === 'denied');
+      b.hidden = true;
+    });
+  });
+  document.getElementById('mudar-cookies').addEventListener('click', function () {
+    b.hidden = false;
+    b.querySelector('.ok').focus();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 3 páginas (início, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "5544988482082",             // só números: 55 + DDD + número
+  EMAIL: "amanda@modusadvocacia.com.br",  // e-mail de contato (rodapé e envio alternativo)
+  ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "XXXXXXXXXXXX",             // Google Ads: rótulo da conversão "Lead – bancário PJ" (criar no Ads e colar aqui)
+  GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "https://hook.us2.make.com/n3sjr2173n7svw4di6fx70qd9luse8mm", // Make: cenário "Leads – bancário PJ"
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL"
+};
+</script>
+<title>Recebemos seus dados | Modus Advocacia – OAB/PR 119.898</title>
+<meta name="description" content="Confirmação de envio dos dados para análise.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0B1E33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1E33'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%235FD3B6' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  window.idValido = valido;
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("/fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/inter-600.woff2") format("woff2")}
+:root{--navy:#0B1E33;--navy-2:#12304F;--navy-line:#23476E;--navy-head-line:#1E3550;--navy-deep:#081626;--green:#12A383;--green-ink:#062A22;--green-dark:#0B6B58;--green-darker:#084F41;--mint:#5FD3B6;--ink:#13253A;--muted:#44576B;--line:#DCE4EC;--soft:#F3F6F9;--on-navy-4:#A9B8C7;
+  --display:Manrope,Inter,system-ui,sans-serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--soft);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
+a{color:var(--green-dark)}
+a:hover{color:var(--green-darker)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);margin:0;color:inherit}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 24px}}
+.narrow{max-width:840px}
+.top{background:var(--navy);border-bottom:1px solid var(--navy-head-line);color:#fff}
+.top .wrap{display:flex;align-items:center;min-height:76px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#fff}
+.brand:hover{color:#fff}
+.brand-nome{font:800 1.25rem/1.15 var(--display);letter-spacing:.02em}
+.brand-sub{font-size:1rem;color:#B9C8D8;line-height:1.3}
+main{flex:1;padding:48px 0 64px}
+@media (min-width:900px){main{padding:72px 0 88px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:10px;border:0;background:var(--green);color:var(--green-ink);font:700 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;width:100%}
+@media (min-width:600px){.btn{width:auto}}
+.btn:hover{background:#17B893;color:var(--green-ink)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-sec{background:transparent;color:var(--green-dark);border:1.5px solid var(--green-dark)}
+.btn-sec:hover{background:#E7F3F0;color:var(--green-darker)}
+.foot{background:var(--navy-deep);color:var(--on-navy-4);padding:40px 0}
+@media (min-width:900px){.foot{padding:48px 0}}
+.foot .wrap{display:grid;gap:24px}
+@media (min-width:800px){.foot .wrap{grid-template-columns:1.2fr 1fr;align-items:start}.foot .lado{text-align:right}}
+.foot-brand{font:800 1.125rem/1.2 var(--display);letter-spacing:.02em;color:#fff;margin-bottom:10px}
+.foot p{line-height:1.7;margin:0}
+.foot p+p{margin-top:6px}
+.foot a{color:#fff}
+[data-email]{overflow-wrap:anywhere}
+.foot a:hover{color:var(--mint)}
+.nw{white-space:nowrap}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:540px;background:var(--navy);color:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px}}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:8px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.6)}
+.cookie .ok{background:var(--green);border-color:var(--green);color:var(--green-ink)}
+.cookie .no{background:transparent;color:#fff}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 20px}
+@media (min-width:700px){.card{padding:44px}}
+.selo{display:grid;place-items:center;width:56px;height:56px;border-radius:14px;background:#E7F3F0;color:var(--green-dark);margin-bottom:18px}
+.selo svg{width:28px;height:28px}
+.card h1{font-size:clamp(1.9rem,6vw,2.5rem);line-height:1.12;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+.lead{font-size:1.125rem}
+.muted{color:var(--muted)}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}
+.proximos{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.proximos h2{font-size:1.375rem;font-weight:800;margin-bottom:14px}
+.proximos ol{list-style:none;margin:0;padding:0;counter-reset:p;display:grid;gap:12px}
+.proximos li{counter-increment:p;position:relative;padding:6px 0 0 54px;min-height:40px}
+.proximos li::before{content:counter(p);position:absolute;left:0;top:0;display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--mint);font:800 1.125rem/1 var(--display)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="brand-nome">MODUS ADVOCACIA</span>
+      <span class="brand-sub">Direito bancário para pequenas empresas</span>
+    </a>
+  </div>
+</header>
+<main>
+  <div class="wrap narrow">
+    <div class="card" id="conteudo">
+      <div class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h1>Obrigada pelo contato</h1>
+      <p class="lead">Se você já enviou os dados da sua empresa, o retorno é feito em horário comercial pelo contato informado.</p>
+      <p>Se ainda não enviou, comece pela página inicial:</p>
+      <div class="acoes"><a class="btn btn-sec" href="/#contato">Enviar dados do caso</a></div>
+    </div>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="foot-brand">MODUS ADVOCACIA</p>
+      <p>Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      <p>R. Quebec, 326 – Jardim Canadá, Maringá-PR, <span class="nw">87080-560</span></p>
+      <p><a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a> · <a data-whats href="https://wa.me/5544988482082" target="_blank" rel="noopener" class="nw">(44) 98848-2082</a></p>
+    </div>
+    <div class="lado">
+      <p>Conteúdo informativo. Cada caso depende da análise dos documentos e não há garantia de resultado.</p>
+      <p><a href="/">Página inicial</a> · <a href="/privacidade/">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function track(ev, p) { if (DEBUG) console.log('[evento]', ev, p); gtag('event', ev, p); }
+  var whatsBase = 'https://wa.me/' + String(C.WHATSAPP).replace(/\D/g, '');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-email]'), function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-whats]'), function (a) { a.href = whatsBase; });
+  var lead = null;
+  try { lead = JSON.parse(sessionStorage.getItem('modus_lead') || 'null'); } catch (e) {}
+  if (!lead || lead.servico !== 'bancario') return;
+  /* Conversão do Google Ads — dispara uma única vez por envio */
+  if (lead.conv_pendente) {
+    var valor = lead.classificacao === 'QUALIFICADO' ? C.VALOR_QUALIFICADO : C.VALOR_REVISAR;
+    if (idValido(C.ADS_ID) && idValido(C.ADS_LABEL)) {
+      gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
+    }
+    /* GA4: evento recomendado de lead, só para a propriedade do GA4 */
+    if (idValido(C.GA4_ID)) {
+      gtag('event', 'generate_lead', { send_to: C.GA4_ID, servico: lead.servico, classificacao: lead.classificacao, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
+    }
+    if (DEBUG) console.log('[conversão]', lead.classificacao, valor, lead.lead_id);
+    lead.conv_pendente = false;
+    try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
+  }
+  /* Mensagens de WhatsApp e e-mail com o resumo enviado */
+  var linhas = (lead.resumo || []).map(function (r) { return '• ' + r[0] + ': ' + r[1]; }).join('\n');
+  var msg = 'Olá, Dra. Amanda. Enviei os dados da minha empresa pela página de direito bancário.\n' +
+    'Nome: ' + lead.nome + '\n' + linhas + '\nGostaria de dar andamento à análise.';
+  var whats = whatsBase + '?text=' + encodeURIComponent(msg);
+  var mail = 'mailto:' + C.EMAIL + '?subject=' + encodeURIComponent('Análise de caso – dívidas bancárias – ' + lead.empresa) +
+    '&body=' + encodeURIComponent(msg + (lead.mensagem ? '\nObservações: ' + lead.mensagem : '') + '\nWhatsApp: ' + lead.whatsapp + '\nE-mail: ' + lead.email);
+  var icoChat = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>';
+  document.getElementById('conteudo').innerHTML =
+    '<div class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+    '<h1>Recebemos os dados da sua empresa</h1>' +
+    '<p class="lead">A advogada vai avaliar as informações e retorna em horário comercial, pelo WhatsApp ou e-mail informado, para explicar os próximos passos.</p>' +
+    '<p>Se quiser adiantar, envie o resumo pelo WhatsApp. Ter em mãos o Registrato da empresa e os contratos com os bancos ajuda na análise.</p>' +
+    '<div class="acoes"><a class="btn" id="btn-whats" href="' + esc(whats) + '" target="_blank" rel="noopener">' + icoChat + 'Enviar resumo pelo WhatsApp</a></div>' +
+    (lead.webhook_ok ? '' : '<p><a id="btn-mail" href="' + esc(mail) + '">Enviar os dados por e-mail</a></p>') +
+    '<p class="muted">Seus dados são usados apenas para a avaliação do seu caso.</p>' +
+    '<div class="proximos"><h2>Próximos passos</h2><ol>' +
+    '<li>A advogada analisa as informações enviadas.</li>' +
+    '<li>O contato é feito em horário comercial para entender melhor a situação e explicar como funciona o diagnóstico.</li>' +
+    '<li>Se fizer sentido seguir, você recebe a lista de documentos e a proposta de contrato com o escopo e os honorários.</li>' +
+    '</ol></div>';
+  document.getElementById('btn-whats').addEventListener('click', function () {
+    track('clique_whatsapp', { servico: lead.servico, classificacao: lead.classificacao, local: 'obrigado' });
+  });
+})();
+</script>
+</body>
+</html>
