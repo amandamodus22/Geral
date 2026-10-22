@@ -110,10 +110,6 @@ Para receber um aviso a cada lead, abra o cenário no Make e acrescente um módu
 
 Sem webhook, ou se ele falhar, a `/obrigado/` mostra o botão "Enviar minhas respostas por e-mail" (mailto com o resumo), além do WhatsApp.
 
-## Visual da página de divórcio
-
-Desde 22/10/2026, `/divorcio/` segue o modelo "Passivo bancário PJ": azul-marinho `#0B1E33`, verde `#12A383` e `#0B6B58`, títulos em Manrope e texto em Inter (fontes em `fonts/`). Também usa a foto em retrato `foto-amanda-modus-retrato.webp`. O conteúdo aprovado, a triagem e o rastreamento continuam os mesmos.
-
 ## Agendamento online (Calendly)
 
 O evento **"Conversa inicial – divórcio e inventário em cartório"** (30 min, Google Meet), separado do evento de Direito Gamer, fica em:
