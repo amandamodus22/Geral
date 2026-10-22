@@ -241,6 +241,10 @@ h1{font-size:clamp(2.1rem,7vw,3rem);line-height:1.05}
     if (idValido(C.ADS_ID) && C.ADS_LABEL && !/X{4,}/.test(C.ADS_LABEL)) {
       gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
     }
+    /* GA4: evento recomendado de lead, só para a propriedade do GA4 */
+    if (C.GA4_ID && /^G-/.test(C.GA4_ID)) {
+      gtag('event', 'generate_lead', { send_to: C.GA4_ID, servico: lead.servico, classificacao: lead.classificacao, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
+    }
     if (DEBUG) console.log('[conversão]', lead.classificacao, valor, lead.lead_id);
     lead.conv_pendente = false;
     try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
