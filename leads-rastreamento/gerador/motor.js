@@ -233,7 +233,7 @@
     emitir('triagem_concluida', { qualificado: false, respostas: respostasTexto(), secao: estado.secao });
     emitir('lead_desqualificado', { faixa_valor: faixa, secao: estado.secao });
     registrar({ secao: estado.secao, qualificado: false, respostas: respostasTexto(), campos: camposRespostas() });
-    $('#tri-prog').textContent = 'Obrigada por responder';
+    $('#tri-prog').textContent = 'Triagem concluída';
     $('#tri-barra').style.width = '100%';
     var h = '<div class="tri-res"><h2 class="tri-q" id="tri-titulo" tabindex="-1">Obrigada por responder</h2>' + T.encerramento;
     if (C.PERMITIR_WHATSAPP_ABAIXO_DO_MINIMO) {
