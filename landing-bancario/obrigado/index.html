@@ -12,7 +12,9 @@ window.CONFIG = {
   WHATSAPP: "5544988482082",             // só números: 55 + DDD + número
   EMAIL: "amanda@modusadvocacia.com.br",  // e-mail de contato (rodapé e envio alternativo)
   ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
-  ADS_LABEL: "8zUeCJn2naYdEM3smoFE",    // Google Ads: rótulo da conversão "Lead – bancário PJ"
+  ADS_LABEL: "8zUeCJn2naYdEM3smoFE",    // Google Ads: lead QUALIFICADO (ação "Lead – bancário PJ", exclusiva deste site)
+  ADS_LABEL_NAO_QUALIFICADO: "ROTULO_NAO_QUALIFICADO",  // Google Ads: lead NÃO qualificado (criar a ação e colar o rótulo)
+  ADS_LABEL_WHATSAPP: "ROTULO_WHATSAPP_BANCARIO",       // Google Ads: clique no WhatsApp deste site (criar a ação e colar o rótulo)
   GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
   WEBHOOK_URL: "https://hook.us2.make.com/n3sjr2173n7svw4di6fx70qd9luse8mm", // Make: cenário "Leads – bancário PJ"
   VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
@@ -25,7 +27,12 @@ window.CONFIG = {
 <meta name="robots" content="noindex, nofollow">
 <link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="theme-color" content="#0B1E33">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1E33'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%235FD3B6' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/logo-ma.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://bancario.modusadvocacia.com.br/og-modus-advocacia.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Modus Advocacia">
 <script>
 /* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
 (function () {
@@ -72,9 +79,11 @@ p{margin:0 0 1em}
 .narrow{max-width:840px}
 .top{background:var(--navy);border-bottom:1px solid var(--navy-head-line);color:#fff}
 .top .wrap{display:flex;align-items:center;min-height:76px;padding-top:12px;padding-bottom:12px}
-.brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#fff}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:0}
 .brand:hover{color:#fff}
-.brand-nome{font:800 1.25rem/1.15 var(--display);letter-spacing:.02em}
+.brand-logo{width:44px;height:44px;flex:none;border-radius:10px}
+.brand-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.brand-nome{font:800 1.25rem/1.15 var(--display);letter-spacing:.01em}
 .brand-sub{font-size:1rem;color:#B9C8D8;line-height:1.3}
 main{flex:1;padding:48px 0 64px}
 @media (min-width:900px){main{padding:72px 0 88px}}
@@ -88,7 +97,8 @@ main{flex:1;padding:48px 0 64px}
 @media (min-width:900px){.foot{padding:48px 0}}
 .foot .wrap{display:grid;gap:24px}
 @media (min-width:800px){.foot .wrap{grid-template-columns:1.2fr 1fr;align-items:start}.foot .lado{text-align:right}}
-.foot-brand{font:800 1.125rem/1.2 var(--display);letter-spacing:.02em;color:#fff;margin-bottom:10px}
+.foot-brand{display:flex;align-items:center;gap:12px;font:800 1.1875rem/1.2 var(--display);letter-spacing:.01em;color:#fff;margin-bottom:12px}
+.foot-brand .brand-logo{width:40px;height:40px}
 .foot p{line-height:1.7;margin:0}
 .foot p+p{margin-top:6px}
 .foot a{color:#fff}
@@ -121,8 +131,9 @@ main{flex:1;padding:48px 0 64px}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/">
-      <span class="brand-nome">MODUS ADVOCACIA</span>
-      <span class="brand-sub">Direito bancário para pequenas empresas</span>
+      <img class="brand-logo" src="/logo-ma.svg" width="44" height="44" alt="">
+      <span class="brand-txt"><span class="brand-nome">Modus Advocacia</span>
+      <span class="brand-sub">Amanda Regina Gonçalves Modus · Advogada · OAB/PR 119.898</span></span>
     </a>
   </div>
 </header>
@@ -140,8 +151,8 @@ main{flex:1;padding:48px 0 64px}
 <footer class="foot">
   <div class="wrap">
     <div>
-      <p class="foot-brand">MODUS ADVOCACIA</p>
-      <p>Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      <p class="foot-brand"><img class="brand-logo" src="/logo-ma.svg" width="40" height="40" alt="" loading="lazy">Modus Advocacia</p>
+      <p>Amanda Regina Gonçalves Modus · Advogada · OAB/PR 119.898</p>
       <p>R. Quebec, 326 – Jardim Canadá, Maringá-PR, <span class="nw">87080-560</span></p>
       <p><a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a> · <a data-whats href="https://wa.me/5544988482082" target="_blank" rel="noopener" class="nw">(44) 98848-2082</a></p>
     </div>
@@ -164,20 +175,7 @@ main{flex:1;padding:48px 0 64px}
   var lead = null;
   try { lead = JSON.parse(sessionStorage.getItem('modus_lead') || 'null'); } catch (e) {}
   if (!lead || lead.servico !== 'bancario') return;
-  /* Conversão do Google Ads — dispara uma única vez por envio */
-  if (lead.conv_pendente) {
-    var valor = lead.classificacao === 'QUALIFICADO' ? C.VALOR_QUALIFICADO : C.VALOR_REVISAR;
-    if (idValido(C.ADS_ID) && idValido(C.ADS_LABEL)) {
-      gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
-    }
-    /* GA4: evento recomendado de lead, só para a propriedade do GA4 */
-    if (idValido(C.GA4_ID)) {
-      gtag('event', 'generate_lead', { send_to: C.GA4_ID, servico: lead.servico, classificacao: lead.classificacao, value: valor, currency: C.MOEDA, transaction_id: lead.lead_id });
-    }
-    if (DEBUG) console.log('[conversão]', lead.classificacao, valor, lead.lead_id);
-    lead.conv_pendente = false;
-    try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
-  }
+  /* A conversão é registrada na página do formulário, no retorno de sucesso do envio; aqui nada dispara. */
   /* Mensagens de WhatsApp e e-mail com o resumo enviado */
   var linhas = (lead.resumo || []).map(function (r) { return '• ' + r[0] + ': ' + r[1]; }).join('\n');
   var msg = 'Olá, Dra. Amanda. Enviei os dados da minha empresa pela página de direito bancário.\n' +
