@@ -11,9 +11,9 @@ As duas páginas (`landing-desbloqueio/` e `landing-marketplace/`) mandam os mes
 |---|---|---|
 | `GTM_ID` | `CONFIG` das duas páginas | **[PREENCHER]**: crie o contêiner (Web) e cole o `GTM-XXXXXXX` |
 | `GA4_ID` | `CONFIG` e variável `const - GA4_ID` | `G-VVFXJ8YE64` (mesma propriedade do site e do cartório; separe por **Nome do host**) |
-| `ADS_ID` | `CONFIG` e `const - ADS_ID` | `AW-18256148045`, **[CONFIRMAR]**: é da conta 364-007-7370; você citou a conta 783-935-8286. Se os anúncios rodarem na 783-935-8286, troque pelo ID dela |
-| `ADS_LABEL_LEAD` | `CONFIG` de cada página e `const - Ads rótulo Lead ...` | **[PREENCHER]** depois de criar as ações "Lead WhatsApp - Judicial" e "Lead WhatsApp - Marketplace" |
-| `ADS_LABEL_LIGACAO` | `CONFIG` e `const - Ads rótulo Ligação` | **[PREENCHER]** ("Ligação pelo site") |
+| `ADS_ID` | `CONFIG` e `const - ADS_ID` | `AW-18256148045`, da conta **364-007-7370** (confirmado em 23/10/2026). A conta 783-935-8286 é antiga e só de leitura |
+| `ADS_LABEL_LEAD` | `CONFIG` de cada página e `const - Ads rótulo Lead ...` | **Preenchido em 23/10/2026**: Judicial `SQaSCPiznacdEM3smoFE` (ação 7866898936), Marketplace `QUhZCPuznacdEM3smoFE` (ação 7866898939). Categoria Contato, principal, contagem Uma, janela de 90 dias |
+| `ADS_LABEL_LIGACAO` | `CONFIG` e `const - Ads rótulo Ligação` | **Não criado** de propósito: a advogada não atende ligações (regra da conta). Fica `ROTULO_LIGACAO`, que não dispara |
 | `META_PIXEL_ID` | `CONFIG` e `const - META_PIXEL_ID` | **[PREENCHER]** |
 | `META_CAPI_TOKEN` | Vercel → projeto → Settings → Environment Variables | **[PREENCHER]** (junto com `META_PIXEL_ID`; veja abaixo) |
 | `CLARITY_ID` | `CONFIG` e `const - CLARITY_ID` | **[PREENCHER]** |
@@ -57,14 +57,14 @@ No Clarity: Configurações → Mascaramento → **Rigoroso** (a triagem não te
 2. Admin → **Eventos principais**: marque `whatsapp_click` e `phone_click`. Deixe `triagem_concluida` e `lead_desqualificado` como eventos comuns.
 3. Admin → **Definições personalizadas** → dimensões (escopo Evento): `pagina`, `secao`, `qualificado`, `faixa_valor`, `origem_dinheiro`, `quando_bloqueio`, `plataforma`, `situacao`, `faturamento`.
 
-## 4. Google Ads (conta de [CONFIRMAR] 783-935-8286)
+## 4. Google Ads (conta 364-007-7370)
 
 Metas → Conversões → Nova ação → **Site** → criar manualmente com código:
 
 | Conversão | Categoria | Classificação | Contagem | Rótulo vai em |
 |---|---|---|---|---|
-| Lead WhatsApp - Judicial | Enviar formulário de lead | Principal | Uma | `ADS_LABEL_LEAD` do judicial / `const - Ads rótulo Lead Judicial` |
-| Lead WhatsApp - Marketplace | Enviar formulário de lead | Principal | Uma | `ADS_LABEL_LEAD` do marketplace / `const - Ads rótulo Lead Marketplace` |
+| Lead WhatsApp - Judicial | Contato (criada em 23/10/2026) | Principal | Uma | `ADS_LABEL_LEAD` do judicial / `const - Ads rótulo Lead Judicial` |
+| Lead WhatsApp - Marketplace | Contato (criada em 23/10/2026) | Principal | Uma | `ADS_LABEL_LEAD` do marketplace / `const - Ads rótulo Lead Marketplace` |
 | Ligação pelo site | Contato | Secundária | Uma | `ADS_LABEL_LIGACAO` / `const - Ads rótulo Ligação` |
 | Cliente fechado - Judicial | Importação → cliques | Secundária (principal depois de ~30 fechamentos) | Uma, com valor | importação offline |
 | Cliente fechado - Marketplace | idem | idem | idem | importação offline |
