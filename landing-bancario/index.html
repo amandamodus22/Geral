@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 3 páginas (início, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "5544988482082",             // só números: 55 + DDD + número
+  EMAIL: "amanda@modusadvocacia.com.br",  // e-mail de contato (rodapé e envio alternativo)
+  ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "8zUeCJn2naYdEM3smoFE",    // Google Ads: lead QUALIFICADO (ação "Lead – bancário PJ", exclusiva deste site)
+  ADS_LABEL_NAO_QUALIFICADO: "ROTULO_NAO_QUALIFICADO",  // Google Ads: lead NÃO qualificado (criar a ação e colar o rótulo)
+  ADS_LABEL_WHATSAPP: "ROTULO_WHATSAPP_BANCARIO",       // Google Ads: clique no WhatsApp deste site (criar a ação e colar o rótulo)
+  GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "https://hook.us2.make.com/n3sjr2173n7svw4di6fx70qd9luse8mm", // Make: cenário "Leads – bancário PJ"
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL"
+};
+</script>
+<title>Dívidas bancárias de pequenas empresas | Advogada OAB/PR 119.898</title>
+<meta name="description" content="Análise jurídica, plano e negociação das dívidas bancárias de ME e EPP: capital de giro, Pronampe, execução e aval. Atendimento online em todo o Brasil.">
+<link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0B1E33">
+<link rel="canonical" href="https://bancario.modusadvocacia.com.br/">
+<meta property="og:url" content="https://bancario.modusadvocacia.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Dívidas bancárias da sua pequena empresa com análise jurídica, plano e negociação">
+<meta property="og:description" content="Mapeamos os empréstimos da empresa, conferimos cada contrato e negociamos com os bancos. Atendimento online para ME e EPP de todo o Brasil.">
+<link rel="icon" type="image/png" href="/logo-modus.png">
+<link rel="apple-touch-icon" href="/logo-modus.png">
+<meta property="og:image" content="https://bancario.modusadvocacia.com.br/og-modus-advocacia.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Modus Advocacia">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Modus Advocacia – Amanda Regina Gonçalves Modus",
+  "description": "Análise jurídica, plano e negociação de dívidas bancárias de microempresas e empresas de pequeno porte.",
+  "serviceType": "Direito bancário para pequenas empresas (gestão de passivo bancário)",
+  "url": "https://bancario.modusadvocacia.com.br/",
+  "image": "https://bancario.modusadvocacia.com.br/og-modus-advocacia.png",
+  "logo": "https://bancario.modusadvocacia.com.br/logo-modus.png",
+  "telephone": "+55-44-98848-2082",
+  "email": "amanda@modusadvocacia.com.br",
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "address": { "@type": "PostalAddress", "streetAddress": "R. Quebec, 326 - Jardim Canadá", "addressLocality": "Maringá", "addressRegion": "PR", "postalCode": "87080-560", "addressCountry": "BR" },
+  "identifier": { "@type": "PropertyValue", "propertyID": "OAB/PR", "value": "119.898" },
+  "founder": { "@type": "Person", "name": "Amanda Regina Gonçalves Modus", "jobTitle": "Advogada", "identifier": "OAB/PR 119.898" },
+  "availableLanguage": "pt-BR"
+}
+</script>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("/fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/inter-600.woff2") format("woff2")}
+:root{
+  --navy:#0B1E33;--navy-2:#12304F;--navy-3:#0F2742;--navy-line:#23476E;--navy-head-line:#1E3550;--navy-deep:#081626;
+  --green:#12A383;--green-ink:#062A22;--green-dark:#0B6B58;--green-darker:#084F41;--mint:#5FD3B6;--mint-soft:#E7F6F1;
+  --amber:#F2B84B;--ink:#13253A;--muted:#44576B;--line:#DCE4EC;--field:#A9B8C7;--soft:#F3F6F9;
+  --on-navy-2:#DCE6F0;--on-navy-3:#C9D6E3;--on-navy-4:#A9B8C7;
+  --err:#B42335;
+  --display:Manrope,Inter,system-ui,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --grad-line:linear-gradient(90deg,#12A383,#5FD3B6);
+  --shadow:0 1px 2px rgba(11,30,51,.05),0 14px 34px -14px rgba(11,30,51,.18);
+  --glow:0 0 0 1px rgba(95,211,182,.35),0 18px 40px -16px rgba(18,163,131,.55);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;overflow-x:clip;background:#fff;color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--green-dark)}
+a:hover{color:var(--green-darker)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);margin:0;color:inherit}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.nw{white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 24px}}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:8px 12px;z-index:70}
+.skip:focus{left:16px}
+.ico{width:22px;height:22px;flex:none}
+@media (min-width:900px){section[id]{scroll-margin-top:78px}}
+.scroll-prog{position:fixed;left:0;top:0;right:0;height:3px;z-index:60;background:var(--grad-line);box-shadow:0 0 10px rgba(95,211,182,.7);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* Botões */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:10px;border:0;background:var(--green);color:var(--green-ink);font:700 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;transition:background .2s,translate .2s var(--ease),box-shadow .2s}
+.btn:hover{background:#17B893;color:var(--green-ink);translate:0 -2px;box-shadow:0 14px 28px -12px rgba(18,163,131,.75)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);background-size:250% 100%;background-position:150% 0;pointer-events:none}
+.btn:hover::after{animation:shine .9s ease}
+.btn[disabled]{opacity:.7;cursor:wait}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--mint);font-weight:600}
+.btn-ghost:hover{background:rgba(95,211,182,.12);color:#fff;box-shadow:none}
+.btn-sm{min-height:44px;padding:10px 18px;border-radius:8px;font-size:1rem;font-weight:600}
+.btn .seta{transition:translate .25s var(--ease)}
+.btn:hover .seta{translate:4px 0}
+
+/* Topo */
+.top{background:var(--navy);border-bottom:1px solid var(--navy-head-line);color:#fff;transition:background .3s,box-shadow .3s}
+@media (min-width:900px){.top{position:sticky;top:0;z-index:40}.top.scrolled{background:rgba(11,30,51,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 30px -16px rgba(0,0,0,.6)}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding-top:10px;padding-bottom:10px}
+@media (min-width:700px){.top .wrap{min-height:76px}}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:0}
+.brand:hover{color:#fff}
+.brand-logo{width:44px;height:44px;flex:none;border-radius:10px}
+.brand-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.brand-nome{font:800 1.1875rem/1.15 var(--display);letter-spacing:.01em;white-space:nowrap}
+@media (min-width:700px){.brand-nome{font-size:1.25rem}}
+.brand-sub{font-size:1rem;color:#B9C8D8;line-height:1.3}
+.menu{display:flex;align-items:center;gap:24px}
+.menu a{color:var(--on-navy-2);text-decoration:none;font-size:1rem;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--mint);transform:scaleX(0);transform-origin:0 50%;transition:transform .25s var(--ease)}
+.menu a:not(.btn):hover{color:#fff}
+.menu a:not(.btn):hover::after{transform:none}
+.menu .btn{color:var(--green-ink)}
+@media (max-width:899px){.menu a:not(.btn){display:none}}
+@media (max-width:599px){.menu .btn{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;overflow:clip;background:var(--navy);color:#fff;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(640px 420px at 88% 8%,rgba(18,163,131,.30),rgba(18,163,131,0) 65%),radial-gradient(520px 420px at -6% 100%,rgba(95,211,182,.14),rgba(95,211,182,0) 60%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/44px 44px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 30%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 70% 30%,#000 10%,transparent 75%)}
+.hero .wrap{display:grid;gap:36px;padding-top:32px;padding-bottom:48px;align-items:center}
+@media (min-width:960px){.hero .wrap{grid-template-columns:1.35fr 1fr;gap:56px;padding-top:72px;padding-bottom:88px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green-dark);margin-bottom:12px}
+.hero .eyebrow,.navy .eyebrow{color:var(--mint)}
+.hero .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(95,211,182,.7);animation:ping 2.2s infinite}
+.hero h1{font-size:clamp(1.75rem,6.6vw,3.25rem);line-height:1.1;font-weight:800;letter-spacing:-.015em;margin-bottom:16px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#5FD3B6,#A7F0DA);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:1.0625rem;line-height:1.6;color:var(--on-navy-3);max-width:600px;margin-bottom:24px}
+@media (min-width:700px){.hero-sub{font-size:1.1875rem;margin-bottom:28px}}
+@media (max-width:599px){.so-desk{display:none}}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px 12px}
+@media (max-width:599px){.cta-row .btn{width:100%}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips li{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid var(--navy-line);color:var(--on-navy-2);font-size:1rem;line-height:1.3}
+.chips svg{width:18px;height:18px;color:var(--mint)}
+.hero-oab{margin-top:18px;font-size:1rem;color:#9FB3C8}
+
+/* Painel ilustrativo do hero */
+.painel-wrap{--mx:0;--my:0;perspective:1200px}
+.painel{position:relative;background:linear-gradient(180deg,#143457,#0F2742);border:1px solid var(--navy-line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8),0 0 0 1px rgba(95,211,182,.08);transform:rotateX(calc(var(--my)*-4deg)) rotateY(calc(var(--mx)*6deg));transition:transform .4s var(--ease)}
+@media (prefers-reduced-motion:no-preference){.painel{animation:float 7s ease-in-out infinite}}
+@media (min-width:700px){.painel{padding:22px 24px 20px}}
+.painel-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.painel-top b{font:700 1.0625rem/1.2 var(--display);color:#fff}
+.painel-top span{display:inline-flex;align-items:center;gap:6px;color:var(--mint);font-size:1rem}
+.painel-top span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint);animation:ping 2.2s infinite}
+.divs{display:grid;gap:12px}
+.div{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
+.div strong{font:700 1rem/1.3 var(--display);color:#fff}
+.div small{display:block;font-size:1rem;color:var(--on-navy-4);line-height:1.3}
+.div .tag{align-self:start;font-size:1rem;line-height:1;padding:6px 10px;border-radius:99px;white-space:nowrap}
+.tag.atraso{background:rgba(242,184,75,.14);color:var(--amber)}
+.tag.aval{background:rgba(255,255,255,.08);color:var(--on-navy-2)}
+.tag.ok{background:rgba(95,211,182,.14);color:var(--mint)}
+.barra{grid-column:1/-1;height:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+.barra i{display:block;height:100%;width:var(--w);border-radius:inherit;background:var(--grad-line)}
+.div:first-child .barra i{background:linear-gradient(90deg,#F2B84B,#F7D58E)}
+.confere{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.14)}
+.confere li{display:inline-flex;align-items:center;gap:6px;color:var(--on-navy-2);font-size:1rem}
+.confere svg{width:18px;height:18px;color:var(--mint)}
+.painel-nota{margin-top:12px;font-size:1rem;color:#8EA3B9;text-align:right}
+.js .painel .barra i{transform:scaleX(0);transform-origin:0 50%;transition:transform 1.2s var(--ease)}
+.js .painel.in .barra i{transform:none}
+.js .painel .div:nth-child(2) .barra i{transition-delay:.15s}
+.js .painel .div:nth-child(3) .barra i{transition-delay:.3s}
+.js .painel .confere li{opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s var(--ease)}
+.js .painel.in .confere li{opacity:1;transform:none}
+.js .painel.in .confere li:nth-child(1){transition-delay:.9s}
+.js .painel.in .confere li:nth-child(2){transition-delay:1.15s}
+.js .painel.in .confere li:nth-child(3){transition-delay:1.4s}
+.js .painel.in .confere li:nth-child(4){transition-delay:1.65s}
+
+/* Seções */
+.sec{padding:56px 0}
+@media (min-width:900px){.sec{padding:88px 0}}
+.soft{background:var(--soft)}
+.navy{position:relative;background:var(--navy);color:#fff;overflow:hidden;overflow:clip;isolation:isolate}
+.navy::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 400px at 100% 0,rgba(18,163,131,.22),rgba(18,163,131,0) 65%)}
+.sec h2{font-size:clamp(1.625rem,5vw,2.5rem);line-height:1.15;font-weight:800;letter-spacing:-.01em;max-width:760px}
+.sec-lead{font-size:1.0625rem;line-height:1.6;color:var(--muted);margin-top:12px;max-width:720px}
+@media (min-width:700px){.sec-lead{font-size:1.125rem}}
+.navy .sec-lead{color:var(--on-navy-3)}
+.sec-head{margin-bottom:28px}
+@media (min-width:700px){.sec-head{margin-bottom:36px}}
+
+/* Perfil (checklist clicável) */
+.perfil{display:grid;gap:12px}
+@media (min-width:700px){.perfil{grid-template-columns:repeat(2,1fr);gap:16px}}
+.req{display:flex;align-items:center;gap:16px;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;min-height:64px;transition:border-color .25s,background .25s,box-shadow .25s,translate .25s var(--ease)}
+.req:hover{border-color:#9BD8C8;box-shadow:var(--shadow);translate:0 -2px}
+.req .ic{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:10px;border:2px solid #B9C7D4;color:transparent;transition:background .25s,border-color .25s,color .25s}
+.req .ic svg{width:20px;height:20px;transform:scale(.4);transition:transform .35s var(--ease)}
+.req[aria-pressed=true]{border-color:var(--green-dark);background:#F2FBF8;box-shadow:var(--glow)}
+.req[aria-pressed=true] .ic{background:var(--green);border-color:var(--green);color:#fff}
+.req[aria-pressed=true] .ic svg{transform:scale(1)}
+.req span:last-child{line-height:1.45}
+.req-dica{display:flex;align-items:center;gap:8px;color:var(--muted);margin:-12px 0 16px}
+.req-dica svg{width:18px;height:18px;color:var(--green-dark)}
+.req-ok{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin-top:16px;padding:20px 22px;border-radius:14px;background:var(--navy);color:#fff;box-shadow:var(--glow)}
+.req-ok p{max-width:30em;color:var(--on-navy-2)}
+.req-ok strong{color:#fff}
+.req-ok:not([hidden]){animation:pop .5s var(--ease) both}
+@media (max-width:599px){.req-ok .btn{width:100%}}
+
+/* Cartões e trilho deslizante (celular) */
+.grid3{display:grid;gap:16px}
+@media (min-width:700px){.grid3{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media (min-width:1000px){.grid3{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:699px){
+  .rail{grid-auto-flow:column;grid-auto-columns:84%;grid-template-columns:none;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0 20px;margin:0 -20px;padding:6px 20px 14px;scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail>*{scroll-snap-align:start}
+}
+.rail-nav{display:none}
+@media (max-width:699px){.rail-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;color:var(--muted)}
+  .rail-nav span{display:inline-flex;align-items:center;gap:6px}
+  .rail-nav svg{width:18px;height:18px;color:var(--green-dark)}
+  .dots{display:flex;gap:6px}
+  .dots i{width:8px;height:8px;border-radius:99px;background:#C3D0DC;transition:width .3s var(--ease),background .3s}
+  .dots i.on{width:22px;background:var(--green-dark)}
+  .navy .rail-nav{color:var(--on-navy-4)}
+}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:border-color .25s,box-shadow .25s,translate .25s var(--ease)}
+@media (min-width:700px){.card{padding:26px}}
+.card:hover{border-color:#B7E3D7;box-shadow:var(--shadow);translate:0 -3px}
+.card .ic{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--mint-soft);color:var(--green-dark);margin-bottom:4px;transition:background .25s,color .25s,transform .35s var(--ease)}
+.card:hover .ic{background:var(--green);color:#fff;transform:rotate(-6deg) scale(1.05)}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:1.1875rem;line-height:1.3;font-weight:700}
+.card p{font-size:1rem;line-height:1.6;color:var(--muted)}
+.card .num{font:800 1rem/1 var(--display);color:var(--green-dark);letter-spacing:.06em}
+.card.srv::before{content:"";position:absolute;left:22px;right:22px;top:-1px;height:3px;border-radius:0 0 3px 3px;background:var(--grad-line);transform:scaleX(.18);transform-origin:0 50%;transition:transform .45s var(--ease)}
+.card.srv:hover::before{transform:none}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(300px circle at var(--x,50%) var(--y,50%),rgba(18,163,131,.10),rgba(18,163,131,0) 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.spot:hover::after{opacity:1}
+
+/* Linha do tempo (como funciona) */
+.timeline{display:grid;counter-reset:passo}
+.timeline li{counter-increment:passo;position:relative;padding:0 0 28px 72px}
+.timeline li::before{content:counter(passo);position:absolute;left:0;top:0;display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--navy-2);border:1.5px solid var(--navy-line);color:var(--mint);font:800 1.375rem/1 var(--display);z-index:1;transition:background .3s,color .3s,box-shadow .3s}
+.timeline li::after{content:"";position:absolute;left:26px;top:52px;bottom:0;width:2px;background:linear-gradient(var(--green),var(--mint));transform-origin:50% 0}
+.timeline li:last-child{padding-bottom:0}
+.timeline li:last-child::after{display:none}
+.timeline li:last-child::before,.timeline li:hover::before{background:var(--green);color:var(--green-ink);border-color:var(--green);box-shadow:0 0 0 6px rgba(18,163,131,.18)}
+.timeline h3{font-size:1.25rem;font-weight:700;margin:12px 0 6px}
+.timeline p{color:var(--on-navy-3);font-size:1rem;line-height:1.6}
+@media (min-width:1000px){
+  .timeline{grid-template-columns:repeat(4,1fr);gap:28px}
+  .timeline li{padding:0}
+  .timeline li::before{position:relative;margin-bottom:22px}
+  .timeline li::after{left:68px;right:-14px;top:25px;bottom:auto;width:auto;height:2px;background:var(--grad-line);transform-origin:0 50%}
+  .timeline h3{margin-top:0}
+}
+.decide{display:flex;gap:12px;align-items:flex-start;margin-top:32px;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--navy-line);color:var(--on-navy-2);max-width:760px}
+.decide svg{width:22px;height:22px;flex:none;margin-top:2px;color:var(--mint)}
+
+/* Antes de assinar */
+.split{display:grid;gap:28px}
+@media (min-width:960px){.split{grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}.split>div:first-child{position:sticky;top:110px}}
+.split .sec-lead{margin-top:16px}
+.mini{display:grid;gap:12px}
+@media (min-width:600px){.mini{grid-template-columns:repeat(2,1fr);gap:16px}}
+.mini>div{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;background:var(--soft);border-radius:12px;padding:18px;border:1px solid transparent;transition:border-color .25s,background .25s}
+.mini>div:hover{background:#fff;border-color:var(--line)}
+.mini svg{grid-row:span 2;width:24px;height:24px;color:var(--green-dark);margin-top:2px}
+.mini h3{font-size:1.0625rem;font-weight:700}
+.mini p{font-size:1rem;line-height:1.55;color:var(--muted)}
+
+/* Quem atende */
+.about{display:grid;gap:28px;align-items:center}
+@media (min-width:800px){.about{grid-template-columns:300px 1fr;gap:56px}}
+.foto{position:relative;width:100%;max-width:300px;aspect-ratio:4/5;border-radius:18px;background:var(--line)}
+@media (max-width:799px){.foto{max-width:220px}}
+.foto::before{content:"";position:absolute;inset:-10px 10px 10px -10px;border-radius:20px;border:2px solid var(--mint);z-index:0}
+.foto img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;border-radius:18px}
+.about h2{margin-bottom:8px}
+.cred{font-weight:600;color:var(--green-dark);margin-bottom:16px}
+.about p+p{margin-top:12px}
+.about .bio{color:var(--muted);line-height:1.7}
+
+/* Dúvidas */
+.faq{max-width:880px;margin:0 auto}
+.faq h2{margin-bottom:20px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font:700 1.0625rem/1.4 var(--display);min-height:44px;transition:color .2s}
+@media (min-width:700px){.faq summary{font-size:1.125rem}}
+.faq summary:hover{color:var(--green-dark)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--mint-soft);font:700 1.375rem/1 var(--sans);color:var(--green-dark);transition:transform .3s var(--ease),background .3s,color .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--green);color:#fff}
+.faq .ans{padding:0 0 20px;color:var(--muted);line-height:1.7}
+@media (prefers-reduced-motion:no-preference){.faq details[open] .ans{animation:pop .35s var(--ease) both}}
+
+/* Contato */
+.contato .wrap{display:grid;gap:28px}
+@media (min-width:960px){.contato .wrap{grid-template-columns:1fr 1.9fr;gap:48px;align-items:start}}
+.contato h2{color:#fff}
+.passos-form{display:grid;gap:10px;margin-top:22px;color:var(--on-navy-2)}
+.passos-form li{display:flex;gap:10px;align-items:center}
+.passos-form svg{width:20px;height:20px;color:var(--mint)}
+.wa-alt{margin:16px 0 0}
+.wa-alt a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border-radius:8px;border:1.5px solid var(--line);color:var(--green-dark);font-size:1rem;font-weight:600;text-decoration:none;transition:border-color .2s,background .2s}
+.wa-alt a:hover{border-color:var(--green-dark);background:#F2FBF8;color:var(--green-darker)}
+.wa-alt .ico{width:20px;height:20px}
+.aviso-perfil{display:flex;gap:8px;align-items:flex-start;margin:8px 0 0;font-size:1rem;line-height:1.45;color:var(--muted)}
+.aviso-perfil svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--green-dark)}
+.rx{display:grid;gap:14px}
+.rx p{color:var(--muted);line-height:1.7}
+.rx h3{font-size:1.125rem;font-weight:700;margin-top:6px}
+.rx .btn{justify-self:start;margin-top:6px}
+@media (max-width:599px){.rx .btn{justify-self:stretch}}
+.form-card{overflow:hidden;overflow:clip;background:#fff;color:var(--ink);border-radius:16px;padding:22px 18px;scroll-margin-top:90px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+@media (min-width:700px){.form-card{padding:32px}}
+.fprog{margin-bottom:20px}
+.fprog p{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px;font-size:1rem;font-weight:600;color:var(--green-dark)}
+.fprog p span:last-child{color:var(--muted);font-weight:400}
+.fprog .trilho{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.fprog .trilho i{display:block;height:100%;width:100%;border-radius:inherit;background:var(--grad-line);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s var(--ease)}
+.fgrid{display:grid;gap:0 18px}
+@media (min-width:640px){.fgrid{grid-template-columns:1fr 1fr}}
+.field{margin:0 0 16px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:1rem;font-weight:600;margin-bottom:6px}
+.field label small{font-size:1rem;font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{display:block;width:100%;min-height:48px;padding:10px 14px;font:inherit;font-size:1.0625rem;color:var(--ink);background:#fff;border:1px solid var(--field);border-radius:8px;transition:border-color .2s,box-shadow .2s,background .2s}
+.field select{appearance:none;-webkit-appearance:none;padding-right:44px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2313253A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/18px 18px}
+.field textarea{min-height:96px;resize:vertical;line-height:1.5}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-dark);outline:none;box-shadow:0 0 0 3px rgba(11,107,88,.2)}
+.field.ok input,.field.ok select{border-color:#7CC9B5}
+.field [aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 1px var(--err)}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:4px 0 8px;cursor:pointer;font-size:1rem;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--green-dark)}
+.err{color:var(--err);font-weight:600;margin:10px 0 0}
+.form-card .enviar{margin-top:18px;width:100%;background:var(--green-dark);color:#fff;border-radius:8px}
+.form-card .enviar:hover{background:var(--green-darker);color:#fff}
+@media (min-width:640px){.form-card .enviar{width:auto}}
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+.seguro{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:1rem;margin:20px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.seguro svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--green-dark)}
+
+/* Rodapé */
+.foot{position:relative;background:var(--navy-deep);color:var(--on-navy-4);padding:40px 0 100px}
+.foot::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--grad-line);opacity:.6}
+@media (min-width:900px){.foot{padding:48px 0}}
+.foot .wrap{display:grid;gap:24px}
+@media (min-width:800px){.foot .wrap{grid-template-columns:1.2fr 1fr;align-items:start}}
+.foot-brand{display:flex;align-items:center;gap:12px;font:800 1.1875rem/1.2 var(--display);letter-spacing:.01em;color:#fff;margin-bottom:12px}
+.foot-brand .brand-logo{width:40px;height:40px}
+.foot p{line-height:1.7}
+.foot p+p{margin-top:6px}
+.foot a{color:#fff}
+.foot a:hover{color:var(--mint)}
+[data-email]{overflow-wrap:anywhere}
+@media (min-width:800px){.foot .lado{text-align:right}}
+
+/* Barra fixa (celular) e cookies */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(11,30,51,.96);border-top:1px solid var(--navy-line);transform:translateY(110%);visibility:hidden;transition:transform .3s var(--ease),visibility .3s}
+.sticky-cta.show{transform:none;visibility:visible}
+.sticky-cta .btn{flex:1;padding:12px 16px}
+@media (min-width:900px){.sticky-cta{display:none}}
+.has-cookie .sticky-cta{display:none}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:540px;background:var(--navy);color:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px}}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+.cookie a{color:var(--mint)}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:8px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.6)}
+.cookie .ok{background:var(--green);border-color:var(--green);color:var(--green-ink)}
+.cookie .no{background:transparent;color:#fff}
+.cookie:not([hidden]){animation:pop .4s var(--ease) both}
+
+/* Movimento ao rolar (sem JavaScript ou com "reduzir movimento", tudo aparece parado) */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+  .js [data-reveal].in{opacity:1;transform:none}
+  .js .timeline li::after{transform:scaleY(0);transition:transform .9s var(--ease);transition-delay:calc(var(--d,0s) + .35s)}
+  .js .timeline.in li::after{transform:none}
+  .hero-anim>*{animation:rise .8s var(--ease) both}
+  .hero-anim>:nth-child(2){animation-delay:.08s}
+  .hero-anim>:nth-child(3){animation-delay:.16s}
+  .hero-anim>:nth-child(4){animation-delay:.24s}
+  .hero-anim>:nth-child(5){animation-delay:.32s}
+  .hero-anim>:nth-child(6){animation-delay:.4s}
+}
+@media (prefers-reduced-motion:no-preference) and (min-width:1000px){.js .timeline li::after{transform:scaleX(0)}.js .timeline.in li::after{transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(95,211,182,.65)}70%{box-shadow:0 0 0 9px rgba(95,211,182,0)}100%{box-shadow:0 0 0 0 rgba(95,211,182,0)}}
+@keyframes shine{from{background-position:150% 0}to{background-position:-50% 0}}
+</style>
+</head>
+<body>
+<div class="scroll-prog" id="scroll-prog" aria-hidden="true"></div>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <img class="brand-logo" src="/logo-modus.png" width="44" height="44" alt="">
+      <span class="brand-txt"><span class="brand-nome">Modus Advocacia</span>
+      <span class="brand-sub">Amanda Regina Gonçalves Modus · Advogada · OAB/PR 119.898</span></span>
+    </a>
+    <nav class="menu" aria-label="Seções da página">
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-sm" href="#contato">Enviar meu caso</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 1. Topo -->
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <div class="hero-anim">
+        <p class="eyebrow"><span>Passivo bancário · <span class="nw">ME e EPP</span></span></p>
+        <h1>Dívidas bancárias da sua pequena empresa com <em>análise jurídica, plano e negociação.</em></h1>
+        <p class="hero-sub">Mapeamos todos os empréstimos da empresa, conferimos cada contrato e negociamos com os bancos propostas por escrito, considerando o caixa da empresa.<!-- REVISAR-AMANDA --><span class="so-desk"> Atendimento online para pequenas empresas de todo o Brasil, a partir de Maringá-PR.</span></p>
+        <div class="cta-row">
+          <a class="btn" id="hero-cta" href="#contato">Enviar dados do caso <svg class="ico seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="chips">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></svg>Atendimento online</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Todo o Brasil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Sigilo profissional</li>
+        </ul>
+        <p class="hero-oab">Advogada Amanda Regina Gonçalves Modus · OAB/PR 119.898</p>
+      </div>
+      <div class="painel-wrap" id="painel-wrap">
+        <figure class="painel" id="painel" aria-label="Exemplo ilustrativo do mapa das dívidas feito no diagnóstico" style="margin:0">
+          <div class="painel-top"><b>Mapa das dívidas</b><span>Diagnóstico</span></div>
+          <div class="divs">
+            <div class="div"><div><strong>Banco A</strong><small>Capital de giro</small></div><span class="tag atraso">Em atraso</span><span class="barra"><i style="--w:82%"></i></span></div>
+            <div class="div"><div><strong>Banco B</strong><small>Pronampe</small></div><span class="tag ok">Em dia</span><span class="barra"><i style="--w:56%"></i></span></div>
+            <div class="div"><div><strong>Banco C</strong><small>Cheque especial PJ</small></div><span class="tag aval">Aval do sócio</span><span class="barra"><i style="--w:34%"></i></span></div>
+          </div>
+          <ul class="confere">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Taxas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Garantias</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Avalistas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Atrasos</li>
+          </ul>
+          <figcaption class="painel-nota">Exemplo ilustrativo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Para quem é (clicável) -->
+  <section class="sec soft" id="perfil" aria-labelledby="t-quem">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow">Para quem é</p>
+        <h2 id="t-quem">A sua empresa tem esse perfil?</h2>
+      </div>
+      <p class="req-dica" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v6M13 10a2 2 0 0 1 4 0v1M17 11a2 2 0 0 1 4 0v4a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-2.7L5 15a2 2 0 0 1 3.3-2.3L9 14"/></svg>Toque nos itens que se aplicam ao seu caso.</p>
+      <div class="perfil">
+        <button type="button" class="req" aria-pressed="false" data-reveal style="--d:0.00s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Microempresa ou empresa de pequeno porte (ME ou EPP)</span></button>
+        <button type="button" class="req" aria-pressed="false" data-reveal style="--d:0.06s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Dívidas bancárias somando a partir de <span class="nw">R$ 50 mil</span></span></button>
+        <button type="button" class="req" aria-pressed="false" data-reveal style="--d:0.12s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Empréstimos em um ou mais bancos: capital de giro, Pronampe, conta garantida, cheque especial PJ ou cédula de crédito bancário (CCB)</span></button>
+        <button type="button" class="req" aria-pressed="false" data-reveal style="--d:0.18s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Parcelas em dia mas apertando o caixa, ou já em atraso</span></button>
+      </div>
+      <div class="req-ok" id="req-ok" hidden>
+        <p><strong>O seu caso está dentro do perfil que atendemos.</strong> Envie os dados da empresa para a advogada avaliar.</p>
+        <a class="btn" href="#contato">Enviar dados do caso <svg class="ico seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Situações -->
+  <section class="sec" id="situacoes" aria-labelledby="t-sit">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <h2 id="t-sit">Alguma dessas situações é a da sua empresa?</h2>
+        <p class="sec-lead">São os casos mais comuns de pequenas empresas que chegam com dívidas bancárias.</p>
+      </div>
+      <div class="grid3 rail" tabindex="0" role="region" aria-label="Situações comuns">
+        <div class="card spot" data-reveal style="--d:0.00s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><h3>Parcelas que não cabem no caixa</h3><p>Capital de giro tomado para cobrir outro empréstimo, e a conta não fecha mais.</p></div>
+        <div class="card spot" data-reveal style="--d:0.08s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>Vendas no cartão retidas pelo banco</h3><p>A “trava bancária” segura os recebíveis e o dinheiro das vendas não chega à conta.</p></div>
+        <div class="card spot" data-reveal style="--d:0.16s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>Sócio avalista preocupado</h3><p>O patrimônio pessoal do sócio está em jogo por causa do aval dado nos contratos.</p></div>
+        <div class="card spot" data-reveal style="--d:0.00s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 8l-3 7h6zM19 8l-3 7h6z"/></svg></span><h3>Execução ou bloqueio de contas</h3><p>O banco entrou com execução da cédula de crédito ou houve bloqueio pelo Sisbajud.</p></div>
+        <div class="card spot" data-reveal style="--d:0.08s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11M10 21v-6h4v6"/></svg></span><h3>Pronampe em atraso</h3><p>Parcelas atrasadas ou contrato já honrado pelo FGO, e o banco segue cobrando.</p></div>
+        <div class="card spot" data-reveal style="--d:0.16s"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg></span><h3>Proposta do banco na mesa</h3><p>O gerente ofereceu uma renegociação ou confissão de dívida e você não sabe se deve assinar.</p></div>
+      </div>
+      <div class="rail-nav" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M15 8l4 4-4 4"/></svg>Deslize para ver mais</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    </div>
+  </section>
+
+  <!-- 4. Serviços -->
+  <section class="sec soft" id="servicos" aria-labelledby="t-srv">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow">Serviços</p>
+        <h2 id="t-srv">O que fazemos pelas dívidas bancárias da empresa</h2>
+      </div>
+      <div class="grid3 rail" tabindex="0" role="region" aria-label="Serviços">
+        <div class="card srv spot" data-reveal style="--d:0.00s"><span class="num">01</span><h3>Diagnóstico do passivo bancário</h3><p>Levantamos todas as dívidas pelo Registrato (SCR do Banco Central) e pelos contratos, e montamos o mapa: banco, saldo, taxa, garantia, avalista e atraso. Você recebe um parecer com a estratégia.</p></div>
+        <div class="card srv spot" data-reveal style="--d:0.08s"><span class="num">02</span><h3>Gestão e renegociação com os bancos</h3><p>Propostas por escrito a cada banco, conversa com o gerente e com a área de recuperação de crédito, e acompanhamento até o acordo final.</p></div>
+        <div class="card srv spot" data-reveal style="--d:0.16s"><span class="num">03</span><h3>Revisão de contratos bancários</h3><p>Análise de cédulas de crédito bancário (CCB), capital de giro, conta garantida e cheque especial PJ: encargos, capitalização, comissão de permanência e tarifas.</p></div>
+        <div class="card srv spot" data-reveal style="--d:0.00s"><span class="num">04</span><h3>Pronampe e programas de renegociação</h3><p>Orientação sobre Pronampe, inclusive depois da honra pelo FGO, e sobre os programas de renegociação para pequenos negócios em vigor.</p></div>
+        <div class="card srv spot" data-reveal style="--d:0.08s"><span class="num">05</span><h3>Defesa em execução bancária</h3><p>Quando o banco já cobrou na Justiça: embargos à execução, impenhorabilidades, bloqueios de conta e proteção do sócio avalista.</p></div>
+        <div class="card srv spot" data-reveal style="--d:0.16s"><span class="num">06</span><h3>Recuperação extrajudicial</h3><p>Avaliação de um plano de pagamento negociado com vários credores (Lei 11.101), como alternativa à recuperação judicial.</p></div>
+      </div>
+      <div class="rail-nav" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M15 8l4 4-4 4"/></svg>Deslize para ver mais</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    </div>
+  </section>
+
+  <!-- 4b. Recuperação extrajudicial -->
+  <!-- REVISAR-AMANDA: conferir os artigos citados no texto vigente da Lei 11.101/2005, com as alterações da Lei 14.112/2020 -->
+  <section class="sec" id="recuperacao-extrajudicial" aria-labelledby="t-rx">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Recuperação extrajudicial</p>
+        <h2 id="t-rx">Recuperação extrajudicial para pequenas empresas</h2>
+      </div>
+      <div class="rx" data-reveal style="--d:.1s">
+        <p>A recuperação extrajudicial é um plano de pagamento negociado diretamente com os credores, previsto nos arts. 161 a 167 da Lei 11.101/2005. Depois de negociado, o plano pode ser levado ao juiz para homologação. É uma alternativa à recuperação judicial.</p>
+        <p>Só pode propor o plano a empresa que cumpre os requisitos do art. 48 da lei, aplicáveis por força do art. 161. Nem toda dívida entra no plano: o art. 161, § 1º, deixa de fora, entre outros, os créditos tributários e os créditos com garantia fiduciária, como a alienação fiduciária de bens e a cessão fiduciária de recebíveis. Para que o plano valha também para os credores que não assinaram, o art. 163 exige a adesão de credores que representem uma parcela mínima dos créditos de cada espécie abrangida.</p>
+        <p>Costuma fazer sentido avaliar essa via quando a empresa tem dívidas concentradas em bancos e em mais de um credor, e precisa de uma solução coletiva em vez de acordos separados. Como parte das garantias bancárias fica fora do plano, a resposta depende da composição do passivo, e a recuperação extrajudicial não é indicada para todos os casos.</p>
+        <p>A viabilidade é avaliada depois do diagnóstico do passivo bancário.</p>
+        <a class="btn" href="#contato">Enviar dados do caso <svg class="ico seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Como funciona -->
+  <section class="sec navy" id="metodo" aria-labelledby="t-metodo">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="t-metodo">Quatro etapas, com você decidindo em cada uma</h2>
+      </div>
+      <ol class="timeline" data-reveal>
+        <li data-reveal style="--d:0.00s"><h3>Diagnóstico</h3><p>Você envia o Registrato, os contratos e os extratos. Montamos o mapa das dívidas e apontamos os riscos.</p></li>
+        <li data-reveal style="--d:0.12s"><h3>Plano</h3><p>Com o seu contador, definimos quanto a empresa consegue pagar por mês e a ordem de cada banco.</p></li>
+        <li data-reveal style="--d:0.24s"><h3>Negociação</h3><p>Enviamos as propostas e conduzimos a conversa com os bancos, com base nos contratos e nas regras do setor.</p></li>
+        <li data-reveal style="--d:0.36s"><h3>Acordo revisado</h3><p>Revisamos a minuta antes da assinatura. A decisão de aceitar cada proposta é sempre da empresa.</p></li>
+      </ol>
+      <p class="decide" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Você acompanha cada etapa e recebe por escrito as propostas enviadas a cada banco.</span></p>
+    </div>
+  </section>
+
+  <!-- 6. Antes de assinar -->
+  <section class="sec" id="antes-de-assinar" aria-labelledby="t-antes">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Antes de assinar</p>
+        <h2 id="t-antes">O que conferimos em qualquer acordo com o banco</h2>
+        <p class="sec-lead">Uma renegociação mal feita pode trocar uma parcela menor por um risco maior. Por isso a minuta passa por análise jurídica antes da assinatura.</p>
+      </div>
+      <div class="mini">
+        <div data-reveal style="--d:0.00s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><h3>Novas garantias</h3><p>Se o acordo exige imóvel, veículo ou recebíveis que antes não estavam em garantia.</p></div>
+        <div data-reveal style="--d:0.08s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3"/></svg><h3>Aval dos sócios</h3><p>Se a renegociação amplia a responsabilidade pessoal do sócio ou do cônjuge.</p></div>
+        <div data-reveal style="--d:0.16s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg><h3>Confissão de dívida</h3><p>O que está sendo confessado, sobre qual saldo e com quais encargos embutidos.</p></div>
+        <div data-reveal style="--d:0.24s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><h3>Vencimento antecipado</h3><p>Cláusulas que fazem uma parcela atrasada derrubar todo o acordo e outros contratos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Quem atende -->
+  <section class="sec soft" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap about">
+      <div class="foto" data-reveal><img src="/foto-amanda-modus-retrato.webp" width="480" height="600" alt="Amanda Regina Gonçalves Modus, advogada" loading="lazy" decoding="async"></div>
+      <div data-reveal style="--d:.1s">
+        <p class="eyebrow">Quem atende</p>
+        <h2 id="t-sobre">Amanda Regina Gonçalves Modus</h2>
+        <p class="cred">Advogada · OAB/PR 119.898 · Modus Advocacia, Maringá-PR</p>
+        <p class="bio">Advogada inscrita na OAB/PR sob o nº 119.898, com escritório em Maringá-PR. Atende pequenas empresas de forma online, em todo o Brasil, na análise de contratos e na negociação de dívidas bancárias.</p>
+        <p class="bio">Renegociar com respaldo jurídico faz diferença: só a advogada pode analisar a legalidade do contrato, orientar sobre os riscos de uma execução e atuar no processo se o banco cobrar na Justiça. Os honorários são combinados em contrato escrito, com escopo definido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Dúvidas -->
+  <section class="sec" id="duvidas" aria-labelledby="t-faq">
+    <div class="wrap">
+      <div class="faq" data-reveal>
+        <h2 id="t-faq">Dúvidas frequentes</h2>
+        <details>
+          <summary>Vocês garantem desconto na dívida?</summary>
+          <div class="ans"><p>Não. Nenhum advogado pode garantir resultado. O que é possível depende do banco, das garantias, do tempo de atraso e do caixa da empresa. No diagnóstico mostramos os cenários realistas do seu caso.</p></div>
+        </details>
+        <details>
+          <summary>Atendem empresas fora de Maringá?</summary>
+          <div class="ans"><p>Sim. O atendimento é online, com reuniões por vídeo e documentos digitais, para pequenas empresas de todo o Brasil.</p></div>
+        </details>
+        <details>
+          <summary>Preciso estar com parcelas em atraso?</summary>
+          <div class="ans"><p>Não. Empresas em dia, mas com o caixa apertado, também podem reorganizar prazos e juros. Quanto antes a análise, mais opções existem.</p></div>
+        </details>
+        <details>
+          <summary>O que acontece com o sócio avalista?</summary>
+          <div class="ans"><p>O aval permite ao banco cobrar o sócio diretamente. Por isso a situação do avalista entra no diagnóstico desde o início, e qualquer acordo é analisado também do ponto de vista dele.</p></div>
+        </details>
+        <details>
+          <summary>Recuperação extrajudicial serve para a minha empresa?</summary>
+          <div class="ans"><p>Depende de quantos credores há, do tipo de garantia de cada dívida e de quantos bancos aceitariam o plano. Em muitos casos de pequenas empresas, a negociação direta resolve sem processo. Avaliamos as duas vias no diagnóstico.</p></div>
+        </details>
+        <details>
+          <summary>Quais documentos vou precisar?</summary>
+          <div class="ans"><p>Relatório do Registrato da empresa e dos sócios, contratos e aditivos com os bancos, extratos recentes e, se possível, balancete ou DRE fornecidos pelo contador. Orientamos como obter cada um.</p></div>
+        </details>
+        <details>
+          <summary>Como são cobrados os honorários?</summary>
+          <div class="ans"><p>Os valores são definidos depois da análise inicial, conforme o número de contratos e de bancos, e ficam registrados em contrato escrito antes do início do trabalho.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Contato -->
+  <section class="sec navy contato" id="contato" aria-labelledby="t-form">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="eyebrow">Contato</p>
+        <h2 id="t-form">Conte a situação da sua empresa</h2>
+        <p class="sec-lead">Com essas informações a advogada avalia o caso e retorna em horário comercial para explicar os próximos passos.</p>
+        <ul class="passos-form">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Leva cerca de 2 minutos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Informações confidenciais</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Retorno pelo WhatsApp ou e-mail</li>
+        </ul>
+      </div>
+      <div class="form-card" id="form-card" data-reveal style="--d:.1s">
+        <div class="fprog" aria-hidden="true"><p><span>Seu progresso</span><span id="fprog-txt">0 de 9</span></p><div class="trilho"><i id="fprog-bar"></i></div></div>
+        <form id="form-caso" novalidate>
+            <div class="fgrid">
+              <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required maxlength="120"></div>
+              <div class="field"><label for="f-empresa">Nome da empresa</label><input id="f-empresa" name="empresa" autocomplete="organization" required maxlength="160"></div>
+              <div class="field"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(44) 99999-9999" required maxlength="20"></div>
+              <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+              <div class="field"><label for="f-porte">Porte da empresa</label>
+                <select id="f-porte" name="porte" required>
+                  <option value="">Selecione</option>
+                  <option value="MEI">MEI</option>
+                  <option value="ME">Microempresa (ME)</option>
+                  <option value="EPP">Empresa de pequeno porte (EPP)</option>
+                  <option value="outro">Outro / não sei</option>
+                </select>
+                <p class="aviso-perfil" id="aviso-porte" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>O atendimento desta página é voltado a ME e EPP com dívidas bancárias a partir de R$ 50 mil. Você pode enviar mesmo assim, e avaliaremos se conseguimos ajudar.</span></p><!-- REVISAR-AMANDA --></div>
+              <div class="field"><label for="f-divida">Total das dívidas com bancos</label>
+                <select id="f-divida" name="faixa_divida" required>
+                  <option value="">Selecione</option>
+                  <option value="ate-50mil">Menos de R$ 50 mil</option>
+                  <option value="50-200mil">De R$ 50 mil a R$ 200 mil</option>
+                  <option value="200-500mil">Mais de R$ 200 mil até R$ 500 mil</option>
+                  <option value="500mil-1mi">Mais de R$ 500 mil até R$ 1 milhão</option>
+                  <option value="acima-1mi">Mais de R$ 1 milhão</option>
+                </select>
+                <p class="aviso-perfil" id="aviso-divida" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>O atendimento desta página é voltado a ME e EPP com dívidas bancárias a partir de R$ 50 mil. Você pode enviar mesmo assim, e avaliaremos se conseguimos ajudar.</span></p><!-- REVISAR-AMANDA --></div>
+              <div class="field"><label for="f-bancos">Com quantos bancos?</label>
+                <select id="f-bancos" name="qtd_bancos" required>
+                  <option value="">Selecione</option>
+                  <option>1 banco</option>
+                  <option>2 ou 3 bancos</option>
+                  <option>4 ou mais</option>
+                </select></div>
+              <div class="field"><label for="f-situacao">Situação hoje</label>
+                <select id="f-situacao" name="situacao" required>
+                  <option value="">Selecione</option>
+                  <option>Em dia, mas o caixa está apertado</option>
+                  <option>Parcelas em atraso</option>
+                  <option>Banco ofereceu renegociação</option>
+                  <option>Execução ou bloqueio de contas</option>
+                </select></div>
+              <div class="field full"><label for="f-cidade">Cidade / UF</label><input id="f-cidade" name="cidade" autocomplete="address-level2" placeholder="Ex.: Maringá/PR" required maxlength="80"></div>
+              <div class="field full"><label for="f-msg">Algo mais que devemos saber? <small>(opcional)</small></label><textarea id="f-msg" name="mensagem" rows="3" maxlength="1500"></textarea></div>
+            </div>
+            <div class="hp" aria-hidden="true"><label for="f-site">Não preencha este campo</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>
+            <input type="hidden" name="gclid"><input type="hidden" name="gbraid"><input type="hidden" name="wbraid">
+            <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+            <input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+            <label class="consent"><input type="checkbox" name="consentimento" required><span>Autorizo o uso destes dados para a avaliação do meu caso e para o registro da origem do contato, conforme a <a href="/privacidade/">política de privacidade</a>.</span></label><!-- REVISAR-AMANDA -->
+            <p class="err" id="form-erro" role="alert" hidden></p>
+            <button class="btn enviar" type="submit">Enviar para análise</button>
+          </form>
+        <p class="wa-alt"><a id="wa-bancario" href="https://wa.me/5544988482082?text=Ol%C3%A1%2C%20Dra.%20Amanda.%20Vim%20pela%20p%C3%A1gina%20de%20d%C3%ADvidas%20banc%C3%A1rias.%20Minha%20empresa%20%C3%A9%20ME%2FEPP%2C%20a%20d%C3%ADvida%20com%20bancos%20%C3%A9%20de%20cerca%20de%20R%24%20___%20mil%20e%20s%C3%A3o%20___%20bancos." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Prefere o WhatsApp? Envie porte e valor da dívida</a></p>
+        <noscript><p>Para enviar o formulário, ative o JavaScript no navegador ou escreva para amanda@modusadvocacia.com.br.</p></noscript>
+        <p class="seguro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>As informações são confidenciais, protegidas pelo sigilo profissional, e servem apenas para a análise do caso.</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="foot-brand"><img class="brand-logo" src="/logo-modus.png" width="40" height="40" alt="" loading="lazy">Modus Advocacia</p>
+      <p>Amanda Regina Gonçalves Modus · Advogada · OAB/PR 119.898</p>
+      <p>R. Quebec, 326 – Jardim Canadá, Maringá-PR, <span class="nw">87080-560</span></p>
+      <p><a data-email href="mailto:amanda@modusadvocacia.com.br">amanda@modusadvocacia.com.br</a> · <a href="tel:+5544988482082" class="nw">(44) 98848-2082</a></p>
+    </div>
+    <div class="lado">
+      <p>Conteúdo informativo. Cada caso depende da análise dos documentos e não há garantia de resultado.</p>
+      <p><a href="/privacidade/">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn" href="#contato">Enviar dados do caso</a>
+</div>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho da página e dos anúncios. <a href="/privacidade/">Política de privacidade</a></p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+
+<script>
+/* Origem do clique: guarda gclid, gbraid, wbraid e UTMs na sessão e preenche os campos ocultos do formulário */
+(function () {
+  var CAMPOS = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var url = new URLSearchParams(location.search);
+  try { CAMPOS.forEach(function (k) { var v = url.get(k); if (v) sessionStorage.setItem('mb_' + k, v.slice(0, 300)); }); } catch (e) {}
+  function preencher() {
+    CAMPOS.forEach(function (k) {
+      var el = document.querySelector('#contato [name="' + k + '"]');
+      if (!el) return;
+      var v = null;
+      try { v = sessionStorage.getItem('mb_' + k); } catch (e) {}
+      el.value = v || url.get(k) || '';
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', preencher); else preencher();
+})();
+</script>
+<script>
+/* ==========================================================================
+   MOTOR DA PÁGINA — não precisa editar
+   ========================================================================== */
+(function () {
+  'use strict';
+  var C = window.CONFIG;
+  var SERVICO = 'bancario', SERVICO_NOME = 'dívidas bancárias da empresa (passivo bancário PJ)';
+  var URL_OBRIGADO = '/obrigado/';
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  var params = new URLSearchParams(location.search);
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function track(ev, p) {
+    p = p || {};
+    p.servico = SERVICO;
+    if (DEBUG) console.log('[evento]', ev, p);
+    if (typeof gtag === 'function') gtag('event', ev, p);
+  }
+  function digitos(s) { return String(s || '').replace(/\D/g, ''); }
+
+  function consentiu() { return lsGet('modus_consent') === 'granted'; }
+  // Rótulo de conversão utilizável: não é marcador e não é rótulo do site principal ou do cartório
+  var ROTULOS_DE_OUTROS_SITES = ['mrS3CPW_8p8dEM3smoFE', 'jPA8CNPM06MdEM3smoFE', '6IlZCNK14KQdEM3smoFE'];
+  function rotuloOk(r) { return !!r && !/^ROTULO_|X{4,}/.test(r) && ROTULOS_DE_OUTROS_SITES.indexOf(r) === -1; }
+
+  /* ---------- WhatsApp (único link, abaixo do formulário) e e-mail ---------- */
+  var wa = $('#wa-bancario');
+  if (wa) wa.addEventListener('click', function () {
+    if (DEBUG) console.log('[whatsapp] consentimento:', consentiu());
+    if (!consentiu() || typeof gtag !== 'function') return;
+    if (rotuloOk(C.ADS_LABEL_WHATSAPP)) gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL_WHATSAPP });
+    gtag('event', 'whatsapp_click', { send_to: C.GA4_ID, pagina: 'bancario' });
+  });
+  $$('[data-email]').forEach(function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+
+  var CAMPOS_ATRIB = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+  /* ---------- Schema FAQPage gerado a partir das perguntas visíveis ---------- */
+  (function () {
+    var itens = $$('#duvidas details').map(function (d) {
+      return { '@type': 'Question', name: d.querySelector('summary').textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: d.querySelector('.ans').textContent.replace(/\s+/g, ' ').trim() } };
+    });
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: itens });
+    document.head.appendChild(s);
+  })();
+
+  /* ---------- Banner de cookies (aparece após rolar ou depois de alguns segundos) ---------- */
+  (function () {
+    var b = $('#cookie');
+    if (!lsGet('modus_consent')) {
+      var mostrou = false;
+      var mostrar = function () {
+        if (mostrou) return;
+        mostrou = true;
+        b.hidden = false;
+        document.body.classList.add('has-cookie');
+        removeEventListener('scroll', aoRolar);
+      };
+      var aoRolar = function () { if (window.scrollY > 150) mostrar(); };
+      addEventListener('scroll', aoRolar, { passive: true });
+      setTimeout(mostrar, 6000);
+    }
+    $$('[data-cookie]', b).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+        lsSet('modus_consent', g);
+        gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+        gtag('set', 'ads_data_redaction', g === 'denied');
+        b.hidden = true;
+        document.body.classList.remove('has-cookie');
+      });
+    });
+  })();
+
+  /* ---------- Barra fixa no celular ---------- */
+  (function () {
+    var bar = $('#sticky-cta');
+    if (!('IntersectionObserver' in window)) return;
+    var heroVisivel = true, formVisivel = false;
+    function atualizar() { bar.classList.toggle('show', !heroVisivel && !formVisivel); }
+    new IntersectionObserver(function (e) { heroVisivel = e[0].isIntersecting; atualizar(); }).observe($('#hero-cta'));
+    new IntersectionObserver(function (e) { formVisivel = e[0].isIntersecting; atualizar(); }).observe($('#contato'));
+  })();
+
+  /* ---------- Formulário ---------- */
+  var form = $('#form-caso'), erroEl = $('#form-erro'), enviando = false, iniciou = false, inicioTs = Date.now();
+  var CONSENT_TXT = 'Autorizo o uso destes dados para a avaliação do meu caso e para o registro da origem do contato, conforme a política de privacidade.';
+
+  // Aviso discreto (não bloqueia o envio) para MEI ou dívida menor que R$ 50 mil
+  function avisoPerfil() {
+    var abaixo = form.faixa_divida.value === 'ate-50mil', mei = form.porte.value === 'MEI';
+    $('#aviso-divida').hidden = !abaixo;
+    $('#aviso-porte').hidden = !(mei && !abaixo);
+  }
+  form.porte.addEventListener('change', avisoPerfil);
+  form.faixa_divida.addEventListener('change', avisoPerfil);
+
+  // Máscara simples do WhatsApp: (44) 99999-9999
+  form.whatsapp.addEventListener('input', function () {
+    var d = digitos(this.value).slice(0, 11);
+    if (d.length > 2) d = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length > 10) d = d.slice(0, 10) + '-' + d.slice(10);
+    this.value = d;
+  });
+  form.addEventListener('input', function (e) {
+    if (!iniciou) { iniciou = true; inicioTs = Date.now(); track('inicio_formulario', {}); }
+    if (e.target.getAttribute('aria-invalid') === 'true') e.target.removeAttribute('aria-invalid');
+  });
+  form.addEventListener('change', function (e) {
+    if (e.target.getAttribute('aria-invalid') === 'true') e.target.removeAttribute('aria-invalid');
+  });
+
+  function erro(msg, campo) {
+    erroEl.textContent = msg;
+    erroEl.hidden = !msg;
+    if (campo) { if (campo.type !== 'checkbox') campo.setAttribute('aria-invalid', 'true'); campo.focus(); }
+  }
+
+  function validar() {
+    var f = form;
+    $$('[aria-invalid]', f).forEach(function (el) { el.removeAttribute('aria-invalid'); });
+    if (f.nome.value.trim().length < 2) return erro('Informe o seu nome.', f.nome);
+    if (f.empresa.value.trim().length < 2) return erro('Informe o nome da empresa.', f.empresa);
+    if (!/^[1-9]\d{9,10}$/.test(digitos(f.whatsapp.value))) return erro('Informe um WhatsApp válido, com DDD.', f.whatsapp);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.value.trim())) return erro('Informe um e-mail válido.', f.email);
+    if (!f.porte.value) return erro('Selecione o porte da empresa.', f.porte);
+    if (!f.faixa_divida.value) return erro('Selecione o total das dívidas com bancos.', f.faixa_divida);
+    if (!f.qtd_bancos.value) return erro('Selecione com quantos bancos a empresa tem dívidas.', f.qtd_bancos);
+    if (!f.situacao.value) return erro('Selecione a situação de hoje.', f.situacao);
+    if (f.cidade.value.trim().length < 2) return erro('Informe a cidade e o estado.', f.cidade);
+    if (!f.consentimento.checked) return erro('Para enviar, marque a caixa de autorização.', f.consentimento);
+    erro('');
+    return true;
+  }
+
+  // Lead qualificado = ME ou EPP com dívidas a partir de R$ 50 mil (não aparece para a pessoa)
+  var FAIXAS_OK = ['50-200mil', '200-500mil', '500mil-1mi', 'acima-1mi'];
+  function ehQualificado(porte, faixa) { return (porte === 'ME' || porte === 'EPP') && FAIXAS_OK.indexOf(faixa) !== -1; }
+  function textoOpcao(sel) { return sel.selectedIndex > 0 ? sel.options[sel.selectedIndex].text : ''; }
+
+  // Conversão: chamada só no retorno de sucesso do envio. "pronto" é chamado quando o Google confirma o envio do evento.
+  function registrarLeadBancario(dados, leadId, pronto) {
+    var qualificado = ehQualificado(dados.porte, dados.faixa_divida);
+    if (typeof gtag !== 'function') { pronto(); return qualificado; }
+    // GA4: relatório
+    gtag('event', 'generate_lead', {
+      send_to: C.GA4_ID,
+      form_name: 'bancario_contato',
+      lead_qualificado: qualificado ? 'sim' : 'nao',
+      porte: dados.porte,
+      faixa_divida: dados.faixa_divida
+    });
+    // Google Ads: um rótulo para cada caso (exclusivos deste site)
+    var rotulo = qualificado ? C.ADS_LABEL : C.ADS_LABEL_NAO_QUALIFICADO;
+    if (rotuloOk(rotulo)) {
+      gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + rotulo, transaction_id: leadId, event_callback: pronto });
+    } else {
+      pronto();
+    }
+    if (DEBUG) console.log('[conversão]', qualificado ? 'qualificado' : 'não qualificado', rotuloOk(rotulo) ? rotulo : '(sem rótulo)', leadId);
+    return qualificado;
+  }
+
+  function montarLead() {
+    var f = form, q = ehQualificado(f.porte.value, f.faixa_divida.value);
+    var lead = {
+      lead_id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+      servico: SERVICO, servico_nome: SERVICO_NOME,
+      classificacao: q ? 'QUALIFICADO' : 'NAO_QUALIFICADO', qualificado: q ? 'sim' : 'nao',
+      nome: f.nome.value.trim(), empresa: f.empresa.value.trim(),
+      whatsapp: f.whatsapp.value.trim(), email: f.email.value.trim(),
+      porte: f.porte.value, porte_texto: textoOpcao(f.porte),
+      faixa_divida: f.faixa_divida.value, faixa_divida_texto: textoOpcao(f.faixa_divida), qtd_bancos: f.qtd_bancos.value,
+      situacao: f.situacao.value, cidade: f.cidade.value.trim(), mensagem: f.mensagem.value.trim(),
+      consentimento: 'sim', consentimento_texto: CONSENT_TXT,
+      data_hora: new Date().toISOString(),
+      pagina_origem: location.origin + location.pathname + location.search,
+      referrer: document.referrer || ''
+    };
+    CAMPOS_ATRIB.forEach(function (k) { lead[k] = f.elements[k] ? f.elements[k].value : ''; });
+    lead.resumo = [
+      ['Empresa', lead.empresa], ['Porte', lead.porte_texto], ['Total das dívidas', lead.faixa_divida_texto],
+      ['Bancos', lead.qtd_bancos], ['Situação', lead.situacao], ['Cidade/UF', lead.cidade]
+    ];
+    return lead;
+  }
+
+  function enviarWebhook(lead) {
+    var url = C.WEBHOOK_URL;
+    if (!url || !/^https:\/\//.test(url)) return Promise.resolve(false);
+    var corpo = new URLSearchParams();
+    Object.keys(lead).forEach(function (k) { if (typeof lead[k] !== 'object') corpo.append(k, lead[k]); });
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, 6000);
+    return fetch(url, { method: 'POST', body: corpo, keepalive: true, signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { clearTimeout(t); return r.ok; })
+      .catch(function () {
+        clearTimeout(t);
+        // Segunda tentativa sem esperar resposta (o lead é gravado pelo lead_id, sem duplicar)
+        try { if (navigator.sendBeacon) navigator.sendBeacon(url, corpo); } catch (e) {}
+        return false;
+      });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (enviando || validar() !== true) return;
+    var btn = $('button[type=submit]', form);
+    enviando = true;
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    // Proteção contra robôs: campo invisível preenchido ou envio rápido demais
+    if (form.website.value || Date.now() - inicioTs < 3000) { location.href = URL_OBRIGADO; return; }
+    var lead = montarLead();
+    enviarWebhook(lead).then(function (ok) {
+      lead.webhook_ok = ok;
+      try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
+      var foi = false;
+      function irParaObrigado() { if (!foi) { foi = true; location.href = URL_OBRIGADO; } }
+      // Conversão só quando o servidor confirmou o recebimento; envio com erro não conta
+      if (ok) {
+        registrarLeadBancario({ porte: lead.porte, faixa_divida: lead.faixa_divida }, lead.lead_id, irParaObrigado);
+        setTimeout(irParaObrigado, 1200);
+      } else {
+        irParaObrigado();
+      }
+    });
+  });
+})();
+</script>
+<script>
+/* Interações visuais: progresso de leitura, topo, revelação ao rolar, painel, perfil, trilhos e progresso do formulário */
+(function () {
+  'use strict';
+  var root = document.documentElement, prog = document.getElementById('scroll-prog'), topo = document.querySelector('.top'), pend = false;
+  function rolagem() {
+    pend = false;
+    var max = root.scrollHeight - root.clientHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, root.scrollTop / max) : 0) + ')';
+    topo.classList.toggle('scrolled', root.scrollTop > 40);
+  }
+  addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(rolagem); } }, { passive: true });
+  rolagem();
+
+  var alvos = [].slice.call(document.querySelectorAll('[data-reveal], #painel'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    alvos.forEach(function (el) { io.observe(el); });
+  } else {
+    alvos.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Painel do topo reage ao mouse (só em telas com mouse)
+  var pw = document.getElementById('painel-wrap'), hero = document.querySelector('.hero');
+  if (window.matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches) {
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      pw.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 2 - 1).toFixed(3));
+      pw.style.setProperty('--my', ((e.clientY - r.top) / r.height * 2 - 1).toFixed(3));
+    });
+    hero.addEventListener('mouseleave', function () { pw.style.setProperty('--mx', 0); pw.style.setProperty('--my', 0); });
+    document.addEventListener('pointermove', function (e) {
+      var el = e.target.closest && e.target.closest('.spot');
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
+  // Perfil: itens clicáveis
+  var reqs = [].slice.call(document.querySelectorAll('.req')), ok = document.getElementById('req-ok');
+  reqs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      var todos = reqs.every(function (x) { return x.getAttribute('aria-pressed') === 'true'; });
+      if (todos && ok.hidden && typeof gtag === 'function') gtag('event', 'perfil_completo', { servico: 'bancario' });
+      ok.hidden = !todos;
+    });
+  });
+
+  // Trilhos deslizantes no celular: indicador de posição
+  [].slice.call(document.querySelectorAll('.rail')).forEach(function (rail) {
+    var dots = rail.parentNode.querySelectorAll('.dots i'), itens = rail.children;
+    function marcar() {
+      var r = rail.getBoundingClientRect(), idx = 0, melhor = 1e9;
+      for (var i = 0; i < itens.length; i++) {
+        var d = Math.abs(itens[i].getBoundingClientRect().left - r.left - 20);
+        if (d < melhor) { melhor = d; idx = i; }
+      }
+      for (var j = 0; j < dots.length; j++) dots[j].classList.toggle('on', j === idx);
+    }
+    rail.addEventListener('scroll', function () { requestAnimationFrame(marcar); }, { passive: true });
+    marcar();
+  });
+
+  // Progresso do formulário
+  var form = document.getElementById('form-caso'), txt = document.getElementById('fprog-txt'), bar = document.getElementById('fprog-bar');
+  var obrig = ['nome', 'empresa', 'whatsapp', 'email', 'porte', 'faixa_divida', 'qtd_bancos', 'situacao', 'cidade'];
+  function progresso() {
+    var n = 0;
+    obrig.forEach(function (k) {
+      var el = form.elements[k], v = el.value.trim();
+      var cheio = k === 'whatsapp' ? v.replace(/\D/g, '').length >= 10 : k === 'email' ? /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) : v.length >= 2 || (el.tagName === 'SELECT' && !!v);
+      el.parentNode.classList.toggle('ok', cheio);
+      if (cheio) n++;
+    });
+    txt.textContent = n + ' de ' + obrig.length;
+    bar.style.transform = 'scaleX(' + (n / obrig.length) + ')';
+  }
+  form.addEventListener('input', progresso);
+  form.addEventListener('change', progresso);
+})();
+</script>
+</body>
+</html>

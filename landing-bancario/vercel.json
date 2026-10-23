@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/privacidade/:resto*", "destination": "https://desbloqueio.modusadvocacia.com.br/privacidade/", "statusCode": 301 },
+    { "source": "/:resto*", "destination": "https://desbloqueio.modusadvocacia.com.br/", "statusCode": 301 }
+  ]
+}

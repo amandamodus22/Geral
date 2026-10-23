@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco. Itens [PREENCHER] ficam desligados até receberem o ID.
+   ========================================================================== */
+window.CONFIG = {
+  PAGINA: "marketplace",                         // vai em todos os eventos (parâmetro "pagina")
+  VALOR_MINIMO: 3000,                              // valor mínimo atendido (texto das faixas da triagem)
+  PERMITIR_WHATSAPP_ABAIXO_DO_MINIMO: false,       // true: a tela de encerramento mostra um WhatsApp (sem contar como lead)
+  QUALIFICAR_POR_FATURAMENTO: false,          // true: até R$ 3 mil, mas faturamento acima de R$ 10 mil/mês, vira qualificado
+  WHATSAPP: "5544988482082",
+  GTM_ID: "[PREENCHER]",                           // Google Tag Manager (GTM-XXXXXXX). Com ele, as tags ficam no contêiner
+  GA4_ID: "G-VVFXJ8YE64",                          // GA4 (usado direto enquanto não houver GTM)
+  ADS_ID: "AW-18256148045",                        // Google Ads: ID da tag da conta 364-007-7370 (confirmado em 23/10/2026)
+  ADS_LABEL_LEAD: "QUhZCPuznacdEM3smoFE",       // Google Ads: rótulo da ação "Lead WhatsApp - Marketplace"
+  ADS_LABEL_LIGACAO: "ROTULO_LIGACAO",             // Google Ads: rótulo da ação "Ligação pelo site"
+  META_PIXEL_ID: "[PREENCHER]",                    // Meta Pixel
+  META_CAPI: true,                                 // envia o Lead também pela API de Conversões (/api/meta-capi)
+  CLARITY_ID: "[PREENCHER]",                       // Microsoft Clarity
+  PLANILHA_URL: "[PREENCHER]"                      // URL do Web App do Google Apps Script (https://script.google.com/macros/s/.../exec)
+};
+</script>
+<script>
+/* Consentimento (Consent Mode v2, modo avançado) e carregamento das tags — não editar */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+  var m = document.cookie.match(/(?:^|; )modus_consent=([^;]*)/);
+  var g = m && m[1] === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[|PREENCHER/.test(id); }
+  window.idValido = valido;
+  var s = document.createElement('script');
+  s.async = true;
+  if (valido(C.GTM_ID)) {
+    dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + C.GTM_ID;
+  } else {
+    var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+    if (!ids.length) return;
+    gtag('js', new Date());
+    if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+    if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  }
+  document.head.appendChild(s);
+})();
+</script>
+<title>Conta de vendedor bloqueada ou saldo retido no marketplace? | Advogada OAB/PR 119.898</title>
+<meta name="description" content="Conta de vendedor suspensa ou saldo de vendas retido? A advogada analisa o bloqueio e busca a reativação e a liberação do dinheiro. Atendimento online.">
+
+<link rel="canonical" href="https://marketplace.modusadvocacia.com.br/">
+<link rel="preload" href="/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#F8F7F3">
+<link rel="icon" type="image/png" href="/logo-modus.png">
+<link rel="apple-touch-icon" href="/logo-modus.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Modus Advocacia">
+<meta property="og:url" content="https://marketplace.modusadvocacia.com.br/">
+<meta property="og:title" content="Conta de vendedor bloqueada ou saldo retido?">
+<meta property="og:description" content="Conta de vendedor suspensa ou saldo de vendas retido? A advogada analisa o bloqueio e busca a reativação e a liberação do dinheiro. Atendimento online.">
+<meta property="og:image" content="https://marketplace.modusadvocacia.com.br/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LegalService",
+ "name": "Modus Advocacia",
+ "url": "https://marketplace.modusadvocacia.com.br/",
+ "logo": "https://marketplace.modusadvocacia.com.br/logo-modus.png",
+ "image": "https://marketplace.modusadvocacia.com.br/og.png",
+ "description": "Defesa de vendedores de marketplace: reativação de conta e liberação de saldo retido",
+ "serviceType": "Defesa de vendedores de marketplace: reativação de conta e liberação de saldo retido",
+ "telephone": "+55-44-98848-2082",
+ "email": "amanda@modusadvocacia.com.br",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Brasil"
+ },
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "R. Quebec, 326 - Jardim Canadá",
+  "addressLocality": "Maringá",
+  "addressRegion": "PR",
+  "postalCode": "87080-560",
+  "addressCountry": "BR"
+ },
+ "founder": {
+  "@type": "Person",
+  "name": "Amanda Regina Gonçalves Modus",
+  "jobTitle": "Advogada",
+  "identifier": "OAB/PR 119.898"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "A plataforma pode bloquear minha conta sem explicar o motivo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A plataforma pode aplicar suas regras, mas precisa agir com transparência e boa-fé. Isso inclui informar o motivo de forma clara e permitir a defesa do vendedor. Um bloqueio sem explicação pode ser questionado, conforme o caso."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Meu dinheiro de vendas pode ficar retido por quanto tempo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A retenção precisa de justificativa e de prazo razoável. O dinheiro de vendas já concluídas é do vendedor e não deve ficar retido por tempo indefinido sem relação com a suspeita apontada. Cada caso depende das regras da plataforma e dos documentos."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Já recorri pela plataforma e não resolveu. O que fazer?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "É possível enviar uma notificação extrajudicial pedindo o motivo, a reativação e a liberação do saldo. Se não houver solução, cabe ação judicial com pedido de urgência, quando cabível."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dá para recuperar a conta ou só o dinheiro?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Depende do caso. Às vezes o pedido é a reativação da conta; em outras, a liberação do saldo, ou as duas coisas. A análise mostra o que faz sentido pedir."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Posso pedir indenização pelas vendas perdidas?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Depende do caso e da prova do prejuízo. Por isso é importante guardar o faturamento dos últimos meses e os registros do bloqueio."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Vocês atendem qualquer valor?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "O atendimento é para valores bloqueados ou retidos acima de R$ 3 mil. Para valores menores, você pode registrar uma reclamação no consumidor.gov.br e, se não resolver, procurar o Juizado Especial Cível da sua cidade."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Sou MEI ou pessoa física. Faz diferença?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pode fazer diferença nas regras que se aplicam ao caso, por exemplo na possibilidade de usar o Código de Defesa do Consumidor. Isso é verificado na análise. O atendimento vale para MEI, pequenas empresas e autônomos."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--acc:#0E5A6A;--acc-dark:#0A4552;--acc-soft:#E2EFF1;--acc-glow:rgba(14,90,106,.10)}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("/fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/inter-600.woff2") format("woff2")}
+/* Cores: --acc é a cor de destaque da página (azul-marinho no judicial, verde-petróleo no marketplace).
+   Todo texto tem contraste de pelo menos 4,5:1 sobre o fundo em que aparece. */
+:root{
+  --bg:#F8F7F3;--surface:#FFFFFF;--ink:#17222B;--muted:#45525C;--line:#E1DED6;
+  --wa:#177C41;--wa-dark:#11602F;--err:#B42335;
+  --display:Manrope,Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --r:16px;--shadow:0 1px 2px rgba(23,34,43,.05),0 14px 32px -16px rgba(23,34,43,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+@media (min-width:900px){body{font-size:1.125rem}}
+a{color:var(--acc)}
+a:hover{color:var(--acc-dark)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:clamp(2rem,7.6vw,3.4rem);line-height:1.08}
+h2{font-size:clamp(1.65rem,4.8vw,2.4rem)}
+h3{font-size:1.1875rem;font-weight:700;line-height:1.3}
+p{margin:0 0 1em;max-width:68ch}
+ul,ol{margin:0}
+.nw{white-space:nowrap}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 32px}}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:8px 12px;z-index:90}
+.skip:focus{left:16px}
+.ico{width:22px;height:22px;flex:none}
+.kicker{display:flex;align-items:center;gap:10px;font:600 1rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}
+.kicker::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--acc);flex:none}
+.lead{font-size:1.125rem;color:var(--muted);max-width:62ch}
+.fonte{font-size:1rem;color:var(--muted)}
+.fonte a{color:var(--muted)}
+
+/* Botões (mínimo 48px de altura) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:.75em 1.3em;border-radius:12px;border:2px solid var(--acc);background:var(--acc);color:#fff;font:600 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--acc-dark);border-color:var(--acc-dark);color:#fff}
+.btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark);border-color:var(--wa-dark);color:#fff}
+.btn-sec{background:#fff;color:var(--acc)}
+.btn-sec:hover{background:var(--acc-soft);color:var(--acc-dark)}
+.btn-sm{min-height:48px;padding:.5em 1em;font-size:1rem}
+.btn svg{width:22px;height:22px;flex:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:599px){.cta-row .btn{width:100%}}
+.link-btn{background:none;border:0;color:var(--acc);font:inherit;font-size:1rem;text-decoration:underline;text-underline-offset:.18em;cursor:pointer;padding:.5em .25em;min-height:48px}
+
+/* Topo */
+.top{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+@media (min-width:900px){.top{position:sticky;top:0;z-index:40}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+.brand:hover{color:var(--ink)}
+.brand img{width:44px;height:44px;border-radius:10px;flex:none}
+.brand-nome{display:block;font:800 1.125rem/1.15 var(--display)}
+.brand-sub{display:block;font-size:1rem;line-height:1.3;color:var(--muted)}
+@media (max-width:599px){.top .btn{display:none}}
+
+/* Hero */
+.hero{padding:32px 0 44px;background:radial-gradient(640px 380px at 95% 0%,var(--acc-glow),transparent 70%),var(--bg)}
+@media (min-width:960px){.hero{padding:64px 0 76px}}
+.hero-grid{display:grid;gap:36px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.45fr .55fr;gap:48px}}
+.hero-grid>*{min-width:0}
+.sub{font-size:1.125rem;color:var(--muted);max-width:40em;margin-bottom:.8em}
+@media (min-width:900px){.sub{font-size:1.25rem}}
+.minimo{display:inline-flex;align-items:center;gap:8px;font-size:1rem;color:var(--muted);margin:0 0 22px}
+.minimo svg{width:18px;height:18px;color:var(--acc)}
+.selo{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:18px 0 0}
+.selo a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:600;text-decoration:none;min-height:44px}
+.selo a:hover{text-decoration:underline}
+.estrelas{color:#8A6100;letter-spacing:1px;font-size:1.125rem}
+.selo small{font-size:.9375rem;color:var(--muted)}
+.chips{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:1rem;line-height:1.3;color:var(--ink)}
+.oab{margin:18px 0 0;font-size:1rem;color:var(--muted)}
+.hero-foto{display:none;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:var(--shadow)}
+@media (min-width:960px){.hero-foto{display:block}}
+.hero-foto img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.hero-foto p{margin:12px 4px 2px;font-size:1rem;line-height:1.45;color:var(--muted)}
+.hero-foto strong{display:block;color:var(--ink)}
+
+/* Seções */
+.sec{padding:56px 0}
+@media (min-width:900px){.sec{padding:88px 0}}
+@media (min-width:900px){section[id]{scroll-margin-top:72px}}
+.sec-alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{max-width:44rem;margin-bottom:28px}
+.head .lead{margin:0}
+.grid2,.grid3{display:grid;gap:16px}
+@media (min-width:700px){.grid2,.grid3{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.sec-alt .card{background:var(--bg)}
+.card h3{margin-bottom:.4em}
+.card p{color:var(--muted)}
+.card p:last-child{margin-bottom:0}
+.card .ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--acc-soft);color:var(--acc);margin-bottom:12px}
+.card .ic svg{width:24px;height:24px}
+.aviso{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:var(--r);padding:18px 20px;margin-top:16px}
+.aviso svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--acc)}
+.aviso h3{font-size:1.0625rem;margin-bottom:.3em}
+.aviso p{margin:0 0 .5em;color:var(--muted)}
+.aviso p:last-child{margin-bottom:0}
+.aviso ul{margin:.2em 0 0;padding-left:1.2em;color:var(--muted)}
+.sec-cta{margin-top:24px}
+@media (max-width:599px){.sec-cta .btn{width:100%}}
+.lista{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.lista li{position:relative;padding-left:30px}
+.lista li::before{content:"";position:absolute;left:4px;top:.55em;width:14px;height:8px;border-left:2.5px solid var(--acc);border-bottom:2.5px solid var(--acc);transform:rotate(-45deg)}
+.passos{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:p}
+@media (min-width:900px){.passos{grid-template-columns:repeat(4,1fr)}}
+.passos li{counter-increment:p;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.sec-alt .passos li{background:var(--bg)}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--acc);color:#fff;font:800 1.125rem/1 var(--display);margin-bottom:12px}
+.passos p{margin:0;color:var(--muted)}
+.passos strong{display:block;color:var(--ink);margin-bottom:4px}
+
+/* Quem cuida */
+.quem{display:grid;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px}
+@media (min-width:800px){.quem{grid-template-columns:260px 1fr;gap:44px;padding:40px}}
+.quem img{display:block;width:100%;max-width:260px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+@media (max-width:799px){.quem img{max-width:220px}}
+.quem p{color:var(--muted)}
+.selo-oab{display:inline-block;background:var(--acc-soft);color:var(--acc-dark);font-weight:600;font-size:1rem;border-radius:99px;padding:6px 14px;margin:0 0 14px}
+
+/* Avaliações */
+.avals{display:grid;gap:16px;justify-content:center}
+.avals.um{grid-template-columns:minmax(0,640px)}
+@media (min-width:900px){.avals.varios{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}}
+.aval{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;margin:0}
+.aval blockquote{margin:8px 0 14px;font-size:1.0625rem;line-height:1.65;color:var(--ink)}
+.aval figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;color:var(--muted);font-size:1rem}
+.aval a{min-height:44px;display:inline-flex;align-items:center}
+.ver-todas{text-align:center;margin:20px 0 0}
+.ver-todas a{display:inline-flex;align-items:center;min-height:48px;font-weight:600}
+
+/* Perguntas */
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.sec-alt .faq details{background:var(--bg)}
+.faq summary{cursor:pointer;list-style:none;position:relative;padding:16px 56px 16px 18px;font:700 1.0625rem/1.45 var(--display);min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:14px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:var(--acc-soft);color:var(--acc);display:grid;place-items:center;font:700 1.25rem/1 var(--sans)}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 18px 16px;color:var(--muted)}
+.faq .ans p:last-child{margin:0}
+.faq{max-width:820px}
+
+/* Chamada final */
+.final{text-align:center;background:var(--acc);color:#fff;border-radius:24px;padding:36px 22px}
+.final h2{color:#fff;margin-bottom:.6em}
+.final .btn-wa{border-color:#fff}
+@media (max-width:599px){.final .btn{width:100%}}
+
+/* Marcas (marketplace) */
+.marcas{background:var(--surface);border-bottom:1px solid var(--line);padding:22px 0}
+.marcas p.tit{margin:0 0 12px;font-weight:600;color:var(--muted);font-size:1rem}
+.marcas ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center}
+.marcas li{font:700 1.125rem/1.2 var(--sans);color:#5E666D;letter-spacing:-.01em}
+@media (max-width:599px){.marcas li{font-size:1rem}}
+.marcas .aviso-marcas{margin:14px 0 0;font-size:1rem;color:var(--muted);max-width:none}
+
+/* Rodapé */
+.foot{background:#13212B;color:#D5DEE4;padding:40px 0 110px;font-size:1rem}
+@media (min-width:900px){.foot{padding:52px 0 44px}}
+.foot .wrap{display:grid;gap:22px}
+@media (min-width:800px){.foot .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}}
+.foot a{color:#fff}
+.foot a:hover{color:#BFE3EA}
+.foot p{margin:0 0 .5em;max-width:none}
+.foot-brand{display:flex;align-items:center;gap:12px;font:800 1.125rem/1.2 var(--display);color:#fff;margin-bottom:12px!important}
+.foot-brand img{width:40px;height:40px;border-radius:9px}
+.foot .disc{padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.07);color:#D5DEE4}
+.foot .cross{margin-top:6px}
+
+/* WhatsApp flutuante */
+.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:35;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:0;background:var(--wa);color:#fff;box-shadow:0 10px 24px -8px rgba(17,96,47,.7);cursor:pointer;transition:opacity .2s,visibility .2s}
+.wa-float:hover{background:var(--wa-dark)}
+.wa-float svg{width:30px;height:30px}
+.wa-float.oculto{opacity:0;visibility:hidden}
+@media (max-width:599px){.has-cookie .wa-float{bottom:calc(150px + env(safe-area-inset-bottom))}}
+
+/* Triagem (janela) */
+dialog.triagem{width:min(560px,100%);max-width:100%;max-height:100%;margin:auto;padding:0;border:0;border-radius:20px;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog.triagem::backdrop{background:rgba(15,25,32,.55)}
+@media (max-width:599px){dialog.triagem{margin:auto 0 0;width:100%;border-radius:20px 20px 0 0;max-height:94vh}}
+.tri-in{padding:20px 20px calc(22px + env(safe-area-inset-bottom))}
+@media (min-width:600px){.tri-in{padding:28px}}
+.tri-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.tri-prog{font-size:1rem;font-weight:600;color:var(--acc)}
+.tri-fechar{width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:1.5rem;line-height:1;cursor:pointer}
+.tri-barra{height:6px;border-radius:99px;background:#E6E9EB;overflow:hidden;margin-bottom:18px}
+.tri-barra i{display:block;height:100%;background:var(--acc);border-radius:99px;transition:width .3s}
+.tri-q{font:800 1.375rem/1.3 var(--display);margin:0 0 16px;outline:none}
+.tri-opts{display:grid;gap:10px}
+.tri-opt{display:flex;align-items:center;width:100%;min-height:54px;padding:12px 16px;border:1.5px solid #C9D0D5;border-radius:12px;background:#fff;color:var(--ink);font:600 1.0625rem/1.35 var(--sans);text-align:left;cursor:pointer}
+.tri-opt:hover,.tri-opt:focus-visible{border-color:var(--acc);background:var(--acc-soft)}
+.tri-nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px;margin-top:12px}
+.tri-res p{color:var(--muted)}
+.tri-res .msg{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);font-size:1rem}
+.tri-res .codigo{font-weight:600;color:var(--ink)}
+.tri-res .btn{width:100%;margin-top:6px}
+.tri-res ul{padding-left:1.2em;margin:0 0 1em}
+.tri-res li{margin:.3em 0}
+.tri-res li a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Cookies */
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:560px;background:#13212B;color:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px;padding:14px 16px}}
+.cookie a{color:#BFE3EA}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:48px;border-radius:10px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.75)}
+.cookie .ok{background:#fff;color:#13212B}
+.cookie .no{background:transparent;color:#fff}
+.cookie button:focus-visible{outline-color:#fff}
+
+/* Movimento ao rolar. Sem JavaScript, ou com "reduzir movimento" ligado, tudo aparece parado e visível.
+   O script só esconde o que está abaixo da dobra e mostra quando o elemento entra na tela. */
+.progresso{position:fixed;left:0;right:0;top:0;height:3px;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+.top{transition:box-shadow .25s}
+.top.rolou{box-shadow:0 8px 20px -14px rgba(23,34,43,.45)}
+.anim .rv{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .75s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.anim .rv.esq{transform:translateX(-32px)}
+.anim .rv.dir{transform:translateX(32px)}
+.anim .rv.zoom{transform:scale(.94)}
+.anim .rv.vis{opacity:1;transform:none}
+.anim .passos li.rv::before{transform:scale(.3) rotate(-25deg);transition:transform .55s cubic-bezier(.3,1.7,.5,1) calc(var(--d,0s) + .2s)}
+.anim .passos li.rv.vis::before{transform:none}
+.anim .head.rv .kicker::before{width:0;transition:width .6s ease .25s}
+.anim .head.rv.vis .kicker::before{width:18px}
+@keyframes sobe{from{opacity:0;transform:translateY(12px)}}
+@keyframes entra-dir{from{opacity:0;transform:translateX(36px)}}
+.chips li{animation:sobe .55s cubic-bezier(.2,.7,.2,1) both}
+.chips li:nth-child(1){animation-delay:.2s}.chips li:nth-child(2){animation-delay:.27s}.chips li:nth-child(3){animation-delay:.34s}
+.chips li:nth-child(4){animation-delay:.41s}.chips li:nth-child(5){animation-delay:.48s}.chips li:nth-child(n+6){animation-delay:.55s}
+.hero-foto{animation:entra-dir .7s cubic-bezier(.2,.7,.2,1) .1s both}
+@media (hover:hover){
+  .card,.passos li,.aval{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.passos li:hover,.aval:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--acc-soft)}
+}
+.wa-float{transition:opacity .25s,visibility .25s,transform .35s cubic-bezier(.3,1.6,.5,1)}
+.wa-float.oculto{transform:scale(.5)}
+.wa-float.pulsar::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(23,124,65,.55);animation:pulso 1.6s ease-out 2;pointer-events:none}
+@keyframes pulso{to{box-shadow:0 0 0 18px rgba(23,124,65,0)}}
+@media print{.anim .rv{opacity:1!important;transform:none!important}.progresso{display:none}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/logo-modus.png" width="44" height="44" alt="">
+      <span><span class="brand-nome">Modus Advocacia</span><span class="brand-sub">Amanda Regina Gonçalves Modus · OAB/PR 119.898</span></span>
+    </a>
+    <button type="button" class="btn btn-wa btn-sm" data-triagem="cabecalho"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Falar no WhatsApp</button>
+  </div>
+</header>
+<main id="conteudo">
+  <section class="hero" id="topo">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Sua conta de vendedor foi bloqueada ou o seu saldo está retido?</h1>
+        <p class="sub">A advogada analisa o bloqueio da sua conta no marketplace e busca a reativação e a liberação do dinheiro de vendas, pelo diálogo com a plataforma ou na Justiça. Atendimento online em todo o Brasil.</p>
+        <p class="minimo"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Atendimento para valores bloqueados acima de R$ 3 mil.</p>
+        <div class="cta-row">
+          <button type="button" class="btn btn-wa" id="hero-cta" data-triagem="topo"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Falar com a advogada no WhatsApp</button>
+          <a class="btn btn-sec" href="#direitos" data-cta="topo">Entender meus direitos</a>
+        </div>
+        <div class="selo" data-selo="topo"></div>
+        <ul class="chips" aria-label="Situações atendidas"><li>Conta suspensa</li><li>Saldo retido</li><li>Anúncios pausados</li><li>Conta encerrada</li><li>Denúncia de marca</li><li>Mediações e reclamações</li></ul>
+        <p class="oab">Advogada Amanda Modus · OAB/PR 119.898</p>
+      </div>
+      <figure class="hero-foto" style="margin:0">
+        <img src="/foto-amanda-modus.webp" width="560" height="700" alt="Amanda Regina Gonçalves Modus, advogada" fetchpriority="low" decoding="async">
+        <figcaption><p><strong>Amanda Regina Gonçalves Modus</strong>Advogada · OAB/PR 119.898<br>Atendimento online em todo o Brasil</p></figcaption>
+      </figure>
+    </div>
+  </section>
+  <!-- [CONFIRMAR a lista final de plataformas antes de publicar]. Logos oficiais não foram obtidos (sem acesso aos kits de imprensa);
+       por isso os nomes aparecem em texto, em cinza uniforme. Para usar logos, coloque os SVG oficiais e troque cada <li> por <img>. -->
+  <div class="marcas" aria-labelledby="t-marcas">
+    <div class="wrap">
+      <p class="tit" id="t-marcas">Atendemos vendedores de:</p>
+      <ul><li>Mercado Livre</li><li>Mercado Pago</li><li>Shopee</li><li>Amazon</li><li>Magalu</li><li>Shein</li><li>TikTok Shop</li></ul>
+      <p class="aviso-marcas">Marcas citadas apenas para identificar as plataformas em que os vendedores atendidos atuam. Não há qualquer vínculo, parceria ou autorização dessas empresas.</p>
+    </div>
+  </div>
+  <section class="sec" id="situacoes" aria-labelledby="t-sit">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Situações</p><h2 id="t-sit">Situações que mais acontecem</h2></div>
+      <div class="grid3"><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span><h3>Bloqueio por “análise de segurança”</h3><p>Suspeita de fraude ou análise de segurança, sem prazo para terminar.</p></div><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg></span><h3>Documentos que não resolvem</h3><p>A plataforma pede documentos, você envia, e o bloqueio continua.</p></div><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span><h3>Reclamações e reputação</h3><p>Suspensão por excesso de reclamações ou queda de reputação.</p></div><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12 12 20l-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><h3>Denúncia de marca</h3><p>Denúncia de marca ou de propriedade intelectual contra os anúncios.</p></div><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span><h3>Conta vinculada</h3><p>A conta foi ligada a outra conta bloqueada.</p></div><div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>Saldo preso no encerramento</h3><p>Saldo retido depois do encerramento da conta.</p></div></div>
+    </div>
+  </section>
+  <section class="sec sec-alt" id="direitos" aria-labelledby="t-dir">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Seus direitos</p><h2 id="t-dir">O vendedor também tem direitos</h2></div>
+      <div class="grid2">
+        <div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg></span><h3>Transparência e defesa</h3><p>A plataforma pode aplicar suas regras, mas precisa agir com transparência e boa-fé: informar o motivo de forma clara, permitir a defesa do vendedor e não reter por tempo indefinido valores sem relação com a suspeita.</p></div>
+        <div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11l2-8H6.2"/></svg></span><h3>O dinheiro das vendas é do vendedor</h3><p>O dinheiro de vendas já concluídas é do vendedor. A retenção precisa de justificativa e de prazo razoável.</p></div>
+      </div>
+      <!-- [CONFIRMAR se o CDC se aplica ao perfil do vendedor antes de afirmar; por ora, "conforme o caso"] -->
+      <p class="fonte" style="margin-top:16px">Base: boa-fé e função social do contrato (<a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener">Código Civil, arts. 421 e 422</a>) e, conforme o caso, as regras de proteção do consumidor (<a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener">CDC</a>).</p>
+      <div class="sec-cta"><button type="button" class="btn btn-wa" data-triagem="direitos"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Analisar o bloqueio da minha conta</button></div>
+    </div>
+  </section>
+  <section class="sec" id="como-funciona" aria-labelledby="t-como">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Como funciona</p><h2 id="t-como">Como a advogada atua</h2></div>
+      <ol class="passos">
+        <li><strong>Análise</strong><p>Você envia os prints das notificações, o histórico da conta e o valor retido.</p></li>
+        <li><strong>Defesa e notificação</strong><p>Recurso na própria plataforma, quando cabível, e notificação extrajudicial pedindo o motivo, a reativação e a liberação do saldo.</p></li>
+        <li><strong>Ação judicial</strong><p>Se não houver solução, ação com pedido de urgência para reativar a conta ou liberar os valores e, quando cabível, reparar os prejuízos.</p></li>
+        <li><strong>Acompanhamento</strong><p>Acompanhamento até a resposta, com retorno direto da advogada.</p></li>
+      </ol>
+    </div>
+  </section>
+  <section class="sec sec-alt" id="quanto-antes" aria-labelledby="t-antes">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Não espere</p><h2 id="t-antes">Quanto antes, melhor</h2></div>
+      <div class="grid2">
+        <div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Conta parada custa</h3><p>Cada dia de conta parada é venda perdida e reputação em risco.</p></div>
+        <div class="card"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg></span><h3>Guarde as provas agora</h3><p>Prints das notificações, e-mails da plataforma, extrato do saldo e faturamento dos últimos meses.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="quem" aria-labelledby="t-quem">
+    <div class="wrap">
+      <div class="quem">
+        <!-- [FOTO PROFISSIONAL]: trocar este arquivo pela foto profissional quando houver (mesmo nome, retrato 4:5) -->
+        <img src="/foto-amanda-modus.webp" width="560" height="700" alt="Amanda Regina Gonçalves Modus, advogada" loading="lazy" decoding="async">
+        <div>
+          <p class="kicker">Quem cuida do seu caso</p>
+          <h2 id="t-quem">Amanda Regina Gonçalves Modus</h2>
+          <p class="selo-oab">Advogada · OAB/PR 119.898 · Maringá-PR</p>
+          <ul class="lista">
+            <li>Atendimento online, para todo o Brasil.</li>
+            <li>Contato direto com a advogada, do começo ao fim.</li>
+            <li>Sigilo profissional sobre tudo o que você contar.</li>
+            <li>Honorários combinados em contrato escrito.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec sec-alt" id="documentos" aria-labelledby="t-docs">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Documentos</p><h2 id="t-docs">Documentos para começar</h2></div>
+      <ul class="lista">
+        <li>Prints e e-mails do bloqueio.</li>
+        <li>Extrato do saldo retido.</li>
+        <li>Relatório de vendas ou faturamento dos últimos 3 a 6 meses.</li>
+        <li>CNPJ ou MEI, se houver.</li>
+        <li>Histórico de reclamações ou mediações.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sec sec-alt" id="avaliacoes" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="head"><h2 id="t-aval">O que dizem no Google</h2></div>
+      <div id="avals" class="avals um"></div>
+      <p class="ver-todas"><a href="https://www.google.com/maps/place/?q=place_id:ChIJydzzsRvX7JQRKOM9yO4yNUY" target="_blank" rel="noopener" data-ev="google_reviews_click" data-secao="avaliacoes">Ver todas as avaliações no Google</a></p>
+    </div>
+  </section>
+  <section class="sec" id="duvidas" aria-labelledby="t-faq">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Dúvidas</p><h2 id="t-faq">Perguntas frequentes</h2></div>
+      <div class="faq">
+        <details>
+          <summary>A plataforma pode bloquear minha conta sem explicar o motivo?</summary>
+          <div class="ans"><p>A plataforma pode aplicar suas regras, mas precisa agir com transparência e boa-fé. Isso inclui informar o motivo de forma clara e permitir a defesa do vendedor. Um bloqueio sem explicação pode ser questionado, conforme o caso.</p></div>
+        </details>
+        <details>
+          <summary>Meu dinheiro de vendas pode ficar retido por quanto tempo?</summary>
+          <div class="ans"><p>A retenção precisa de justificativa e de prazo razoável. O dinheiro de vendas já concluídas é do vendedor e não deve ficar retido por tempo indefinido sem relação com a suspeita apontada. Cada caso depende das regras da plataforma e dos documentos.</p></div>
+        </details>
+        <details>
+          <summary>Já recorri pela plataforma e não resolveu. O que fazer?</summary>
+          <div class="ans"><p>É possível enviar uma notificação extrajudicial pedindo o motivo, a reativação e a liberação do saldo. Se não houver solução, cabe ação judicial com pedido de urgência, quando cabível.</p></div>
+        </details>
+        <details>
+          <summary>Dá para recuperar a conta ou só o dinheiro?</summary>
+          <div class="ans"><p>Depende do caso. Às vezes o pedido é a reativação da conta; em outras, a liberação do saldo, ou as duas coisas. A análise mostra o que faz sentido pedir.</p></div>
+        </details>
+        <details>
+          <summary>Posso pedir indenização pelas vendas perdidas?</summary>
+          <div class="ans"><p>Depende do caso e da prova do prejuízo. Por isso é importante guardar o faturamento dos últimos meses e os registros do bloqueio.</p></div>
+        </details>
+        <details>
+          <summary>Vocês atendem qualquer valor?</summary>
+          <div class="ans"><p>O atendimento é para valores bloqueados ou retidos acima de R$ 3 mil. Para valores menores, você pode registrar uma reclamação no consumidor.gov.br e, se não resolver, procurar o Juizado Especial Cível da sua cidade.</p></div>
+        </details>
+        <details>
+          <summary>Sou MEI ou pessoa física. Faz diferença?</summary>
+          <div class="ans"><p>Pode fazer diferença nas regras que se aplicam ao caso, por exemplo na possibilidade de usar o Código de Defesa do Consumidor. Isso é verificado na análise. O atendimento vale para MEI, pequenas empresas e autônomos.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0" aria-labelledby="t-final">
+    <div class="wrap">
+      <div class="final">
+        <h2 id="t-final">Vamos entender o bloqueio da sua conta.</h2>
+        <button type="button" class="btn btn-wa" data-triagem="final"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Falar com a advogada no WhatsApp</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="foot-brand"><img src="/logo-modus.png" width="40" height="40" alt="" loading="lazy">Modus Advocacia</p>
+        <p>Amanda Regina Gonçalves Modus · Advogada · OAB/PR 119.898</p>
+        <p>R. Quebec, 326, Jardim Canadá, Maringá-PR · Atendimento online em todo o Brasil</p>
+        <p><a href="tel:+5544988482082" data-ev="phone_click" data-secao="rodape">(44) 98848-2082</a> · <a href="mailto:amanda@modusadvocacia.com.br" data-ev="email_click" data-secao="rodape">amanda@modusadvocacia.com.br</a></p>
+      </div>
+      <div>
+        <p><a href="/privacidade/">Política de privacidade</a></p>
+        <p class="cross"><a href="https://desbloqueio.modusadvocacia.com.br" data-ev="cross_page_click">Teve a conta bancária bloqueada por ordem judicial?</a></p>
+        <p>Marcas citadas apenas para identificar as plataformas em que os vendedores atendidos atuam. Não há qualquer vínculo, parceria ou autorização dessas empresas.</p>
+      </div>
+    </div>
+    <p class="disc">Conteúdo informativo. Cada caso depende da análise dos documentos; não há garantia de resultado nem de prazo.</p>
+  </div>
+</footer>
+<button type="button" class="wa-float oculto" id="wa-float" data-triagem="flutuante" aria-label="Falar com a advogada no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></button>
+<dialog class="triagem" id="triagem" aria-labelledby="tri-titulo">
+  <div class="tri-in">
+    <div class="tri-top"><span class="tri-prog" id="tri-prog">Pergunta 1</span><button type="button" class="tri-fechar" id="tri-fechar" aria-label="Fechar">×</button></div>
+    <div class="tri-barra" aria-hidden="true"><i id="tri-barra" style="width:0"></i></div>
+    <div id="tri-corpo"></div>
+  </div>
+</dialog>
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho da página e dos anúncios (Google, Meta e Microsoft Clarity). <a href="/privacidade/">Política de privacidade</a></p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+<script>
+/* ==========================================================================
+   AVALIAÇÕES DO GOOGLE — nota, total e lista APROVADA. Edite só este bloco.
+   Critérios para aprovar uma nova avaliação (Provimento 205/2021 da OAB):
+   - fala de atendimento, clareza, atenção ou comunicação;
+   - NÃO menciona resultado, valores, prazo, preço, "especialista" ou "melhor";
+   - NÃO identifica processo, parte contrária ou dado sensível.
+   O texto vai LITERAL, sem nenhuma edição. Não use widget/API que puxe os textos
+   automaticamente e não adicione dados estruturados AggregateRating/Review.
+   ========================================================================== */
+window.AVALIACOES = {
+  nota: "5,0",
+  total: 9,
+  atualizado: "outubro/2026",
+  perfil: "https://www.google.com/maps/place/?q=place_id:ChIJydzzsRvX7JQRKOM9yO4yNUY",
+  lista: [
+    { texto: "Eu estava com muitas dúvidas sobre esse novo ECA Digital. Ela me explicou muito bem tudo o que precisa ser feito. E está trabalhando no meu Alvará. Super recomendo!",
+      autor: "[PRIMEIRO NOME]", data: "[MÊS/ANO]" }
+    // , { texto: "...", autor: "Nome", data: "mês/ano" }
+  ]
+};
+</script>
+<script>
+/* Monta o selo e os cartões a partir de window.AVALIACOES (texto literal, escapado). */
+(function () {
+  var A = window.AVALIACOES;
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function pronto(v) { return v && !/^\[/.test(v); }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-selo]'), function (el) {
+    el.innerHTML = '<a href="' + esc(A.perfil) + '" target="_blank" rel="noopener" data-ev="google_reviews_click" data-secao="' + el.getAttribute('data-selo') + '"><span class="estrelas" aria-hidden="true">★★★★★</span>' + esc(A.nota) + ' no Google · ' + esc(A.total) + ' avaliações</a><small>Atualizado em ' + esc(A.atualizado) + '</small>';
+  });
+  var box = document.getElementById('avals');
+  if (box) {
+    box.className = 'avals ' + (A.lista.length === 1 ? 'um' : 'varios');
+    box.innerHTML = A.lista.slice(0, 3).map(function (r) {
+      var quem = [pronto(r.autor) ? esc(r.autor) : 'Avaliação no Google', pronto(r.data) ? esc(r.data) : ''].filter(Boolean).join(' · ');
+      return '<figure class="aval"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><blockquote>' + esc(r.texto) + '</blockquote>' +
+        '<figcaption><span>' + quem + '</span><a href="' + esc(A.perfil) + '" target="_blank" rel="noopener" data-ev="google_reviews_click" data-secao="avaliacoes">Ver no Google</a></figcaption></figure>';
+    }).join('');
+  }
+})();
+</script>
+<script>
+/* Triagem desta página: perguntas, mensagem do WhatsApp e tela de encerramento. */
+window.TRIAGEM = {
+  prefixo: 'MK',
+  perguntas: [
+    { id: 'valor', chave: 'faixa_valor', texto: 'Quanto está bloqueado ou retido, aproximadamente?',
+      opcoes: [['ate3', 'Até R$ 3 mil'], ['3a20', 'De R$ 3 mil a R$ 20 mil'], ['20a100', 'De R$ 20 mil a R$ 100 mil'], ['acima100', 'Acima de R$ 100 mil'], ['naosei', 'Não sei o valor exato']] },
+    { id: 'plataforma', chave: 'plataforma', texto: 'Qual plataforma?',
+      opcoes: [['mercadolivre', 'Mercado Livre'], ['mercadopago', 'Mercado Pago'], ['shopee', 'Shopee'], ['amazon', 'Amazon'], ['magalu', 'Magalu'], ['shein', 'Shein'], ['tiktok', 'TikTok Shop'], ['outra', 'Outra']] },
+    { id: 'situacao', chave: 'situacao', texto: 'O que aconteceu?',
+      opcoes: [['suspensa', 'Conta suspensa'], ['retido', 'Saldo retido'], ['pausados', 'Anúncios pausados'], ['encerrada', 'Conta encerrada']] },
+    { id: 'faturamento', chave: 'faturamento', texto: 'Faturamento mensal na plataforma?',
+      opcoes: [['ate10', 'Até R$ 10 mil'], ['10a50', 'R$ 10 a 50 mil'], ['acima50', 'Acima de R$ 50 mil']] }
+  ],
+  mensagem: function (r, rot) {
+    var v = { '3a20': 'cerca de R$ 3 a 20 mil', '20a100': 'cerca de R$ 20 a 100 mil', 'acima100': 'mais de R$ 100 mil', 'ate3': 'até R$ 3 mil' }[r.valor];
+    var prep = { mercadolivre: 'no', mercadopago: 'no', shopee: 'na', amazon: 'na', magalu: 'na', shein: 'na', tiktok: 'no' }[r.plataforma];
+    var onde = prep ? prep + ' ' + rot('plataforma') : (r.plataforma === 'outra' ? 'em outra plataforma' : 'em um marketplace');
+    var t = 'Olá, Amanda! ' + (v ? 'Tenho ' + v + ' retidos ' + onde : 'Tenho valores retidos ' + onde + ', mas ainda não sei o valor exato');
+    if (r.situacao) t += ', ' + rot('situacao').toLowerCase();
+    var f = { ate10: 'até R$ 10 mil', '10a50': 'de R$ 10 a 50 mil', acima50: 'acima de R$ 50 mil' }[r.faturamento];
+    if (f) t += ', faturo ' + f + ' por mês';
+    return t + '.';
+  },
+  encerramento: '<p>Para valores até R$ 3 mil, os custos de uma atuação particular podem não compensar. Você pode registrar uma reclamação no consumidor.gov.br e, se não resolver, procurar o Juizado Especial Cível da sua cidade, onde causas de até 20 salários mínimos podem ser apresentadas sem advogado.</p>' +
+    '<p>Se o valor retido aumentar, volte a falar com a gente.</p>' +
+    /* [CONFIRMAR o link oficial de orientação sobre Juizados] */
+    '<ul><li><a href="https://www.consumidor.gov.br" target="_blank" rel="noopener">Registrar reclamação no consumidor.gov.br</a></li>' +
+    '<li><a href="https://www.cnj.jus.br/programas-e-acoes/juizados-especiais/" target="_blank" rel="noopener">Orientações sobre os Juizados Especiais (CNJ)</a></li></ul>'
+};
+</script>
+<script>
+/* ==========================================================================
+   MOTOR DA PÁGINA (igual nas páginas judicial e marketplace) — não precisa editar.
+   Consentimento, origem do clique, triagem, eventos, Meta e registro na planilha.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var C = window.CONFIG, T = window.TRIAGEM;
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  var MODO_GTM = idValido(C.GTM_ID);
+  var params = new URLSearchParams(location.search);
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function log() { if (DEBUG) console.log.apply(console, arguments); }
+
+  /* ---------- Cookies próprios (compartilhados entre os subdomínios) ---------- */
+  var DOMINIO = /(^|\.)modusadvocacia\.com\.br$/.test(location.hostname) ? '; domain=.modusadvocacia.com.br' : '';
+  function setCookie(n, v, dias) {
+    document.cookie = n + '=' + encodeURIComponent(v) + '; max-age=' + Math.round(dias * 86400) + '; path=/' + DOMINIO + '; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
+  }
+  function getCookie(n) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + n.replace(/[.$?*|{}()[\]\\/+^]/g, '\\$&') + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function consentiu() { return getCookie('modus_consent') === 'granted'; }
+
+  /* ---------- Origem do clique: cookie de 90 dias, sem apagar um gclid anterior ---------- */
+  var CAMPOS = ['gclid', 'gbraid', 'wbraid', 'fbclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gad_source', 'gad_campaignid'];
+  var CLIQUE = ['gclid', 'gbraid', 'wbraid', 'fbclid'];
+  var origem = (function () {
+    var salvo = {};
+    try { salvo = JSON.parse(getCookie('modus_origem') || '{}') || {}; } catch (e) { salvo = {}; }
+    var novo = {}, tem = false;
+    CAMPOS.forEach(function (k) { var v = params.get(k); if (v) { novo[k] = v.slice(0, 300); tem = true; } });
+    if (!tem && salvo.data_entrada) return salvo;
+    var o = {};
+    CAMPOS.forEach(function (k) {
+      if (novo[k]) o[k] = novo[k];
+      else if (CLIQUE.indexOf(k) !== -1 && salvo[k]) o[k] = salvo[k]; // não sobrescreve gclid/fbclid anteriores
+      else if (!tem && salvo[k]) o[k] = salvo[k];
+    });
+    o.pagina_entrada = (location.origin + location.pathname).slice(0, 200);
+    o.data_entrada = new Date().toISOString();
+    setCookie('modus_origem', JSON.stringify(o), 90);
+    return o;
+  })();
+
+  /* ---------- Cookies _fbp e _fbc do Meta (só com consentimento) ---------- */
+  function cookiesMeta() {
+    if (!consentiu()) return;
+    if (!getCookie('_fbp')) setCookie('_fbp', 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 1e10), 90);
+    var fbc = getCookie('_fbc');
+    if (origem.fbclid && (!fbc || fbc.split('.').slice(3).join('.') !== origem.fbclid)) setCookie('_fbc', 'fb.1.' + Date.now() + '.' + origem.fbclid, 90);
+  }
+
+  /* ---------- Meta Pixel e Clarity (modo sem GTM; com GTM, as tags ficam no contêiner) ---------- */
+  var metaPronto = false, clarityPronto = false;
+  function carregarMeta() {
+    if (MODO_GTM || metaPronto || !consentiu() || !idValido(C.META_PIXEL_ID)) return;
+    metaPronto = true;
+    /* eslint-disable */
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    /* eslint-enable */
+    fbq('init', C.META_PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+  function carregarClarity() {
+    if (MODO_GTM || clarityPronto || !consentiu() || !idValido(C.CLARITY_ID)) return;
+    clarityPronto = true;
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', C.CLARITY_ID);
+  }
+  function aposConsentimento() { cookiesMeta(); carregarMeta(); carregarClarity(); }
+  aposConsentimento();
+
+  /* ---------- Eventos: dataLayer (GTM) e, sem GTM, envio direto ao GA4/Google Ads/Meta ---------- */
+  function rotuloOk(r) { return idValido(r) && !/^ROTULO_/.test(r); }
+  function emitir(ev, p) {
+    p = p || {};
+    p.pagina = C.PAGINA;
+    var obj = { event: ev };
+    Object.keys(p).forEach(function (k) { obj[k] = p[k]; });
+    window.dataLayer.push(obj);
+    log('[evento]', ev, p);
+    if (MODO_GTM) return;
+    if (idValido(C.GA4_ID)) { var g = { send_to: C.GA4_ID }; Object.keys(p).forEach(function (k) { g[k] = p[k]; }); gtag('event', ev, g); }
+    // Google Ads: lead (só qualificados) e ligação
+    if (ev === 'whatsapp_click' && rotuloOk(C.ADS_LABEL_LEAD)) gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL_LEAD, transaction_id: p.lead_id });
+    if (ev === 'phone_click' && rotuloOk(C.ADS_LABEL_LIGACAO)) gtag('event', 'conversion', { send_to: C.ADS_ID + '/' + C.ADS_LABEL_LIGACAO });
+    // Meta
+    if (metaPronto && window.fbq) {
+      if (ev === 'whatsapp_click') fbq('track', 'Lead', { content_category: C.PAGINA }, { eventID: p.lead_id });
+      else if (ev === 'lead_desqualificado') fbq('trackCustom', 'LeadDesqualificado', { content_category: C.PAGINA, faixa_valor: p.faixa_valor });
+      else if (ev === 'phone_click') fbq('track', 'Contact');
+      else if (ev === 'scroll_depth' && p.percentual === 50) fbq('track', 'ViewContent', { content_category: C.PAGINA });
+    }
+  }
+
+  /* ---------- Registro do lead na planilha (sem nome nem telefone) ---------- */
+  function registrar(d) {
+    var linha = {
+      lead_id: d.lead_id || '', data_hora: new Date().toISOString(), pagina: C.PAGINA, secao: d.secao || '',
+      qualificado: d.qualificado ? 'sim' : 'nao', respostas: d.respostas || '',
+      fbp: getCookie('_fbp') || '', fbc: getCookie('_fbc') || '',
+      pagina_entrada: origem.pagina_entrada || '', data_entrada: origem.data_entrada || '',
+      url: location.href.slice(0, 300), user_agent: navigator.userAgent.slice(0, 300)
+    };
+    Object.keys(d.campos || {}).forEach(function (k) { linha[k] = d.campos[k]; });
+    CAMPOS.forEach(function (k) { linha[k] = origem[k] || ''; });
+    log('[planilha]', linha);
+    if (!/^https:\/\/script\.google\.com\//.test(C.PLANILHA_URL || '')) return;
+    var corpo = JSON.stringify(linha);
+    try {
+      if (navigator.sendBeacon && navigator.sendBeacon(C.PLANILHA_URL, new Blob([corpo], { type: 'text/plain;charset=UTF-8' }))) return;
+    } catch (e) {}
+    try { fetch(C.PLANILHA_URL, { method: 'POST', body: corpo, mode: 'no-cors', keepalive: true }); } catch (e) {}
+  }
+  function capiLead(leadId) {
+    if (!C.META_CAPI || !consentiu()) return;
+    var corpo = JSON.stringify({ event_id: leadId, content_category: C.PAGINA, url: location.href.slice(0, 500), fbp: getCookie('_fbp') || '', fbc: getCookie('_fbc') || '' });
+    try { navigator.sendBeacon('/api/meta-capi', new Blob([corpo], { type: 'application/json' })); } catch (e) {}
+  }
+
+  /* ---------- Triagem ---------- */
+  var dlg = $('#triagem'), corpoTri = $('#tri-corpo');
+  var estado = null;
+  function pergunta(id) { for (var i = 0; i < T.perguntas.length; i++) if (T.perguntas[i].id === id) return T.perguntas[i]; return null; }
+  function rotulo(q, v) { for (var i = 0; i < q.opcoes.length; i++) if (q.opcoes[i][0] === v) return q.opcoes[i][1]; return v; }
+  function respostasTexto() {
+    return T.perguntas.filter(function (q) { return estado.r[q.id]; }).map(function (q) { return q.chave + '=' + rotulo(q, estado.r[q.id]); }).join('; ');
+  }
+  function camposRespostas() {
+    var o = {};
+    T.perguntas.forEach(function (q) { o[q.chave] = estado.r[q.id] ? rotulo(q, estado.r[q.id]) : ''; });
+    return o;
+  }
+  function proximaPergunta() {
+    // A 1ª pergunta é sempre o valor. Abaixo do mínimo, só segue se a regra de faturamento estiver ligada.
+    if (!estado.r.valor) return 'valor';
+    if (estado.qualificado === false) return null;
+    for (var i = 0; i < estado.ordem.length; i++) if (!estado.r[estado.ordem[i]]) return estado.ordem[i];
+    return null;
+  }
+  function abrirTriagem(secao) {
+    estado = { secao: secao, r: {}, hist: [], qualificado: null, ordem: T.perguntas.map(function (q) { return q.id; }).filter(function (id) { return id !== 'valor'; }) };
+    emitir('triagem_inicio', { secao: secao });
+    $('#wa-float').classList.add('oculto');
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+    mostrar();
+  }
+  function fecharTriagem() {
+    if (dlg.close) dlg.close(); else dlg.removeAttribute('open');
+  }
+  dlg.addEventListener('close', function () { atualizarFlutuante(); });
+  $('#tri-fechar').addEventListener('click', fecharTriagem);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) fecharTriagem(); });
+
+  function mostrar() {
+    var id = proximaPergunta();
+    if (!id) return estado.qualificado ? telaFinal() : telaEncerramento();
+    var q = pergunta(id), total = 1 + estado.ordem.length, feitas = Object.keys(estado.r).length;
+    $('#tri-prog').textContent = 'Pergunta ' + (feitas + 1) + ' de ' + total;
+    $('#tri-barra').style.width = Math.round(feitas / total * 100) + '%';
+    var h = '<h2 class="tri-q" id="tri-titulo" tabindex="-1">' + esc(q.texto) + '</h2><div class="tri-opts">';
+    q.opcoes.forEach(function (o) { h += '<button type="button" class="tri-opt" data-v="' + esc(o[0]) + '">' + esc(o[1]) + '</button>'; });
+    h += '</div><div class="tri-nav">';
+    h += estado.hist.length ? '<button type="button" class="link-btn" data-acao="voltar">Voltar</button>' : '<span></span>';
+    if (estado.qualificado && id !== 'valor') h += '<button type="button" class="link-btn" data-acao="pular">Pular e ir direto ao WhatsApp</button>';
+    h += '</div>';
+    corpoTri.innerHTML = h;
+    $$('.tri-opt', corpoTri).forEach(function (b) { b.addEventListener('click', function () { responder(q, b.getAttribute('data-v')); }); });
+    var v = $('[data-acao=voltar]', corpoTri); if (v) v.addEventListener('click', voltar);
+    var p = $('[data-acao=pular]', corpoTri); if (p) p.addEventListener('click', function () { telaFinal(true); });
+    $('#tri-titulo').focus({ preventScroll: true });
+  }
+  function responder(q, v) {
+    estado.hist.push({ id: q.id, qualificado: estado.qualificado, ordem: estado.ordem.slice() });
+    estado.r[q.id] = v;
+    emitir('triagem_etapa', { etapa: q.chave, resposta: rotulo(q, v), secao: estado.secao });
+    if (q.id === 'valor') {
+      if (v !== 'ate3') estado.qualificado = true;
+      else if (C.QUALIFICAR_POR_FATURAMENTO && pergunta('faturamento')) {
+        estado.qualificado = null;
+        estado.ordem = ['faturamento'];               // pergunta o faturamento antes de encerrar
+      } else estado.qualificado = false;
+    } else if (q.id === 'faturamento' && estado.qualificado === null) {
+      if (v === 'ate10') estado.qualificado = false;
+      else {
+        estado.qualificado = true;
+        estado.ordem = T.perguntas.map(function (x) { return x.id; }).filter(function (x) { return x !== 'valor'; });
+      }
+    }
+    mostrar();
+  }
+  function voltar() {
+    var a = estado.hist.pop();
+    if (!a) return;
+    delete estado.r[a.id];
+    estado.qualificado = a.qualificado; estado.ordem = a.ordem;
+    mostrar();
+  }
+  function novoCodigo() { return T.prefixo + '-' + String(Math.floor(1000 + Math.random() * 9000)); }
+
+  function telaFinal(pulou) {
+    var leadId = novoCodigo();
+    var msg = T.mensagem(estado.r, rotuloDe) + ' (código do atendimento: ' + leadId + ')';
+    var url = 'https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(msg);
+    emitir('triagem_concluida', { qualificado: true, respostas: respostasTexto(), secao: estado.secao });
+    $('#tri-prog').textContent = 'Tudo certo';
+    $('#tri-barra').style.width = '100%';
+    corpoTri.innerHTML = '<div class="tri-res"><h2 class="tri-q" id="tri-titulo" tabindex="-1">Pronto! Agora é só abrir a conversa</h2>' +
+      '<p>A mensagem abaixo já vai preenchida no WhatsApp da advogada. Você pode completar com o que quiser contar.</p>' +
+      '<p class="msg">' + esc(msg) + '</p>' +
+      '<p class="codigo">Seu código de atendimento: ' + esc(leadId) + '</p>' +
+      '<a class="btn btn-wa" id="tri-wa" href="' + esc(url) + '" target="_blank" rel="noopener">' + ICONE_WA + 'Abrir conversa no WhatsApp</a>' +
+      '<div class="tri-nav"><button type="button" class="link-btn" data-acao="voltar">Voltar e mudar uma resposta</button></div></div>';
+    var enviado = false;
+    $('#tri-wa').addEventListener('click', function () {
+      if (enviado) return;
+      enviado = true;
+      var campos = camposRespostas();
+      var p = { lead_id: leadId, secao: estado.secao };
+      Object.keys(campos).forEach(function (k) { p[k] = campos[k]; });
+      emitir('whatsapp_click', p);
+      registrar({ lead_id: leadId, secao: estado.secao, qualificado: true, respostas: respostasTexto() + (pulou ? '; pulou=sim' : ''), campos: campos });
+      capiLead(leadId);
+    });
+    $('[data-acao=voltar]', corpoTri).addEventListener('click', function () { voltar(); });
+    $('#tri-titulo').focus({ preventScroll: true });
+  }
+  function telaEncerramento() {
+    var faixa = rotulo(pergunta('valor'), estado.r.valor);
+    emitir('triagem_concluida', { qualificado: false, respostas: respostasTexto(), secao: estado.secao });
+    emitir('lead_desqualificado', { faixa_valor: faixa, secao: estado.secao });
+    registrar({ secao: estado.secao, qualificado: false, respostas: respostasTexto(), campos: camposRespostas() });
+    $('#tri-prog').textContent = 'Triagem concluída';
+    $('#tri-barra').style.width = '100%';
+    var h = '<div class="tri-res"><h2 class="tri-q" id="tri-titulo" tabindex="-1">Obrigada por responder</h2>' + T.encerramento;
+    if (C.PERMITIR_WHATSAPP_ABAIXO_DO_MINIMO) {
+      h += '<a class="btn btn-sec" href="https://wa.me/' + C.WHATSAPP + '" target="_blank" rel="noopener">Mesmo assim, falar no WhatsApp</a>';
+    }
+    h += '<div class="tri-nav"><button type="button" class="link-btn" data-acao="voltar">Voltar e mudar a resposta</button></div></div>';
+    corpoTri.innerHTML = h;
+    $('[data-acao=voltar]', corpoTri).addEventListener('click', voltar);
+    $('#tri-titulo').focus({ preventScroll: true });
+  }
+  function rotuloDe(id) { var q = pergunta(id); return q && estado.r[id] ? rotulo(q, estado.r[id]) : ''; }
+  var ICONE_WA = $('#wa-float').innerHTML;
+
+  /* ---------- Botões que abrem a triagem e demais cliques medidos ---------- */
+  $$('[data-triagem]').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var secao = b.getAttribute('data-triagem');
+      emitir('cta_click', { secao: secao, texto_botao: (b.getAttribute('aria-label') || b.textContent).trim() });
+      abrirTriagem(secao);
+    });
+  });
+  $$('[data-cta]').forEach(function (a) {
+    a.addEventListener('click', function () { emitir('cta_click', { secao: a.getAttribute('data-cta'), texto_botao: a.textContent.trim() }); });
+  });
+  $$('[data-ev]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var ev = a.getAttribute('data-ev'), p = { secao: a.getAttribute('data-secao') || '' };
+      if (ev === 'cross_page_click') p = { destino: a.getAttribute('href') };
+      emitir(ev, p);
+    });
+  });
+  $$('#duvidas details').forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) emitir('faq_open', { pergunta: $('summary', d).textContent.trim() }); });
+  });
+
+  /* ---------- Profundidade de rolagem (25, 50, 75 e 90%) ---------- */
+  (function () {
+    var marcas = [25, 50, 75, 90], feitas = {}, pend = false;
+    function medir() {
+      pend = false;
+      var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      if (max <= 0) return;
+      var pct = (h.scrollTop || window.scrollY) / max * 100;
+      marcas.forEach(function (m) { if (pct >= m && !feitas[m]) { feitas[m] = true; emitir('scroll_depth', { percentual: m }); } });
+    }
+    addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(medir); } }, { passive: true });
+  })();
+
+  /* ---------- Movimento ao rolar: barra de leitura, sombra do topo e elementos que entram na tela ---------- */
+  (function () {
+    var barra = document.createElement('div');
+    barra.className = 'progresso'; barra.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(barra);
+    var topo = $('.top'), pend = false;
+    function rolar() {
+      pend = false;
+      var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      barra.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+      if (topo) topo.classList.toggle('rolou', window.scrollY > 8);
+    }
+    addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(rolar); } }, { passive: true });
+    rolar();
+
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // [seletor, variação, intervalo entre irmãos em segundos]
+    var grupos = [
+      ['main .sec .head', '', 0], ['.grid2 > *, .grid3 > *', '', 0.09], ['.passos > li', '', 0.12],
+      ['.aviso', 'esq', 0], ['.lista > li', '', 0.06], ['.quem > :first-child', 'esq', 0], ['.quem > :last-child', 'dir', 0.1],
+      ['.aval', 'zoom', 0.1], ['.faq details', '', 0.05], ['.final', 'zoom', 0], ['.marcas li', '', 0.06],
+      ['.sec-cta', '', 0.1], ['.ver-todas', '', 0]
+    ];
+    var alvo = [], limite = window.innerHeight * 0.92;
+    grupos.forEach(function (g) {
+      $$(g[0]).forEach(function (el) {
+        if (el.classList.contains('rv') || el.closest('.hero') || el.getBoundingClientRect().top < limite) return;
+        var irmaos = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.classList.add('rv'); if (g[1]) el.classList.add(g[1]);
+        if (g[2]) el.style.setProperty('--d', (Math.min(irmaos, 6) * g[2]).toFixed(2) + 's');
+        alvo.push(el);
+      });
+    });
+    if (!alvo.length) return;
+    document.documentElement.classList.add('anim');
+    var io = new IntersectionObserver(function (itens) {
+      itens.forEach(function (it) {
+        if (!it.isIntersecting) return;
+        var el = it.target; io.unobserve(el); el.classList.add('vis');
+        // depois de entrar, volta ao normal (para o efeito de passar o mouse funcionar)
+        setTimeout(function () { el.classList.remove('rv', 'vis', 'esq', 'dir', 'zoom'); el.style.removeProperty('--d'); }, 1700);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    alvo.forEach(function (el) { io.observe(el); });
+  })();
+
+  /* ---------- WhatsApp flutuante: aparece depois do topo, some com a triagem aberta ---------- */
+  var flutuante = $('#wa-float');
+  var pulsou = false;
+  function atualizarFlutuante() {
+    var aberto = dlg.hasAttribute('open');
+    var esconder = aberto || window.scrollY < 380;
+    flutuante.classList.toggle('oculto', esconder);
+    if (!esconder && !pulsou) { pulsou = true; flutuante.classList.add('pulsar'); }
+  }
+  addEventListener('scroll', atualizarFlutuante, { passive: true });
+  atualizarFlutuante();
+
+  /* ---------- Aviso de cookies (escolha guardada por 12 meses) ---------- */
+  (function () {
+    var b = $('#cookie');
+    if (!getCookie('modus_consent')) {
+      var mostrou = false;
+      var mostrar = function () {
+        if (mostrou) return;
+        mostrou = true; b.hidden = false; document.body.classList.add('has-cookie');
+        removeEventListener('scroll', aoRolar);
+      };
+      var aoRolar = function () { if (window.scrollY > 150) mostrar(); };
+      addEventListener('scroll', aoRolar, { passive: true });
+      setTimeout(mostrar, 6000);
+    }
+    $$('[data-cookie]', b).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+        setCookie('modus_consent', g, 365);
+        gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+        gtag('set', 'ads_data_redaction', g === 'denied');
+        if (g === 'granted') { window.dataLayer.push({ event: 'consentimento_aceito' }); aposConsentimento(); }
+        b.hidden = true; document.body.classList.remove('has-cookie');
+      });
+    });
+    var mudar = $('#mudar-cookies');
+    if (mudar) mudar.addEventListener('click', function () { b.hidden = false; $('.ok', b).focus(); });
+  })();
+})();
+</script>
+</body>
+</html>

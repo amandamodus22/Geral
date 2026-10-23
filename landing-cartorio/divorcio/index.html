@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
+<script>
+/* ==========================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   Use os mesmos valores nas 4 páginas (divorcio, inventario, obrigado, privacidade).
+   ========================================================================== */
+window.CONFIG = {
+  WHATSAPP: "5544988482082",             // só números: 55 + DDD + número. Ex.: 5544999999999
+  CALENDLY_URL: "https://calendly.com/amanda-modusadvocacia/conversa-inicial-divorcio-e-inventario-em-cartorio", // agendamento online (aparece depois da triagem)
+  EMAIL: "amanda@modusadvocacia.com.br",  // e-mail que recebe os contatos e aparece no rodapé
+  ADS_ID: "AW-18256148045",              // Google Ads: ID da tag (AW-...)
+  ADS_LABEL: "6IlZCNK14KQdEM3smoFE",    // Google Ads: rótulo da conversão principal (lead)
+  GA4_ID: "G-VVFXJ8YE64",               // Google Analytics 4: ID de métricas (G-...)
+  WEBHOOK_URL: "https://hook.us2.make.com/h2ykw2j3wkuyjyx7sl513ear7729nk1t", // Make: cenário "Leads – cartório online"
+  VALOR_QUALIFICADO: 1,                 // valor interno da conversão — nunca aparece na página
+  VALOR_REVISAR: 0.5,
+  MOEDA: "BRL",
+  PERGUNTA_GRAVIDEZ: false              // true inclui a pergunta sobre gravidez na triagem
+};
+</script>
+<title>Divórcio em cartório 100% online | Advogada OAB/PR 119.898</title>
+<meta name="description" content="Divórcio consensual por escritura pública, sem processo judicial. Assinatura online pelo e-Notariado, com advogada. Atendimento em todo o Brasil.">
+<link rel="preload" href="../fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#FAF8F4">
+<link rel="canonical" href="https://cartorio.modusadvocacia.com.br/divorcio/">
+<meta property="og:url" content="https://cartorio.modusadvocacia.com.br/divorcio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Divórcio em cartório 100% online">
+<meta property="og:description" content="Divórcio consensual por escritura pública, sem processo judicial, com assinatura online pelo e-Notariado.">
+<link rel="icon" type="image/png" href="/logo-modus.png">
+<script>
+/* Rastreamento: Google Ads + GA4 com Consent Mode v2 (não editar) */
+(function () {
+  var C = window.CONFIG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var salvo = null;
+  try { salvo = localStorage.getItem('modus_consent'); } catch (e) {}
+  var g = salvo === 'granted' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g, wait_for_update: 500 });
+  gtag('set', 'ads_data_redaction', g === 'denied');
+  gtag('set', 'url_passthrough', true);
+  function valido(id) { return !!id && !/X{4,}|\[/.test(id); }
+  var ids = [C.GA4_ID, C.ADS_ID].filter(valido);
+  if (!ids.length) return;
+  gtag('js', new Date());
+  if (valido(C.GA4_ID)) gtag('config', C.GA4_ID);
+  if (valido(C.ADS_ID)) gtag('config', C.ADS_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Modus Advocacia",
+  "logo": "https://cartorio.modusadvocacia.com.br/logo-modus.png",
+  "description": "Divórcio consensual em cartório, feito online pelo e-Notariado, com acompanhamento de advogada.",
+  "serviceType": "Divórcio consensual em cartório (extrajudicial)",
+  "url": "https://cartorio.modusadvocacia.com.br/divorcio/",
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "address": { "@type": "PostalAddress", "streetAddress": "R. Quebec, 326 - Jardim Canadá", "addressLocality": "Maringá", "addressRegion": "PR", "postalCode": "87080-560", "addressCountry": "BR" },
+  "identifier": { "@type": "PropertyValue", "propertyID": "OAB/PR", "value": "119.898" },
+  "founder": { "@type": "Person", "name": "Amanda Modus", "jobTitle": "Advogada", "identifier": "OAB/PR 119.898" },
+  "availableLanguage": "pt-BR"
+}
+</script>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/manrope-700.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("../fonts/manrope-800.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/inter-400.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/inter-600.woff2") format("woff2")}
+/* Tema acolhedor: fundo claro, azul-petróleo como destaque e o lilás da marca só em detalhes.
+   Todas as cores de texto têm contraste de pelo menos 4,5:1 sobre o fundo em que aparecem. */
+:root{
+  --bg:#FAF8F4;--surface:#FFFFFF;--soft:#EEF5F6;--ink:#1C2B33;--muted:#45535D;--line:#E2DED5;--field:#7C8A93;
+  --brand:#0E5A6A;--brand-dark:#0A4552;--brand-soft:#E2EFF1;--accent:#6A3FD1;
+  --wa:#177C41;--wa-dark:#11602F;
+  --night:#0E2E36;--on-dark:#F4F8F9;--on-dark-muted:#C9DADF;
+  --err:#B42335;--r:16px;
+  --shadow-sm:0 1px 2px rgba(28,43,51,.06);
+  --shadow:0 1px 2px rgba(28,43,51,.05),0 14px 32px -16px rgba(14,90,106,.28);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --display:Manrope,Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.nw{white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+@media (min-width:900px){body{font-size:1.125rem}}
+a{color:var(--brand);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--brand-dark)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:clamp(2.1rem,7.4vw,3.5rem);line-height:1.1}
+h2{font-size:clamp(1.75rem,4.8vw,2.5rem)}
+h3{font-size:1.25rem;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+h4{font-size:1.0625rem;font-weight:700;margin:1.2em 0 .4em}
+h1 em,h2 em{font-style:normal;color:var(--brand)}
+p{margin:0 0 1em;max-width:68ch}
+ul,ol{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+@media (min-width:700px){.wrap{padding:0 32px}}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--surface);padding:8px 12px;z-index:70}
+.skip:focus{left:16px}
+.ico{width:22px;height:22px;flex:none}
+.ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);flex:none}
+.kicker{display:flex;align-items:center;gap:10px;font:600 1rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin:0 0 14px}
+.kicker::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--accent);flex:none}
+.kn{display:none}
+.lead{font-size:1.125rem;color:var(--muted);max-width:62ch}
+@media (min-width:900px){.lead{font-size:1.1875rem}}
+.fonte{font-size:1rem;color:var(--muted)}
+.fonte a{color:var(--muted)}
+.fonte a:hover{color:var(--brand)}
+mark.revisar{background:#FFF1B8;color:#5C4300;font-size:1rem;font-weight:700;padding:0 .3em;border-radius:4px}
+
+/* Detalhe neutro herdado das páginas anteriores */
+.spot{position:relative}
+
+/* Barra de progresso de leitura */
+.scroll-prog{position:fixed;left:0;top:0;right:0;height:3px;z-index:60;background:var(--brand);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* Topo */
+.top{position:relative;z-index:45;background:rgba(255,255,255,.96);color:var(--ink);border-bottom:1px solid var(--line)}
+@media (min-width:900px){.top{position:sticky;top:0}.top.scrolled{box-shadow:0 8px 24px -18px rgba(28,43,51,.45)}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;line-height:1.2}
+.brand:hover{color:inherit}
+.mono-logo{width:44px;height:44px;border-radius:10px;flex:none;display:block}
+.brand-nome{display:block;font:800 1.1875rem/1.15 var(--display)}
+.brand-oab{display:block;font:400 1rem/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+@media (max-width:599px){.top .btn{display:none}}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:.8em 1.4em;border-radius:12px;border:2px solid var(--brand);background:var(--brand);color:#fff;font:600 1.0625rem/1.25 var(--sans);text-decoration:none;text-align:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.btn .arrow{transition:transform .2s var(--ease)}
+.btn:hover .arrow{transform:translateX(3px)}
+.btn[disabled]{opacity:.7;cursor:wait}
+.btn-sec{background:transparent;color:var(--brand)}
+.btn-sec:hover{background:var(--brand-soft);color:var(--brand-dark)}
+.btn-wa{background:#fff;color:var(--wa);border-color:var(--wa)}
+.btn-wa:hover{background:#EAF6EF;color:var(--wa-dark);border-color:var(--wa-dark)}
+.btn-sm{min-height:44px;padding:.45em 1.1em;font-size:1rem}
+.btn-lg{min-height:58px;font-size:1.0625rem;padding:.8em 1.2em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:599px){.cta-row .btn,.btn-lg{width:100%}}
+.link-btn{background:none;border:0;color:var(--brand);font:inherit;font-size:1rem;text-decoration:underline;text-underline-offset:.18em;cursor:pointer;padding:.5em .25em;min-height:44px}
+
+/* Hero */
+.hero{position:relative;padding:36px 0 48px;background:radial-gradient(700px 420px at 92% 0%,rgba(14,90,106,.10),rgba(14,90,106,0) 70%),var(--bg);color:var(--ink)}
+@media (min-width:960px){.hero{padding:72px 0 88px}}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.4fr .6fr;gap:48px}}
+.tag{display:inline-flex;align-items:center;gap:10px;font:600 1rem/1.2 var(--sans);color:var(--brand);padding:8px 14px;border-radius:99px;background:var(--brand-soft);margin:0 0 18px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.sub{font-size:1.125rem;color:var(--muted);max-width:36em;margin-bottom:1.5em}
+@media (min-width:900px){.sub{font-size:1.25rem}}
+.nota-custo{display:inline-flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:-.4em 0 1.4em}
+.micro{display:flex;align-items:center;gap:8px;color:var(--muted);margin:14px 0 0;font-size:1.0625rem}
+.micro .ico{width:18px;height:18px;color:var(--brand)}
+.acolhe{font-size:1.125rem;font-style:italic;color:var(--muted);border-left:3px solid var(--brand);padding-left:16px;margin:28px 0 0;max-width:34em}
+/* Ilustração das 4 etapas (computador) */
+.hero-etapas{display:none;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+@media (min-width:960px){.hero-etapas{display:block}}
+.hero-etapas>p{font:700 1.0625rem/1.3 var(--display);margin:0 0 18px;color:var(--ink)}
+.hero-etapas ol{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:he}
+.hero-etapas li{counter-increment:he;display:grid;grid-template-columns:44px 1fr;gap:2px 14px;align-items:center}
+.hero-etapas li::before{content:counter(he);grid-row:span 2;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font:800 1.125rem/1 var(--display)}
+.hero-etapas li:last-child::before{background:var(--brand);color:#fff}
+.hero-etapas strong{font-weight:600;line-height:1.3}
+.hero-etapas span{color:var(--muted);font-size:1.0625rem;line-height:1.4}
+.hero-etapas .selo{display:flex;align-items:center;gap:10px;margin:20px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:1.0625rem}
+.hero-etapas .selo svg{width:20px;height:20px;color:var(--brand);flex:none}
+
+/* Faixa de confiança */
+.trust{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust ul{list-style:none;margin:0;padding:20px 0;display:grid;gap:14px}
+@media (min-width:700px){.trust ul{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.trust ul{grid-template-columns:repeat(4,1fr);padding:26px 0;gap:24px}}
+.trust li{display:flex;align-items:center;gap:14px;line-height:1.4;font-weight:600}
+
+/* Seções */
+.sec{position:relative;padding:60px 0}
+@media (min-width:900px){.sec{padding:96px 0}}
+section[id]{scroll-margin-top:0}
+@media (min-width:900px){section[id]{scroll-margin-top:76px}}
+.sec-alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{max-width:46rem;margin-bottom:32px}
+@media (min-width:900px){.head{margin-bottom:44px}}
+.head .lead{margin:0}
+.split{display:grid;gap:8px}
+.split>*,.hero-grid>*,.form-grid>*,.faq-grid>*{min-width:0}
+@media (min-width:960px){.split{grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}.split .head{position:sticky;top:110px;margin:0}}
+.ressalva{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:1.0625rem;margin:0;padding:16px 18px;border-radius:12px;background:var(--bg);border:1px solid var(--line);max-width:72ch}
+.ressalva .ico{width:20px;height:20px;margin-top:3px;color:var(--brand)}
+.sec:not(.sec-alt) .ressalva{background:var(--surface)}
+
+/* Requisitos (itens clicáveis) */
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.req{display:flex;gap:16px;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:18px 20px;min-height:64px;box-shadow:var(--shadow-sm);transition:border-color .2s,background .2s}
+.req:hover{border-color:#9CC3CB}
+.req .ic{width:40px;height:40px;border-radius:10px;background:transparent;border:2px solid #9AA8B0;color:transparent}
+.req[aria-pressed=true]{border-color:var(--brand);background:#F3F9FA}
+.req[aria-pressed=true] .ic{background:var(--brand);border-color:var(--brand);color:#fff}
+.req strong{display:block;font:700 1.125rem/1.3 var(--display);margin-bottom:4px}
+.req span{color:var(--muted)}
+.req strong{color:var(--ink)}
+.req-dica{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:1.0625rem;margin:0 0 12px}
+.req-dica .ico{width:18px;height:18px;color:var(--brand)}
+.req-ok{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin-top:12px;padding:18px 20px;border-radius:var(--r);background:var(--brand-soft);border:1px solid #B9D7DD}
+.req-ok p{margin:0;max-width:30em}
+@media (max-width:599px){.req-ok .btn{width:100%}}
+.note{display:flex;gap:16px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--r);padding:20px 22px;margin-top:14px}
+.note h3{font-size:1.125rem;margin-bottom:.35em}
+.note p{margin:0;color:var(--muted)}
+
+/* Passo a passo */
+.timeline{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:0;counter-reset:passo}
+.timeline li{counter-increment:passo;position:relative;padding:0 0 28px 68px}
+.timeline li::before{content:counter(passo);position:absolute;left:0;top:0;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font:800 1.25rem/1 var(--display)}
+.timeline li::after{content:"";position:absolute;left:23px;top:52px;bottom:4px;width:2px;background:#C9DFE3}
+.timeline li:last-child{padding-bottom:0}
+.timeline li:last-child::after{display:none}
+.timeline li:last-child::before{background:var(--brand);color:#fff}
+.timeline h3{margin:10px 0 6px}
+.timeline p{margin:0;color:var(--muted)}
+.timeline ul{margin:.4em 0 .6em;padding-left:1.2em;color:var(--muted)}
+.timeline li li{padding:0;margin:.2em 0;counter-increment:none}
+.timeline li li::before,.timeline li li::after{display:none}
+@media (min-width:960px){
+  .timeline{grid-template-columns:repeat(4,1fr);gap:28px}
+  .timeline li{padding:0}
+  .timeline li::before{position:relative;margin-bottom:18px}
+  .timeline li::after{left:60px;right:-16px;top:23px;bottom:auto;width:auto;height:2px}
+  .timeline h3{margin-top:0}
+  .timeline.detalhe{grid-template-columns:repeat(2,1fr);gap:36px 48px}
+  .timeline.detalhe li::after{display:none}
+}
+
+/* Cartões */
+.cards{display:grid;gap:16px;margin-bottom:24px}
+@media (min-width:700px){.cards-2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.cards-3{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow-sm)}
+.sec-alt .card{background:var(--bg)}
+.card-h{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.card-h h3{margin:0}
+.card ul{list-style:none;padding:0;margin:0}
+.card li{position:relative;padding:5px 0 5px 22px}
+.card li::before{content:"";position:absolute;left:4px;top:calc(5px + .62em);width:7px;height:7px;border-radius:50%;background:var(--brand)}
+.card p{color:var(--muted)}
+.card p:last-child{margin-bottom:0}
+.num{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font:800 1rem/1 var(--display);margin-bottom:14px}
+
+/* Custos (inventário) */
+.custo-bloco{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;margin-bottom:16px}
+@media (min-width:700px){.custo-bloco{padding:32px}}
+.custo-bloco>h3{display:flex;align-items:center;gap:12px;font-size:1.375rem}
+.custo-bloco>h3 .num{margin:0;flex:none}
+.custo-bloco p,.custo-bloco li{color:var(--muted)}
+.custo-bloco ul{padding-left:1.2em;margin:0 0 1em}
+.custo-bloco li{margin:.35em 0;max-width:66ch}
+.tabela{width:100%;max-width:440px;border-collapse:collapse;margin:4px 0 8px;background:var(--surface);border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.tabela caption{caption-side:bottom;text-align:left;padding-top:8px;color:var(--muted);font-size:1.0625rem}
+.tabela th,.tabela td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.tabela th{background:var(--brand-soft);color:var(--brand-dark);font-weight:600}
+.tabela tr:last-child td{border-bottom:0}
+.exemplo{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 1em;max-width:66ch}
+.exemplo svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--brand)}
+.exemplo p{margin:0}
+.novidade{border-left:4px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 18px;margin:8px 0 0}
+.novidade strong{color:var(--ink)}
+.novidade p{margin:0}
+
+/* Conteúdo "o que é" (inventário) */
+.oque-txt p{font-size:1.125rem}
+.oque-txt p:first-child{color:var(--ink)}
+.oque-txt p{color:var(--muted)}
+
+/* Bens digitais (inventário) */
+.digital{background:var(--soft);border:1px solid #CFE3E7;color:var(--muted);border-radius:24px;padding:32px 22px;display:grid;gap:26px}
+@media (min-width:900px){.digital{grid-template-columns:1fr 1fr;padding:52px;gap:52px;align-items:center}}
+.digital h2 em{color:var(--brand)}
+.digital p:last-child{margin:0}
+.digital ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.digital li{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 16px;color:var(--ink);font-weight:600;line-height:1.3}
+.digital li svg{color:var(--brand);width:26px;height:26px}
+
+/* Quem cuida / Sobre */
+.about{display:grid;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px 20px;box-shadow:var(--shadow-sm)}
+@media (min-width:800px){.about{grid-template-columns:280px 1fr;gap:48px;padding:44px}}
+.photo{width:100%;max-width:280px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:var(--brand-soft)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-ph{width:100%;max-width:280px;aspect-ratio:4/5;border-radius:20px;border:2px dashed #8FB5BD;background:var(--brand-soft);display:grid;place-items:center;text-align:center;padding:16px;color:var(--brand-dark);font:700 1rem/1.4 var(--sans)}
+@media (max-width:799px){.photo,.foto-ph{max-width:240px}}
+.about h2{margin-bottom:8px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--brand-soft);color:var(--brand-dark);font:600 1rem/1.2 var(--sans);border-radius:99px;padding:7px 14px;margin:0 0 18px}
+.badge svg{width:18px;height:18px}
+.about p{color:var(--muted)}
+.facts{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px 24px}
+.facts li{display:flex;align-items:center;gap:8px;font-weight:600}
+.facts svg{width:20px;height:20px;color:var(--brand)}
+.quem .acoes-quem{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+@media (max-width:599px){.quem .acoes-quem .btn{width:100%}}
+
+/* Perguntas frequentes */
+.faq-grid{display:grid;gap:8px}
+@media (min-width:960px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.faq-grid .head{position:sticky;top:110px;margin:0}}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
+.sec-alt .faq details,.sec-alt details{background:var(--bg)}
+.faq details[open]{border-color:#9CC3CB}
+.faq summary{cursor:pointer;list-style:none;position:relative;padding:18px 60px 18px 20px;font:700 1.0625rem/1.45 var(--display);color:var(--ink);min-height:44px}
+@media (min-width:900px){.faq summary{font-size:1.125rem}}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;width:32px;height:32px;margin-top:-16px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font:700 1.375rem/1 var(--sans)}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 20px 20px;color:var(--muted)}
+.faq .ans p:last-child{margin:0}
+
+/* Formulário */
+.sec-form{background:var(--soft);border-top:1px solid #CFE3E7;color:var(--ink)}
+.form-grid{display:grid;gap:32px}
+@media (min-width:960px){.form-grid{grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}}
+.sec-form .lead{color:var(--muted)}
+.reassure{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.reassure li{display:flex;gap:14px;align-items:center;font-weight:600}
+.reassure .ic{background:var(--surface);width:42px;height:42px}
+.form-card{overflow:hidden;overflow:clip;background:var(--surface);color:var(--ink);border:1px solid #CFE3E7;border-radius:20px;box-shadow:var(--shadow);padding:24px 18px;scroll-margin-top:96px}
+@media (min-width:700px){.form-card{padding:36px}}
+.progress-text{color:var(--brand);margin:0 0 10px;font:600 1rem/1.3 var(--sans)}
+.progress{height:8px;background:#E3ECEE;border-radius:99px;overflow:hidden;margin-bottom:26px}
+.progress span{display:block;height:100%;width:0;background:var(--brand);border-radius:99px;transition:width .35s var(--ease)}
+fieldset.step{border:0;margin:0;padding:0;min-width:0}
+legend.q{font:800 1.375rem/1.3 var(--display);padding:0;margin:0 0 8px;outline-offset:4px;color:var(--ink)}
+.hint{color:var(--muted);margin:0 0 12px}
+.opts{display:grid;gap:10px;margin:16px 0 4px}
+.opt{display:flex;align-items:center;gap:14px;min-height:56px;padding:12px 16px;border:1.5px solid #C9D2D7;border-radius:12px;background:#fff;cursor:pointer;line-height:1.4;font-weight:600;transition:border-color .2s,background .2s}
+.opt:hover{border-color:var(--brand)}
+.opt.sel{border-color:var(--brand);background:#F0F7F8}
+.opt input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--brand)}
+.field{margin:0 0 16px}
+.field label{display:block;font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;min-height:52px;padding:12px 14px;font:inherit;font-size:1.0625rem;color:var(--ink);background:#fff;border:1.5px solid var(--field);border-radius:12px}
+.field input:focus,.field select:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 4px rgba(14,90,106,.18)}
+.field [aria-invalid=true]{border-color:var(--err)}
+.row2{display:grid;gap:0 12px;grid-template-columns:1fr 112px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:4px 0 8px;cursor:pointer;color:var(--muted);font-size:1.0625rem}
+.consent input{width:22px;height:22px;margin-top:3px;flex:none;accent-color:var(--brand)}
+.err{color:var(--err);font-weight:600;margin:10px 0 0}
+.nav{display:flex;flex-direction:row-reverse;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;margin-top:22px}
+.nav .btn{flex:1 1 220px}
+@media (min-width:600px){.nav .btn{flex:0 0 auto}}
+@media (max-width:599px){.nav{flex-direction:column;align-items:stretch;gap:4px}.nav .btn{flex:none;width:100%}.nav .link-btn{align-self:center}}
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+.seguro{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:1.0625rem;margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.seguro .ico{width:20px;height:20px;margin-top:3px;color:var(--brand)}
+.result h3{font-size:1.375rem}
+.result p{color:var(--muted)}
+.result .acoes{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:8px}
+.result:focus{outline:none}
+
+/* Barra fixa (celular), WhatsApp flutuante e cookies */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -8px 24px -16px rgba(28,43,51,.4);transform:translateY(110%);visibility:hidden;transition:transform .25s var(--ease),visibility .25s}
+.sticky-cta.show{transform:none;visibility:visible}
+.sticky-cta .btn{width:100%}
+@media (min-width:900px){.sticky-cta{display:none}}
+.has-cookie .sticky-cta{display:none}
+.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:35;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;box-shadow:0 10px 24px -8px rgba(17,96,47,.7);text-decoration:none;transition:background .2s,bottom .25s var(--ease),opacity .2s,visibility .2s}
+.wa-float:hover{background:var(--wa-dark);color:#fff}
+.wa-float svg{width:30px;height:30px}
+@media (min-width:900px){.wa-float{right:24px;bottom:24px;width:60px;height:60px}}
+@media (max-width:899px){.wa-float.oculto{opacity:0;visibility:hidden}}
+@media (max-width:599px){.has-cookie .wa-float{bottom:calc(150px + env(safe-area-inset-bottom))}}
+.cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:560px;background:var(--night);color:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.cookie p{margin:0 0 12px;font-size:1rem;line-height:1.45}
+@media (max-width:599px){.cookie{left:8px;right:8px;bottom:8px;padding:14px 16px}.cookie p{margin-bottom:10px}}
+.cookie a{color:#A8E0EA}
+.cookie .btns{display:flex;gap:10px}
+.cookie button{flex:1;min-height:44px;border-radius:10px;font:600 1rem var(--sans);cursor:pointer;border:1.5px solid rgba(255,255,255,.7)}
+.cookie .ok{background:#fff;border-color:#fff;color:var(--brand-dark)}
+.cookie .no{background:transparent;color:#fff}
+.cookie button:focus-visible{outline-color:#fff}
+
+/* Rodapé */
+.foot{background:var(--night);color:var(--on-dark-muted);padding:44px 0 100px}
+@media (min-width:900px){.foot{padding:60px 0 44px}}
+.foot-top{display:grid;gap:14px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.12)}
+@media (min-width:800px){.foot-top{grid-template-columns:auto 1fr;align-items:center;gap:40px}}
+.foot .brand{color:var(--on-dark);text-decoration:none}
+.foot .brand-oab{color:var(--on-dark-muted)}
+.foot-tag{margin:0;max-width:32em}
+.foot-cols{display:grid;gap:22px;padding:24px 0}
+@media (min-width:600px){.foot-cols{grid-template-columns:repeat(3,1fr)}}
+.foot-h{font:600 1rem/1.2 var(--sans);text-transform:uppercase;letter-spacing:.06em;color:#A8E0EA;margin:0 0 10px}
+.foot-cols p{margin:0}
+.foot-cols p+p{margin-top:8px}
+.foot-cols ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot-cols a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:.2em}
+.foot-cols a:hover{color:#A8E0EA}
+.foot-mail{display:flex;align-items:center;gap:10px;min-width:0}
+.foot-mail .ico{width:20px;height:20px;color:#A8E0EA}
+.foot-mail a{overflow-wrap:anywhere}
+.disclaimer{display:flex;gap:10px;align-items:flex-start;margin:0;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.06);color:var(--on-dark-muted);max-width:none}
+.disclaimer .ico{width:20px;height:20px;margin-top:3px;color:#A8E0EA}
+.foot-copy{margin:16px 0 0;color:var(--on-dark-muted)}
+
+/* Movimento: o conteúdo aparece sempre, sem esperar animação.
+   Só o formulário troca de etapa com uma transição curta, e nada se move para quem prefere menos movimento. */
+@keyframes stepIn{from{opacity:.4;transform:translateX(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){fieldset.step:not([hidden]),.result{animation:stepIn .3s var(--ease) both}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="scroll-prog" id="scroll-prog" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <img class="mono-logo" src="/logo-modus.png" width="44" height="44" alt="" aria-hidden="true">
+      <span><span class="brand-nome">Modus Advocacia</span><span class="brand-oab">Amanda Modus · OAB/PR 119.898</span></span>
+    </a>
+    <a class="btn btn-sm btn-sec" href="#verificar">Verificar meu caso</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 1. Topo -->
+  <section class="hero" id="topo">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="tag rise"><i></i>Divórcio consensual</p>
+        <h1 id="h1" class="rise" style="--d:.08s">Divórcio em cartório <em>100% online</em></h1>
+        <p class="sub rise" style="--d:.18s">Quando o casal está de acordo, o divórcio pode ser feito por escritura pública, sem processo judicial, com acompanhamento de advogada do início ao fim.</p>
+        <p class="nota-custo" id="nota-custo" hidden>Quer entender o custo? <a href="#custo">Veja do que ele é composto</a>.</p>
+        <a class="btn btn-lg rise" style="--d:.28s" id="hero-cta" href="#verificar">Verificar se meu caso pode ser feito em cartório <svg class="ico arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="micro rise" style="--d:.36s"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Leva cerca de 1 minuto. Suas respostas são confidenciais.</p>
+      </div>
+      <div class="hero-etapas" aria-hidden="true">
+        <p>Como funciona, em 4 etapas</p>
+        <ol><li><strong>Análise do caso</strong></li><li><strong>Documentos</strong></li><li><strong>Minuta e cálculo dos impostos</strong></li><li><strong>Assinatura online</strong></li></ol>
+        <p class="selo"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></svg><span>Assinatura por videoconferência pelo <span class="nw">e-Notariado</span></span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span><span>Sem precisar ir ao cartório</span></li>
+        <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></svg></span><span>Assinatura por videoconferência pelo <span class="nw">e-Notariado</span></span></li>
+        <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span>Atendimento em todo o Brasil</span></li>
+        <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14"/><path d="m5 7-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z"/></svg></span><span>Advogada inscrita na OAB/PR 119.898</span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 2. Quando dá para fazer em cartório -->
+  <section class="sec" id="requisitos" aria-labelledby="t-req">
+    <div class="wrap split">
+      <div class="head" data-reveal>
+        <p class="kicker"><span class="kn">01</span>Requisitos</p>
+        <h2 id="t-req">Quando dá para fazer em cartório</h2>
+        <p class="lead">O divórcio por escritura pública é possível quando:</p>
+      </div>
+      <div>
+        <p class="req-dica" data-reveal><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Toque nos itens que valem para o seu caso.</p>
+        <ul class="checklist">
+          <li data-reveal style="--d:0.0s"><button type="button" class="req spot" aria-pressed="false"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Acordo entre os dois</strong>Sobre o divórcio e sobre a divisão dos bens, ou não há bens a dividir.</span></button></li>
+          <li data-reveal style="--d:0.1s"><button type="button" class="req spot" aria-pressed="false"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Sem filhos menores ou incapazes</strong>Se houver, a guarda e a pensão já foram resolvidas na Justiça.</span></button></li>
+          <li data-reveal style="--d:0.2s"><button type="button" class="req spot" aria-pressed="false"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Acompanhamento de advogado</strong>A presença de advogado é obrigatória, e um mesmo advogado pode atender os dois.</span></button></li>
+        </ul>
+        <div class="req-ok" id="req-ok" role="status" hidden><p><strong>Pelo que você marcou, vale verificar o seu caso.</strong> A triagem leva cerca de 1 minuto.</p><a class="btn" href="#verificar">Fazer a triagem <svg class="ico arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <aside class="note" data-reveal aria-labelledby="t-judicial"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><div>
+          <h3 id="t-judicial">Quando o caminho costuma ser judicial</h3>
+          <p>Se ainda não há acordo sobre o divórcio ou sobre a divisão dos bens, ou se há filhos menores com guarda e pensão ainda não definidas, o caminho costuma ser o processo judicial. Nesses casos, também é possível avaliar a melhor forma de conduzir.</p>
+        </div></aside>
+      </div>
+    </div>
+  </section>
+  <!-- 3. Como funciona -->
+  <section class="sec sec-alt" id="como-funciona" aria-labelledby="t-como">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="kicker"><span class="kn">02</span>Passo a passo</p>
+        <h2 id="t-como">Como funciona</h2>
+        <p class="lead">Todo o procedimento é feito a distância, com orientação em cada etapa.</p>
+      </div>
+      <ol class="timeline" data-reveal>
+        <li style="--d:0.00s"><h3>Análise do caso</h3><p>Você responde a algumas perguntas e conversamos para confirmar se o divórcio pode ser feito em cartório.</p></li>
+        <li style="--d:0.15s"><h3>Documentos</h3><p>Enviamos a lista do que é necessário, e vocês mandam tudo em formato digital.</p></li>
+        <li style="--d:0.30s"><h3>Minuta e cálculo dos impostos</h3><p>Preparamos a minuta da escritura com os termos do acordo e levantamos os custos do cartório e os impostos, se houver.</p></li>
+        <li style="--d:0.45s"><h3>Assinatura online</h3><p>Com tudo aprovado, a escritura é assinada por videoconferência pelo <span class="nw">e-Notariado</span>, cada um de onde estiver.</p></li>
+      </ol>
+      <p class="ressalva" data-reveal><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Em casos simples, o divórcio em cartório costuma ser mais rápido que o processo judicial. O tempo depende da documentação e da agenda do cartório.</span></p>
+    </div>
+  </section>
+  <!-- 4. Documentos -->
+  <section class="sec" id="documentos" aria-labelledby="t-docs">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="kicker"><span class="kn">03</span>Documentos</p>
+        <h2 id="t-docs">Documentos necessários</h2>
+        <p class="lead">Lista orientativa. Na análise do caso, enviamos a lista completa.</p>
+      </div>
+      <div class="cards cards-2">
+        <div class="card spot" data-reveal style="--d:0.0s"><div class="card-h"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3"/></svg></span><h3>Do casal</h3></div><ul><li>RG e CPF dos dois</li><li>Comprovante de endereço</li><li>Certidão de casamento atualizada</li><li>Pacto antenupcial, se houver</li></ul></div>
+        <div class="card spot" data-reveal style="--d:0.1s"><div class="card-h"><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span><h3>Dos filhos e dos bens</h3></div><ul><li>Se houver filhos: certidões de nascimento e a decisão judicial sobre guarda e pensão</li><li>Imóveis: matrícula atualizada</li><li>Veículos: documento do veículo</li><li>Investimentos e empresas: extratos e contrato social</li></ul></div>
+      </div>
+      <p class="ressalva" data-reveal><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><span>O cartório pode solicitar documentos adicionais.</span></p>
+    </div>
+  </section>
+  <!-- 5. Custo -->
+  <section class="sec sec-alt" id="custo" aria-labelledby="t-custo">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="kicker"><span class="kn">04</span>Custos</p>
+        <h2 id="t-custo">Do que é composto o custo</h2>
+        <p class="lead">O custo de um divórcio em cartório tem três partes:</p>
+      </div>
+      <div class="cards cards-3 cost">
+        <div class="card spot" data-reveal style="--d:0.0s"><span class="num" aria-hidden="true">01</span><h3>Emolumentos do cartório</h3><p>São definidos pela tabela oficial de cada estado.</p></div>
+        <div class="card spot" data-reveal style="--d:0.1s"><span class="num" aria-hidden="true">02</span><h3>Impostos</h3><p>Quando a partilha dos bens é desigual, pode haver incidência de ITCMD.</p></div>
+        <div class="card spot" data-reveal style="--d:0.2s"><span class="num" aria-hidden="true">03</span><h3>Honorários advocatícios</h3><p>São combinados por contrato, com clareza, depois da análise do caso.</p></div>
+      </div>
+      <p class="ressalva" data-reveal><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Como cada caso envolve bens, estado e documentos diferentes, os valores são informados depois da análise.</span></p>
+    </div>
+  </section>
+  <!-- 7. Sobre a advogada -->
+  <section class="sec" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap">
+      <div class="about" data-reveal>
+        <div class="photo"><img src="../foto-amanda-modus.webp" width="184" height="184" alt="Amanda Modus, advogada" loading="lazy" decoding="async"></div>
+        <div>
+          <p class="kicker"><span class="kn">05</span>Sobre a advogada</p>
+          <h2 id="t-sobre">Amanda Modus</h2>
+          <p class="badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14"/><path d="m5 7-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z"/></svg>OAB/PR 119.898</p>
+          <p>Amanda Modus é advogada inscrita na OAB/PR sob o nº 119.898, com escritório em Maringá-PR. Atende de forma 100% online clientes de todo o Brasil em procedimentos feitos em cartório pelo <span class="nw">e-Notariado</span>, como divórcio consensual e inventário extrajudicial.</p>
+          <p>O atendimento tem escuta, clareza sobre cada etapa e sigilo profissional.</p>
+          <ul class="facts">
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Maringá-PR</li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>Atendimento 100% online</li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Sigilo profissional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 8. FAQ -->
+  <section class="sec sec-alt faq" id="duvidas" aria-labelledby="t-faq">
+    <div class="wrap faq-grid">
+      <div class="head" data-reveal>
+        <p class="kicker"><span class="kn">06</span>Dúvidas</p>
+        <h2 id="t-faq">Perguntas frequentes</h2>
+        <p class="lead">Respostas gerais. Cada caso é analisado individualmente.</p>
+      </div>
+      <div>
+          <details class="spot" data-reveal>
+            <summary>Precisamos ir ao cartório?</summary>
+            <div class="ans"><p>Não. Pelo <span class="nw">e-Notariado</span>, a escritura é assinada por videoconferência, e cada um participa do lugar onde estiver.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Precisa de advogado?</summary>
+            <div class="ans"><p>Sim. A presença de advogado é obrigatória no divórcio em cartório. A advogada acompanha o casal desde a análise do caso até a assinatura da escritura.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Moramos em cidades diferentes. Dá para fazer?</summary>
+            <div class="ans"><p>Sim. Como a assinatura é online, cada um participa de onde estiver. A escolha do cartório segue regras próprias, que verificamos na análise do caso.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Quanto tempo leva?</summary>
+            <div class="ans"><p>Depende da documentação e da agenda do cartório. Em casos simples, costuma ser mais rápido que o processo judicial. Não é possível garantir um prazo antes de analisar o caso.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Do que é composto o custo?</summary>
+            <div class="ans"><p>Dos emolumentos do cartório (tabela oficial de cada estado), dos impostos, quando houver (como o ITCMD em caso de partilha desigual), e dos honorários advocatícios, combinados por contrato. Os valores são informados depois da análise do caso.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Precisamos ter certificado digital?</summary>
+            <div class="ans"><p>Não é preciso ter um antes. Para assinar pelo <span class="nw">e-Notariado</span>, é usado um certificado digital notarizado, emitido pelo próprio cartório durante o procedimento.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Temos filhos menores. Dá para fazer em cartório?</summary>
+            <div class="ans"><p>Se a guarda e a pensão já foram decididas na Justiça, pode ser possível. Se ainda não foram, o caminho costuma ser o processo judicial.</p></div>
+          </details>
+          <details class="spot" data-reveal>
+            <summary>Dá para fazer o divórcio agora e a partilha dos bens depois?</summary>
+            <div class="ans"><p>Em algumas situações, a partilha pode ser feita em momento posterior. Isso é avaliado na análise do caso.</p></div>
+          </details>
+      </div>
+    </div>
+  </section>
+  <!-- 9. Formulário de triagem + chamada final -->
+  <section class="sec sec-form" id="verificar" aria-labelledby="t-form">
+    <div class="wrap form-grid">
+      <div>
+        <p class="kicker"><span class="kn">07</span>Triagem</p>
+        <h2 id="t-form">Verifique se o seu caso pode ser feito <em>em cartório</em></h2>
+        <p class="lead">Cada caso tem particularidades. Responda às perguntas para receber uma orientação inicial sobre o caminho possível.</p>
+        <ul class="reassure" data-reveal>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Leva cerca de 1 minuto</span></li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><span>Respostas confidenciais</span></li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><span>Retorno pelo contato que você informar</span></li>
+        </ul>
+      </div>
+      <div class="form-card" id="form-card" data-reveal style="--d:.1s">
+        <div id="progresso">
+          <p class="progress-text" id="progresso-texto" aria-live="polite">Etapa 1</p>
+          <div class="progress" role="progressbar" aria-label="Progresso do formulário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="barra"></span></div>
+        </div>
+        <form id="triagem" novalidate>
+          <div id="passos"></div>
+          <!-- Campos ocultos -->
+          <input type="hidden" name="classificacao">
+          <input type="hidden" name="motivo">
+          <input type="hidden" name="servico" value="divorcio">
+          <input type="hidden" name="gclid">
+          <input type="hidden" name="gbraid">
+          <input type="hidden" name="wbraid">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="pagina_origem">
+        </form>
+        <div id="resultado" hidden></div>
+        <noscript><p>Para usar o formulário, ative o JavaScript no navegador.</p></noscript>
+        <p class="seguro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Suas respostas são confidenciais e servem apenas para a análise inicial do caso.</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- 10. Rodapé -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#topo"><img class="mono-logo" src="/logo-modus.png" width="44" height="44" alt="" aria-hidden="true"><span><span class="brand-nome">Modus Advocacia</span><span class="brand-oab">Amanda Modus · OAB/PR 119.898</span></span></a>
+      <p class="foot-tag">Divórcio e inventário em cartório, 100% online, com acompanhamento de advogada do início ao fim.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <p class="foot-h">Contato</p>
+        <p class="foot-mail"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg><a data-email href="#"></a></p>
+      </div>
+      <div>
+        <p class="foot-h">Atendimento</p>
+        <p>R. Quebec, 326 – Jardim Canadá<br>Maringá-PR, <span class="nw">87080-560</span><br>Online em todo o Brasil</p>
+      </div>
+      <div>
+        <p class="foot-h">Páginas</p>
+        <ul>
+          <li><a href="../divorcio/">Divórcio em cartório</a></li>
+          <li><a href="../inventario/">Inventário em cartório</a></li>
+          <li><a href="../privacidade/">Política de privacidade</a></li>
+          <li><a href="https://modusadvocacia.com.br/">Site do escritório</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Conteúdo informativo; não substitui análise jurídica individual.</span></p>
+    <p class="foot-copy">© 2026 Amanda Modus · OAB/PR 119.898</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn" href="#verificar">Verificar meu caso <svg class="ico arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies para medir o desempenho da página e dos anúncios. <a href="../privacidade/">Política de privacidade</a></p>
+  <div class="btns">
+    <button type="button" class="no" data-cookie="denied">Recusar</button>
+    <button type="button" class="ok" data-cookie="granted">Aceitar</button>
+  </div>
+</div>
+
+<script>
+/* Interações visuais: progresso de leitura, topo, revelação ao rolar, ilustração e requisitos */
+(function () {
+  'use strict';
+  var root = document.documentElement, prog = document.getElementById('scroll-prog'), topo = document.querySelector('.top'), pend = false;
+  function rolagem() {
+    pend = false;
+    var max = root.scrollHeight - root.clientHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, root.scrollTop / max) : 0) + ')';
+    topo.classList.toggle('scrolled', root.scrollTop > 60);
+  }
+  addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(rolagem); } }, { passive: true });
+  rolagem();
+
+  var alvos = [].slice.call(document.querySelectorAll('[data-reveal]'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    alvos.forEach(function (el) { io.observe(el); });
+  } else {
+    alvos.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  var vis = document.querySelector('.hero-visual'), hero = document.querySelector('.hero');
+  if (vis && window.matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches) {
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      vis.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 2 - 1).toFixed(3));
+      vis.style.setProperty('--my', ((e.clientY - r.top) / r.height * 2 - 1).toFixed(3));
+    });
+    hero.addEventListener('mouseleave', function () { vis.style.setProperty('--mx', 0); vis.style.setProperty('--my', 0); });
+  }
+
+  // Luz que acompanha o cursor nos cartões
+  if (window.matchMedia('(hover:hover)').matches) {
+    document.addEventListener('pointermove', function (e) {
+      var el = e.target.closest && e.target.closest('.spot');
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
+  var reqs = [].slice.call(document.querySelectorAll('.req')), ok = document.getElementById('req-ok');
+  reqs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      ok.hidden = !reqs.every(function (x) { return x.getAttribute('aria-pressed') === 'true'; });
+    });
+  });
+})();
+</script>
+
+<script>
+/* ==========================================================================
+   DADOS DESTA PÁGINA (divórcio): títulos alternativos, perguntas e classificação
+   ========================================================================== */
+var PAGINA = {
+  servico: 'divorcio',
+  servicoNome: 'divórcio em cartório',
+  // Títulos alternativos (message match). Use ?h=consensual ou ?h=extrajudicial na URL final do anúncio.
+  variantes: {
+    consensual: 'Divórcio consensual em cartório <em>100% online</em>',
+    extrajudicial: 'Divórcio extrajudicial <em>100% online</em>'
+  },
+  passos: [
+    { id: 'acordo_divorcio', tipo: 'unica', curto: 'Acordo sobre o divórcio',
+      pergunta: 'Vocês dois estão de acordo com o divórcio?',
+      opcoes: [['sim', 'Sim'], ['ainda_nao', 'Ainda não']] },
+    { id: 'acordo_bens', tipo: 'unica', curto: 'Acordo sobre a divisão dos bens',
+      pergunta: 'Vocês estão de acordo sobre a divisão dos bens?',
+      opcoes: [['sim', 'Sim'], ['nao', 'Não'], ['sem_bens', 'Não temos bens']] },
+    { id: 'filhos', tipo: 'unica', curto: 'Filhos menores ou incapazes',
+      pergunta: 'Vocês têm filhos menores de 18 anos ou incapazes?',
+      opcoes: [['nao', 'Não'], ['sim_decidido', 'Sim, com guarda e pensão já decididas na Justiça'], ['sim_nao_decidido', 'Sim, ainda não decidido']] },
+    { id: 'gravidez', tipo: 'unica', curto: 'Gravidez em curso',
+      se: function () { return !!window.CONFIG.PERGUNTA_GRAVIDEZ; },
+      pergunta: 'Há gravidez em curso no momento?',
+      opcoes: [['nao', 'Não'], ['sim', 'Sim'], ['nao_sei', 'Não sei']] },
+    { id: 'bens', tipo: 'multipla', curto: 'Bens a dividir',
+      se: function (r) { return r.acordo_bens !== 'sem_bens'; },
+      pergunta: 'Quais bens há para dividir?', ajuda: 'Marque todas as opções que se aplicam.',
+      opcoes: [['imovel', 'Imóvel'], ['veiculo', 'Veículo'], ['empresa_investimentos', 'Empresa ou investimentos'], ['nenhum', 'Não há bens']],
+      exclusiva: 'nenhum' },
+    { id: 'local', tipo: 'local', curto: 'Cidade/UF',
+      pergunta: 'Em qual cidade e estado você mora?' },
+    { id: 'contato', tipo: 'contato',
+      pergunta: 'Seus dados para contato',
+      perguntaNaoCabe: 'Deixe seus dados para uma avaliação',
+      ajuda: 'Usamos estes dados apenas para falar com você sobre o seu caso.' }
+  ],
+  // QUALIFICADO, REVISAR ou NAO_CABE (motivos separados por vírgula)
+  classificar: function (r) {
+    if (r.acordo_divorcio === 'ainda_nao') return { c: 'NAO_CABE', m: 'sem_acordo_divorcio' };
+    if (r.acordo_bens === 'nao') return { c: 'NAO_CABE', m: 'sem_acordo_bens' };
+    if (r.filhos === 'sim_nao_decidido') return { c: 'NAO_CABE', m: 'filhos_sem_decisao' };
+    var m = [];
+    if (r.filhos === 'sim_decidido') m.push('filhos_guarda_decidida');
+    if (r.gravidez === 'sim' || r.gravidez === 'nao_sei') m.push('gravidez');
+    return m.length ? { c: 'REVISAR', m: m.join(',') } : { c: 'QUALIFICADO', m: '' };
+  },
+  // Usado na página de obrigado (classificação REVISAR)
+  motivosTexto: {
+    filhos_guarda_decidida: 'a existência de filhos com guarda e pensão já decididas na Justiça',
+    gravidez: 'a informação sobre gravidez'
+  },
+  // Mensagem exibida quando o caso não cabe em cartório
+  naoCabeTexto: {
+    sem_acordo_divorcio: 'Quando ainda não há acordo sobre o divórcio, o caminho costuma ser o processo judicial.',
+    sem_acordo_bens: 'Quando ainda não há acordo sobre a divisão dos bens, o caminho costuma ser o processo judicial.',
+    filhos_sem_decisao: 'Quando há filhos menores de 18 anos ou incapazes e a guarda e a pensão ainda não foram decididas na Justiça, o caminho costuma ser o processo judicial.'
+  }
+};
+</script>
+<script>
+/* ==========================================================================
+   MOTOR DA PÁGINA (igual em divórcio e inventário) — não precisa editar
+   ========================================================================== */
+(function () {
+  'use strict';
+  var C = window.CONFIG, P = window.PAGINA;
+  var URL_OBRIGADO = '../obrigado/';
+  var DEBUG = /[?&]debug=1/.test(location.search);
+  var params = new URLSearchParams(location.search);
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function track(ev, p) {
+    p = p || {};
+    p.servico = P.servico;
+    if (DEBUG) console.log('[evento]', ev, p);
+    if (typeof gtag === 'function') gtag('event', ev, p);
+  }
+  function digitos(s) { return String(s || '').replace(/\D/g, ''); }
+  function linkWhats(msg) { return 'https://wa.me/' + digitos(C.WHATSAPP) + '?text=' + encodeURIComponent(msg); }
+
+  /* ---------- Funil: clique nos botões que levam à triagem e triagem visível ---------- */
+  $$('a[href="#verificar"]').forEach(function (a) {
+    var local = a.id === 'hero-cta' ? 'topo' : a.closest('#sticky-cta') ? 'barra' : a.closest('header') ? 'cabecalho' : a.closest('#req-ok') ? 'requisitos' : 'outro';
+    a.addEventListener('click', function () { track('clique_cta', { local: local }); });
+  });
+  (function () {
+    var sec = document.getElementById('verificar');
+    if (!sec || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (e) { return e.isIntersecting; })) { track('viu_triagem'); io.disconnect(); }
+    }, { threshold: 0.3 });
+    io.observe(sec);
+  })();
+
+  /* ---------- E-mail no rodapé ---------- */
+  $$('[data-email]').forEach(function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
+
+  /* ---------- Atribuição: gclid / UTM (guardada por 90 dias, último clique) ---------- */
+  var CAMPOS_ATRIB = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var atrib = (function () {
+    var salvo = {};
+    try { salvo = JSON.parse(lsGet('modus_atrib') || '{}') || {}; } catch (e) {}
+    if (salvo.ts && Date.now() - salvo.ts > 90 * 864e5) salvo = {};
+    var novo = {}, tem = false;
+    CAMPOS_ATRIB.forEach(function (k) { var v = params.get(k); if (v) { novo[k] = v.slice(0, 200); tem = true; } });
+    if (tem) { novo.ts = Date.now(); lsSet('modus_atrib', JSON.stringify(novo)); return novo; }
+    return salvo;
+  })();
+
+  /* ---------- Título alternativo (somente textos pré-aprovados) ---------- */
+  (function () {
+    var h = (params.get('h') || '').toLowerCase();
+    if (!h) {
+      var termo = (params.get('utm_term') || atrib.utm_term || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+      if (/consensual/.test(termo)) h = 'consensual';
+      else if (/extrajudicial/.test(termo)) h = 'extrajudicial';
+      else if (/quanto|custa|custo|valor|preco/.test(termo)) h = 'custo';
+    }
+    if (Object.prototype.hasOwnProperty.call(P.variantes, h)) $('#h1').innerHTML = P.variantes[h];
+    if (h === 'custo') $('#nota-custo').hidden = false;
+  })();
+
+  /* ---------- Schema FAQPage gerado a partir das perguntas visíveis ---------- */
+  (function () {
+    if (document.querySelector('script[data-faq-estatico]')) return;
+    var itens = $$('#duvidas details').map(function (d) {
+      var q = d.querySelector('summary').cloneNode(true), a = d.querySelector('.ans').cloneNode(true);
+      [q, a].forEach(function (n) { $$('.revisar', n).forEach(function (m) { m.remove(); }); });
+      return { '@type': 'Question', name: q.textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: a.textContent.replace(/\s+/g, ' ').trim() } };
+    });
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: itens });
+    document.head.appendChild(s);
+  })();
+
+  /* ---------- Banner de cookies (não bloqueia a página) ---------- */
+  (function () {
+    var b = $('#cookie');
+    if (!b) return;
+    // Aparece só depois da primeira rolagem (ou de alguns segundos) para não cobrir o botão principal
+    if (!lsGet('modus_consent')) {
+      var mostrou = false;
+      var mostrar = function () {
+        if (mostrou) return;
+        mostrou = true;
+        b.hidden = false;
+        document.body.classList.add('has-cookie');
+        removeEventListener('scroll', aoRolar);
+      };
+      var aoRolar = function () { if (window.scrollY > 150) mostrar(); };
+      addEventListener('scroll', aoRolar, { passive: true });
+      setTimeout(mostrar, 6000);
+    }
+    $$('[data-cookie]', b).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var g = btn.getAttribute('data-cookie') === 'granted' ? 'granted' : 'denied';
+        lsSet('modus_consent', g);
+        gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g });
+        gtag('set', 'ads_data_redaction', g === 'denied');
+        b.hidden = true;
+        document.body.classList.remove('has-cookie');
+      });
+    });
+  })();
+
+  /* ---------- Barra fixa no celular ---------- */
+  (function () {
+    var bar = $('#sticky-cta');
+    if (!bar || !('IntersectionObserver' in window)) return;
+    var heroVisivel = true, formVisivel = false;
+    function atualizar() { bar.classList.toggle('show', !heroVisivel && !formVisivel); }
+    new IntersectionObserver(function (e) { heroVisivel = e[0].isIntersecting; atualizar(); }).observe($('#hero-cta'));
+    new IntersectionObserver(function (e) { formVisivel = e[0].isIntersecting; atualizar(); }).observe($('#verificar'));
+  })();
+
+  /* ======================= FORMULÁRIO DE TRIAGEM ======================= */
+  var UFS = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
+  var CONSENT_TXT = 'Concordo com o uso destes dados para contato sobre o meu caso e para o registro da origem do contato, conforme a Política de privacidade.';
+  var form = $('#triagem'), areaPassos = $('#passos'), resultado = $('#resultado');
+  var progresso = $('#progresso'), barra = $('#barra'), progTxt = $('#progresso-texto'), card = $('#form-card');
+  var resp = {}, historico = [], atual = null, modo = 'triagem', classifNaoCabe = null, passoNaoCabe = null;
+  var iniciou = false, inicioTs = 0, ponteiro = false, timer = null, enviando = false;
+
+  function passo(id) { for (var i = 0; i < P.passos.length; i++) if (P.passos[i].id === id) return P.passos[i]; return null; }
+  function visiveis() { return P.passos.filter(function (p) { return !p.se || p.se(resp); }); }
+  function elPasso(id) { return $('fieldset[data-id="' + id + '"]', areaPassos); }
+  function rotulo(p, valor) { for (var i = 0; i < p.opcoes.length; i++) if (p.opcoes[i][0] === valor) return p.opcoes[i][1]; return valor; }
+  function opcoesUF(vazio, extra) {
+    return '<option value="">' + vazio + '</option>' + UFS.map(function (u) { return '<option>' + u + '</option>'; }).join('') +
+      (extra ? '<option value="VARIOS">Mais de um estado</option>' : '');
+  }
+
+  function htmlPasso(p) {
+    var h = '<fieldset class="step" data-id="' + p.id + '" hidden>' +
+      '<legend class="q" tabindex="-1">' + esc(p.pergunta) + '</legend>' +
+      (p.ajuda ? '<p class="hint">' + esc(p.ajuda) + '</p>' : '');
+    if (p.tipo === 'unica' || p.tipo === 'multipla') {
+      var t = p.tipo === 'unica' ? 'radio' : 'checkbox';
+      h += '<div class="opts">' + p.opcoes.map(function (o) {
+        return '<label class="opt"><input type="' + t + '" name="' + p.id + '" value="' + o[0] + '"><span>' + esc(o[1]) + '</span></label>';
+      }).join('') + '</div>';
+    } else if (p.tipo === 'local') {
+      h += '<div class="row2">' +
+        '<div class="field"><label for="f-cidade">Cidade</label><input id="f-cidade" name="cidade" autocomplete="address-level2" maxlength="80"></div>' +
+        '<div class="field"><label for="f-uf">Estado</label><select id="f-uf" name="uf" autocomplete="address-level1">' + opcoesUF('UF') + '</select></div>' +
+        '</div>';
+    } else if (p.tipo === 'contato') {
+      if (p.ufBens) h += '<div class="field"><label for="f-uf-bens">Em qual estado estão os bens?</label><select id="f-uf-bens" name="uf_bens">' + opcoesUF('Selecione', true) + '</select></div>';
+      h += '<div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" maxlength="100"></div>' +
+        '<div class="field"><label for="f-whats">WhatsApp com DDD</label><input id="f-whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(44) 99999-9999" maxlength="16"></div>' +
+        '<div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="120"></div>' +
+        '<div class="hp" aria-hidden="true"><label for="f-site">Não preencha</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>' +
+        '<label class="consent"><input type="checkbox" name="consentimento" id="f-consent"><span>Concordo com o uso destes dados para contato sobre o meu caso e para o registro da origem do contato, conforme a <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>';
+    }
+    h += '<p class="err" id="err-' + p.id + '" role="alert" hidden></p><div class="nav">' +
+      (p.tipo === 'contato'
+        ? '<button type="submit" class="btn">Enviar respostas</button>'
+        : '<button type="button" class="btn" data-acao="avancar">Continuar</button>') +
+      '<button type="button" class="link-btn" data-acao="voltar">Voltar</button></div></fieldset>';
+    return h;
+  }
+  areaPassos.innerHTML = P.passos.map(htmlPasso).join('');
+
+  function atualizarProgresso() {
+    var lista = visiveis(), i = 0;
+    for (var k = 0; k < lista.length; k++) if (lista[k].id === atual) i = k;
+    var pct = Math.round(((i + 1) / lista.length) * 100);
+    barra.style.width = pct + '%';
+    barra.parentNode.setAttribute('aria-valuenow', pct);
+    progTxt.textContent = 'Etapa ' + (i + 1) + ' de ' + lista.length;
+  }
+
+  function mostrar(id, focar) {
+    atual = id;
+    $$('fieldset.step', areaPassos).forEach(function (fs) { fs.hidden = fs.getAttribute('data-id') !== id; });
+    var fs = elPasso(id);
+    var voltar = $('[data-acao="voltar"]', fs);
+    voltar.hidden = !(historico.length || modo === 'nao_cabe');
+    var p = passo(id);
+    if (p.tipo === 'contato') $('.q', fs).textContent = modo === 'nao_cabe' ? p.perguntaNaoCabe : p.pergunta;
+    progresso.hidden = modo === 'nao_cabe';
+    if (modo !== 'nao_cabe') atualizarProgresso();
+    if (focar) {
+      var top = card.getBoundingClientRect().top;
+      if (top < 0 || top > window.innerHeight * 0.6) card.scrollIntoView({ block: 'start' });
+      $('.q', fs).focus({ preventScroll: true });
+    }
+  }
+
+  function erro(id, msg, campo) {
+    var e = $('#err-' + id);
+    e.textContent = msg || '';
+    e.hidden = !msg;
+    $$('[aria-invalid]', elPasso(id)).forEach(function (c) { c.removeAttribute('aria-invalid'); });
+    if (campo) { campo.setAttribute('aria-invalid', 'true'); campo.focus(); }
+  }
+
+  function ler(p) {
+    var fs = elPasso(p.id);
+    if (p.tipo === 'unica') { var r = $('input:checked', fs); return r ? r.value : null; }
+    if (p.tipo === 'multipla') { return $$('input:checked', fs).map(function (c) { return c.value; }); }
+    if (p.tipo === 'local') return { cidade: form.cidade.value.trim(), uf: form.uf.value };
+    return null;
+  }
+
+  function validar(p, v) {
+    if (p.tipo === 'unica' && !v) { erro(p.id, 'Escolha uma opção para continuar.'); return false; }
+    if (p.tipo === 'multipla' && !v.length) { erro(p.id, 'Marque pelo menos uma opção para continuar.'); return false; }
+    if (p.tipo === 'local') {
+      if (v.cidade.length < 2) { erro(p.id, 'Informe a sua cidade.', form.cidade); return false; }
+      if (!v.uf) { erro(p.id, 'Selecione o estado.', form.uf); return false; }
+    }
+    erro(p.id, '');
+    return true;
+  }
+
+  function avancar() {
+    clearTimeout(timer);
+    var p = passo(atual), v = ler(p);
+    if (!validar(p, v)) return;
+    resp[p.id] = v;
+    var lista = visiveis(), n = lista.indexOf(p);
+    track('etapa_formulario', { etapa: n + 1, pergunta: p.id });
+    var cl = P.classificar(resp);
+    if (cl.c === 'NAO_CABE') return mostrarNaoCabe(cl);
+    historico.push(atual);
+    mostrar(lista[n + 1].id, true);
+  }
+
+  function voltar() {
+    clearTimeout(timer);
+    if (modo === 'nao_cabe') return mostrarNaoCabe(classifNaoCabe);
+    var ant = historico.pop();
+    if (ant) mostrar(ant, true);
+  }
+
+  function mostrarNaoCabe(cl) {
+    if (modo !== 'nao_cabe') passoNaoCabe = atual;
+    modo = 'nao_cabe';
+    classifNaoCabe = cl;
+    form.hidden = true;
+    progresso.hidden = true;
+    resultado.hidden = false;
+    resultado.innerHTML = '<div class="result" tabindex="-1">' +
+      '<h3>Pelas respostas, este caso provavelmente não pode ser feito em cartório</h3>' +
+      '<p>' + esc(P.naoCabeTexto[cl.m] || 'Nesse caso, o caminho costuma ser o processo judicial.') + '</p>' +
+      '<p>Se quiser, é possível avaliar a sua situação e conversar sobre as alternativas.</p>' +
+      '<div class="acoes"><button type="button" class="btn btn-sec" data-acao="avaliar">Quero uma avaliação do meu caso</button>' +
+      '<button type="button" class="link-btn" data-acao="revisar">Voltar e revisar minhas respostas</button></div></div>';
+    $('.result', resultado).focus({ preventScroll: true });
+    track('triagem_nao_cabe', { motivo: cl.m });
+  }
+
+  function revisar() {
+    modo = 'triagem';
+    resultado.hidden = true;
+    form.hidden = false;
+    mostrar(passoNaoCabe, true);
+  }
+
+  function avaliar() {
+    resultado.hidden = true;
+    form.hidden = false;
+    mostrar('contato', true);
+  }
+
+  /* Interações */
+  areaPassos.addEventListener('pointerdown', function () { ponteiro = true; });
+  areaPassos.addEventListener('keydown', function (e) {
+    ponteiro = false;
+    if (e.key === 'Enter' && e.target.matches('.opt input')) { e.preventDefault(); avancar(); }
+  });
+  form.addEventListener('change', function (e) {
+    if (!iniciou) { iniciou = true; inicioTs = Date.now(); track('inicio_formulario'); }
+    var t = e.target;
+    if (!t.matches('.opt input')) return;
+    var p = passo(t.name), fs = elPasso(p.id);
+    if (p.tipo === 'multipla' && p.exclusiva && t.checked) {
+      $$('input', fs).forEach(function (c) {
+        if (t.value === p.exclusiva ? c !== t : c.value === p.exclusiva) c.checked = false;
+      });
+    }
+    $$('.opt', fs).forEach(function (l) { l.classList.toggle('sel', $('input', l).checked); });
+    erro(p.id, '');
+  });
+  form.addEventListener('click', function (e) {
+    // Avanço automático só com toque/mouse (também ao clicar de novo na opção já marcada)
+    if (e.target.matches('.opt input[type=radio]') && ponteiro) {
+      clearTimeout(timer);
+      timer = setTimeout(avancar, 280);
+      return;
+    }
+    var b = e.target.closest('[data-acao]');
+    if (!b) return;
+    if (b.getAttribute('data-acao') === 'avancar') avancar();
+    if (b.getAttribute('data-acao') === 'voltar') voltar();
+  });
+  resultado.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-acao]');
+    if (!b) return;
+    var a = b.getAttribute('data-acao');
+    if (a === 'avaliar') avaliar();
+    if (a === 'revisar') revisar();
+    if (a === 'whatsapp') track('clique_whatsapp', { classificacao: 'NAO_CABE', local: 'formulario' });
+    if (a === 'agenda') track('clique_agendamento', { classificacao: 'NAO_CABE', local: 'formulario' });
+  });
+  form.addEventListener('input', function (e) {
+    if (e.target.name !== 'whatsapp') return;
+    var d = digitos(e.target.value).slice(0, 11), f = d;
+    if (d.length > 10) f = '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+    else if (d.length > 6) f = '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+    else if (d.length > 2) f = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    else if (d.length) f = '(' + d;
+    e.target.value = f;
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (atual === 'contato') enviar(); else avancar();
+  });
+
+  /* Envio */
+  function lerContato() {
+    var p = passo('contato'), d = {
+      nome: form.nome.value.trim(), whatsapp: form.whatsapp.value.trim(), email: form.email.value.trim(),
+      uf_bens: form.uf_bens ? form.uf_bens.value : ''
+    };
+    var tel = digitos(d.whatsapp);
+    if (p.ufBens && !d.uf_bens) { erro('contato', 'Selecione o estado onde estão os bens.', form.uf_bens); return null; }
+    if (d.nome.length < 2) { erro('contato', 'Informe o seu nome.', form.nome); return null; }
+    if (!/^[1-9]\d{9,10}$/.test(tel)) { erro('contato', 'Informe um WhatsApp válido, com DDD.', form.whatsapp); return null; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)) { erro('contato', 'Informe um e-mail válido.', form.email); return null; }
+    if (!form.consentimento.checked) { erro('contato', 'Para enviar, marque a caixa de consentimento.', form.consentimento); return null; }
+    erro('contato', '');
+    return d;
+  }
+
+  function juntar(lista) {
+    return lista.length < 2 ? lista.join('') : lista.slice(0, -1).join(', ') + ' e ' + lista[lista.length - 1];
+  }
+
+  function montarLead(cl, d) {
+    var resumo = [];
+    visiveis().forEach(function (p) {
+      var v = resp[p.id];
+      if (v == null || p.tipo === 'contato') return;
+      if (p.tipo === 'local') resumo.push([p.curto, v.cidade + '/' + v.uf]);
+      else if (p.tipo === 'multipla') resumo.push([p.curto, v.map(function (x) { return rotulo(p, x); }).join(', ')]);
+      else resumo.push([p.curto, rotulo(p, v)]);
+    });
+    if (d.uf_bens) resumo.push(['Estado dos bens', d.uf_bens === 'VARIOS' ? 'Mais de um estado' : d.uf_bens]);
+    var lead = {
+      lead_id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+      servico: P.servico, servico_nome: P.servicoNome,
+      classificacao: cl.c, motivo: cl.m,
+      motivo_texto: juntar(cl.m ? cl.m.split(',').map(function (k) { return P.motivosTexto[k] || k; }) : []),
+      nome: d.nome, whatsapp: d.whatsapp, email: d.email,
+      cidade: resp.local ? resp.local.cidade : '', uf: resp.local ? resp.local.uf : '', uf_bens: d.uf_bens,
+      consentimento: 'sim', consentimento_texto: CONSENT_TXT,
+      data_hora: new Date().toISOString(),
+      pagina_origem: location.origin + location.pathname + location.search,
+      referrer: document.referrer || ''
+    };
+    CAMPOS_ATRIB.forEach(function (k) { lead[k] = atrib[k] || ''; });
+    resumo.forEach(function (r) { lead['resp_' + r[0]] = r[1]; });
+    lead.resumo = resumo;
+    return lead;
+  }
+
+  function textoResumo(lead) {
+    return lead.resumo.map(function (r) { return '• ' + r[0] + ': ' + r[1]; }).join('\n');
+  }
+
+  function enviarWebhook(lead) {
+    var url = C.WEBHOOK_URL;
+    if (!url || !/^https:\/\//.test(url)) return Promise.resolve(false);
+    var corpo = new URLSearchParams();
+    Object.keys(lead).forEach(function (k) { if (typeof lead[k] !== 'object') corpo.append(k, lead[k]); });
+    corpo.append('resumo', textoResumo(lead));
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, 6000);
+    return fetch(url, { method: 'POST', body: corpo, keepalive: true, signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { clearTimeout(t); return r.ok; })
+      .catch(function () {
+        clearTimeout(t);
+        // Segunda tentativa sem esperar resposta (o webhook deve ignorar lead_id repetido)
+        try { if (navigator.sendBeacon) navigator.sendBeacon(url, corpo); } catch (e) {}
+        return false;
+      });
+  }
+
+  function enviar() {
+    if (enviando) return;
+    var d = lerContato();
+    if (!d) return;
+    var cl = modo === 'nao_cabe' ? classifNaoCabe : P.classificar(resp);
+    var lead = montarLead(cl, d);
+    $$('input[type=hidden]', form).forEach(function (h) { if (h.name in lead) h.value = lead[h.name]; });
+    var btn = $('button[type=submit]', form);
+    enviando = true;
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    // Proteção contra robôs: campo invisível preenchido ou envio rápido demais
+    if (form.website.value || Date.now() - inicioTs < 4000) { location.href = URL_OBRIGADO; return; }
+    var ev = cl.c === 'QUALIFICADO' ? 'lead_qualificado' : cl.c === 'REVISAR' ? 'lead_revisar' : 'lead_nao_qualificado';
+    track(ev, { classificacao: cl.c, motivo: cl.m || '(nenhum)' });
+    enviarWebhook(lead).then(function (ok) {
+      lead.webhook_ok = ok;
+      if (cl.c === 'NAO_CABE') return confirmarNaoCabe(lead);
+      lead.conv_pendente = true;
+      try { sessionStorage.setItem('modus_lead', JSON.stringify(lead)); } catch (e) {}
+      location.href = URL_OBRIGADO;
+    });
+  }
+
+  function confirmarNaoCabe(lead) {
+    var msg = 'Olá, Dra. Amanda. Preenchi o formulário sobre ' + lead.servico_nome + ' e gostaria de uma avaliação do meu caso.\n' +
+      'Nome: ' + lead.nome + '\n' + textoResumo(lead);
+    var mail = 'mailto:' + C.EMAIL + '?subject=' + encodeURIComponent('Avaliação de caso – ' + lead.servico_nome) +
+      '&body=' + encodeURIComponent(msg + '\nWhatsApp: ' + lead.whatsapp + '\nE-mail: ' + lead.email);
+    form.hidden = true;
+    resultado.hidden = false;
+    resultado.innerHTML = '<div class="result" tabindex="-1"><h3>Recebemos seus dados</h3>' +
+      '<p>Sua situação será analisada, e o retorno é feito pelo contato informado. Se preferir, envie uma mensagem com o resumo das suas respostas ou agende uma conversa por vídeo.</p>' +
+      '<div class="acoes"><a class="btn btn-sec" data-acao="whatsapp" href="' + esc(linkWhats(msg)) + '" target="_blank" rel="noopener">Enviar mensagem pelo WhatsApp</a>' +
+      (C.CALENDLY_URL ? '<a class="btn btn-sec" data-acao="agenda" href="' + esc(C.CALENDLY_URL + '?name=' + encodeURIComponent(lead.nome) + '&email=' + encodeURIComponent(lead.email) + '&a1=' + encodeURIComponent('Avaliação (' + lead.servico_nome + '):\n' + textoResumo(lead)) + '&utm_source=site-cartorio&utm_medium=nao-cabe&utm_campaign=' + P.servico) + '" target="_blank" rel="noopener">Agendar conversa por vídeo</a>' : '') +
+      (lead.webhook_ok ? '' : '<a class="link-btn" href="' + esc(mail) + '">Enviar por e-mail</a>') + '</div></div>';
+    $('.result', resultado).focus({ preventScroll: true });
+  }
+
+  mostrar(P.passos[0].id, false);
+})();
+</script>
+</body>
+</html>
