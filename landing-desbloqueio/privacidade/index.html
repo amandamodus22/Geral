@@ -327,6 +327,36 @@ dialog.triagem::backdrop{background:rgba(15,25,32,.55)}
 .cookie .no{background:transparent;color:#fff}
 .cookie button:focus-visible{outline-color:#fff}
 
+/* Movimento ao rolar. Sem JavaScript, ou com "reduzir movimento" ligado, tudo aparece parado e visível.
+   O script só esconde o que está abaixo da dobra e mostra quando o elemento entra na tela. */
+.progresso{position:fixed;left:0;right:0;top:0;height:3px;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+.top{transition:box-shadow .25s}
+.top.rolou{box-shadow:0 8px 20px -14px rgba(23,34,43,.45)}
+.anim .rv{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .75s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.anim .rv.esq{transform:translateX(-32px)}
+.anim .rv.dir{transform:translateX(32px)}
+.anim .rv.zoom{transform:scale(.94)}
+.anim .rv.vis{opacity:1;transform:none}
+.anim .passos li.rv::before{transform:scale(.3) rotate(-25deg);transition:transform .55s cubic-bezier(.3,1.7,.5,1) calc(var(--d,0s) + .2s)}
+.anim .passos li.rv.vis::before{transform:none}
+.anim .head.rv .kicker::before{width:0;transition:width .6s ease .25s}
+.anim .head.rv.vis .kicker::before{width:18px}
+@keyframes sobe{from{opacity:0;transform:translateY(12px)}}
+@keyframes entra-dir{from{opacity:0;transform:translateX(36px)}}
+.chips li{animation:sobe .55s cubic-bezier(.2,.7,.2,1) both}
+.chips li:nth-child(1){animation-delay:.2s}.chips li:nth-child(2){animation-delay:.27s}.chips li:nth-child(3){animation-delay:.34s}
+.chips li:nth-child(4){animation-delay:.41s}.chips li:nth-child(5){animation-delay:.48s}.chips li:nth-child(n+6){animation-delay:.55s}
+.hero-foto{animation:entra-dir .7s cubic-bezier(.2,.7,.2,1) .1s both}
+@media (hover:hover){
+  .card,.passos li,.aval{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.passos li:hover,.aval:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--acc-soft)}
+}
+.wa-float{transition:opacity .25s,visibility .25s,transform .35s cubic-bezier(.3,1.6,.5,1)}
+.wa-float.oculto{transform:scale(.5)}
+.wa-float.pulsar::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(23,124,65,.55);animation:pulso 1.6s ease-out 2;pointer-events:none}
+@keyframes pulso{to{box-shadow:0 0 0 18px rgba(23,124,65,0)}}
+@media print{.anim .rv{opacity:1!important;transform:none!important}.progresso{display:none}}
+
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>

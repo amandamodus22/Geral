@@ -283,11 +283,60 @@
     addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(medir); } }, { passive: true });
   })();
 
+  /* ---------- Movimento ao rolar: barra de leitura, sombra do topo e elementos que entram na tela ---------- */
+  (function () {
+    var barra = document.createElement('div');
+    barra.className = 'progresso'; barra.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(barra);
+    var topo = $('.top'), pend = false;
+    function rolar() {
+      pend = false;
+      var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      barra.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+      if (topo) topo.classList.toggle('rolou', window.scrollY > 8);
+    }
+    addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(rolar); } }, { passive: true });
+    rolar();
+
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // [seletor, variação, intervalo entre irmãos em segundos]
+    var grupos = [
+      ['main .sec .head', '', 0], ['.grid2 > *, .grid3 > *', '', 0.09], ['.passos > li', '', 0.12],
+      ['.aviso', 'esq', 0], ['.lista > li', '', 0.06], ['.quem > :first-child', 'esq', 0], ['.quem > :last-child', 'dir', 0.1],
+      ['.aval', 'zoom', 0.1], ['.faq details', '', 0.05], ['.final', 'zoom', 0], ['.marcas li', '', 0.06],
+      ['.sec-cta', '', 0.1], ['.ver-todas', '', 0]
+    ];
+    var alvo = [], limite = window.innerHeight * 0.92;
+    grupos.forEach(function (g) {
+      $$(g[0]).forEach(function (el) {
+        if (el.classList.contains('rv') || el.closest('.hero') || el.getBoundingClientRect().top < limite) return;
+        var irmaos = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.classList.add('rv'); if (g[1]) el.classList.add(g[1]);
+        if (g[2]) el.style.setProperty('--d', (Math.min(irmaos, 6) * g[2]).toFixed(2) + 's');
+        alvo.push(el);
+      });
+    });
+    if (!alvo.length) return;
+    document.documentElement.classList.add('anim');
+    var io = new IntersectionObserver(function (itens) {
+      itens.forEach(function (it) {
+        if (!it.isIntersecting) return;
+        var el = it.target; io.unobserve(el); el.classList.add('vis');
+        // depois de entrar, volta ao normal (para o efeito de passar o mouse funcionar)
+        setTimeout(function () { el.classList.remove('rv', 'vis', 'esq', 'dir', 'zoom'); el.style.removeProperty('--d'); }, 1700);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    alvo.forEach(function (el) { io.observe(el); });
+  })();
+
   /* ---------- WhatsApp flutuante: aparece depois do topo, some com a triagem aberta ---------- */
   var flutuante = $('#wa-float');
+  var pulsou = false;
   function atualizarFlutuante() {
     var aberto = dlg.hasAttribute('open');
-    flutuante.classList.toggle('oculto', aberto || window.scrollY < 380);
+    var esconder = aberto || window.scrollY < 380;
+    flutuante.classList.toggle('oculto', esconder);
+    if (!esconder && !pulsou) { pulsou = true; flutuante.classList.add('pulsar'); }
   }
   addEventListener('scroll', atualizarFlutuante, { passive: true });
   atualizarFlutuante();
