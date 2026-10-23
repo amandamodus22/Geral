@@ -14,7 +14,7 @@ O bloco `window.CONFIG` fica no topo das 3 páginas. Use os mesmos valores em to
 
 - `WHATSAPP`, `EMAIL`: contato (botão do topo, "Chame no WhatsApp" do formulário e rodapé).
 - `ADS_ID`: `AW-18256148045` (mesma conta do Google Ads).
-- `ADS_LABEL`: **falta preencher.** Crie no Google Ads a ação "Lead – bancário PJ" (Metas → Conversões → Nova ação → Site → manualmente; categoria "Enviar formulário de lead"; contagem "Uma"; "Usar valores diferentes para cada conversão") e cole o rótulo aqui. Enquanto estiver `XXXX...`, nenhuma conversão é enviada ao Ads.
+- `ADS_LABEL`: `8zUeCJn2naYdEM3smoFE`, ação "Lead – bancário PJ" (Enviar formulário de lead, contagem "Uma", valores diferentes para cada conversão).
 - `GA4_ID`: `G-VVFXJ8YE64` (filtre por **Nome do host = bancario.modusadvocacia.com.br**).
 - `WEBHOOK_URL`: cenário do Make "Leads – bancário PJ".
 
@@ -48,4 +48,3 @@ Nenhum dado pessoal vai para o GA4 ou para o Google Ads. O banner de cookies usa
 ## Pendências da advogada
 
 - Bio curta em "Quem atende" (hoje está um texto neutro).
-- Rótulo da conversão do Google Ads (`ADS_LABEL`).
