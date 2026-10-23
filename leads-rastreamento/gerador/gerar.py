@@ -83,7 +83,7 @@ AVAL_RENDER = '''<script>
 # ---------------------------------------------------------------- páginas
 JUD = dict(
  slug='desbloqueio', dominio='desbloqueio.modusadvocacia.com.br', pagina='judicial', prefixo='DJ',
- acc='#1B3A63', acc_dark='#122947', acc_soft='#E7EDF5', acc_glow='rgba(27,58,99,.10)', label_ads='ROTULO_LEAD_JUDICIAL',
+ acc='#1B3A63', acc_dark='#122947', acc_soft='#E7EDF5', acc_glow='rgba(27,58,99,.10)', label_ads='SQaSCPiznacdEM3smoFE',
  title='Bloqueio judicial na conta? Desbloqueio de salário e poupança | OAB/PR 119.898',
  desc='Valores bloqueados por ordem judicial: salário, aposentadoria, pensão e poupança têm proteção na lei. Advogada OAB/PR 119.898, atendimento online.',
  og_titulo='A Justiça bloqueou sua conta?', og_sub='Desbloqueio de salário, aposentadoria, pensão e poupança',
@@ -95,7 +95,7 @@ JUD = dict(
 )
 MKT = dict(
  slug='marketplace', dominio='marketplace.modusadvocacia.com.br', pagina='marketplace', prefixo='MK',
- acc='#0E5A6A', acc_dark='#0A4552', acc_soft='#E2EFF1', acc_glow='rgba(14,90,106,.10)', label_ads='ROTULO_LEAD_MARKETPLACE',
+ acc='#0E5A6A', acc_dark='#0A4552', acc_soft='#E2EFF1', acc_glow='rgba(14,90,106,.10)', label_ads='QUhZCPuznacdEM3smoFE',
  title='Conta de vendedor bloqueada ou saldo retido no marketplace? | Advogada OAB/PR 119.898',
  desc='Conta de vendedor suspensa ou saldo de vendas retido? A advogada analisa o bloqueio e busca a reativação e a liberação do dinheiro. Atendimento online.',
  og_titulo='Conta de vendedor bloqueada ou saldo retido?', og_sub='Reativação da conta e liberação do saldo de vendas',
@@ -119,7 +119,7 @@ window.CONFIG = {{
 {fat}  WHATSAPP: "5544988482082",
   GTM_ID: "[PREENCHER]",                           // Google Tag Manager (GTM-XXXXXXX). Com ele, as tags ficam no contêiner
   GA4_ID: "G-VVFXJ8YE64",                          // GA4 (usado direto enquanto não houver GTM)
-  ADS_ID: "AW-18256148045",                        // Google Ads: ID da tag (CONFIRMAR: é da conta 364-007-7370)
+  ADS_ID: "AW-18256148045",                        // Google Ads: ID da tag da conta 364-007-7370 (confirmado em 23/10/2026)
   ADS_LABEL_LEAD: "{pg['label_ads']}",       // Google Ads: rótulo da ação "Lead WhatsApp - {'Judicial' if pg['pagina']=='judicial' else 'Marketplace'}"
   ADS_LABEL_LIGACAO: "ROTULO_LIGACAO",             // Google Ads: rótulo da ação "Ligação pelo site"
   META_PIXEL_ID: "[PREENCHER]",                    // Meta Pixel
