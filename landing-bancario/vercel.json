@@ -1,16 +1,6 @@
 {
-  "trailingSlash": true,
-  "headers": [
-    {
-      "source": "/fonts/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    }
+  "redirects": [
+    { "source": "/privacidade/:resto*", "destination": "https://desbloqueio.modusadvocacia.com.br/privacidade/", "statusCode": 301 },
+    { "source": "/:resto*", "destination": "https://desbloqueio.modusadvocacia.com.br/", "statusCode": 301 }
   ]
 }
