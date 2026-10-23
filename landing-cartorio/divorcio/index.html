@@ -832,6 +832,20 @@ var PAGINA = {
   function digitos(s) { return String(s || '').replace(/\D/g, ''); }
   function linkWhats(msg) { return 'https://wa.me/' + digitos(C.WHATSAPP) + '?text=' + encodeURIComponent(msg); }
 
+  /* ---------- Funil: clique nos botões que levam à triagem e triagem visível ---------- */
+  $$('a[href="#verificar"]').forEach(function (a) {
+    var local = a.id === 'hero-cta' ? 'topo' : a.closest('#sticky-cta') ? 'barra' : a.closest('header') ? 'cabecalho' : a.closest('#req-ok') ? 'requisitos' : 'outro';
+    a.addEventListener('click', function () { track('clique_cta', { local: local }); });
+  });
+  (function () {
+    var sec = document.getElementById('verificar');
+    if (!sec || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (e) { return e.isIntersecting; })) { track('viu_triagem'); io.disconnect(); }
+    }, { threshold: 0.3 });
+    io.observe(sec);
+  })();
+
   /* ---------- E-mail no rodapé ---------- */
   $$('[data-email]').forEach(function (a) { a.href = 'mailto:' + C.EMAIL; a.textContent = C.EMAIL; });
 
