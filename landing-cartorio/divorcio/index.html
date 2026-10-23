@@ -68,7 +68,7 @@ window.CONFIG = {
   "serviceType": "Divórcio consensual em cartório (extrajudicial)",
   "url": "https://cartorio.modusadvocacia.com.br/divorcio/",
   "areaServed": { "@type": "Country", "name": "Brasil" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Maringá", "addressRegion": "PR", "addressCountry": "BR" },
+  "address": { "@type": "PostalAddress", "streetAddress": "R. Quebec, 326 - Jardim Canadá", "addressLocality": "Maringá", "addressRegion": "PR", "postalCode": "87080-560", "addressCountry": "BR" },
   "identifier": { "@type": "PropertyValue", "propertyID": "OAB/PR", "value": "119.898" },
   "founder": { "@type": "Person", "name": "Amanda Modus", "jobTitle": "Advogada", "identifier": "OAB/PR 119.898" },
   "availableLanguage": "pt-BR"
@@ -736,7 +736,7 @@ legend.q{font:600 1.55rem/1.2 var(--display);letter-spacing:-.025em;padding:0;ma
       </div>
       <div>
         <p class="foot-h">Atendimento</p>
-        <p>Escritório em Maringá-PR<br>Online em todo o Brasil</p>
+        <p>R. Quebec, 326 – Jardim Canadá<br>Maringá-PR, <span class="nw">87080-560</span><br>Online em todo o Brasil</p>
       </div>
       <div>
         <p class="foot-h">Páginas</p>
@@ -744,6 +744,7 @@ legend.q{font:600 1.55rem/1.2 var(--display);letter-spacing:-.025em;padding:0;ma
           <li><a href="../divorcio/">Divórcio em cartório</a></li>
           <li><a href="../inventario/">Inventário em cartório</a></li>
           <li><a href="../privacidade/">Política de privacidade</a></li>
+          <li><a href="https://modusadvocacia.com.br/">Site do escritório</a></li>
         </ul>
       </div>
     </div>
@@ -988,7 +989,7 @@ var PAGINA = {
 
   /* ======================= FORMULÁRIO DE TRIAGEM ======================= */
   var UFS = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
-  var CONSENT_TXT = 'Concordo com o uso destes dados para contato sobre o meu caso, conforme a Política de privacidade.';
+  var CONSENT_TXT = 'Concordo com o uso destes dados para contato sobre o meu caso e para o registro da origem do contato, conforme a Política de privacidade.';
   var form = $('#triagem'), areaPassos = $('#passos'), resultado = $('#resultado');
   var progresso = $('#progresso'), barra = $('#barra'), progTxt = $('#progresso-texto'), card = $('#form-card');
   var resp = {}, historico = [], atual = null, modo = 'triagem', classifNaoCabe = null, passoNaoCabe = null;
@@ -1023,7 +1024,7 @@ var PAGINA = {
         '<div class="field"><label for="f-whats">WhatsApp com DDD</label><input id="f-whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(44) 99999-9999" maxlength="16"></div>' +
         '<div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="120"></div>' +
         '<div class="hp" aria-hidden="true"><label for="f-site">Não preencha</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>' +
-        '<label class="consent"><input type="checkbox" name="consentimento" id="f-consent"><span>Concordo com o uso destes dados para contato sobre o meu caso, conforme a <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>';
+        '<label class="consent"><input type="checkbox" name="consentimento" id="f-consent"><span>Concordo com o uso destes dados para contato sobre o meu caso e para o registro da origem do contato, conforme a <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>';
     }
     h += '<p class="err" id="err-' + p.id + '" role="alert" hidden></p><div class="nav">' +
       (p.tipo === 'contato'
