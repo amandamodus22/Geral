@@ -53,11 +53,10 @@ O banner de cookies usa o Consent Mode v2 no modo avançado: tudo começa "negad
 
 ## Marca
 
-`logo-ma.svg` (cabeçalho, rodapé e ícone), `apple-touch-icon.png` e `og-modus-advocacia.png` (imagem de compartilhamento) são **provisórios**, desenhados para combinar com o logo dos anúncios (monograma "MA" dourado sobre bordô). Quando a advogada enviar o arquivo oficial, substitua esses três arquivos mantendo os nomes.
+`logo-modus.png` é o mesmo logo "MA" dourado sobre bordô usado nos anúncios e nas páginas do cartório (cabeçalho, rodapé, ícone e JSON-LD). `og-modus-advocacia.png` é a imagem de compartilhamento (1200×630) feita com esse logo.
 
 ## Pendências da advogada
 
 - Bio curta em "Quem atende" (hoje está um texto neutro).
 - Revisar os trechos marcados `REVISAR-AMANDA` no `index.html`.
 - Criar no Google Ads as ações "Lead não qualificado – bancário" e "WhatsApp – bancário" e colar os rótulos.
-- Enviar o arquivo oficial do logo "MA Modus Advocacia".
